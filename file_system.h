@@ -34,6 +34,7 @@ struct treeNode {
 class FileSystem {
 private:
     std::vector<treeNode*> path, version;
+    void decrease_counter(treeNode *p);
     void init_version(treeNode *p, treeNode *vp);
     void recursive_modify_counter(treeNode *p, int diff, bool modify_brother=false);
     void recursive_delete_nodes(treeNode *p, bool delete_brother=false);

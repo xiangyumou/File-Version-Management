@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
 #include <stack>
@@ -11,7 +12,41 @@
 #define ll std::cerr << "----1111----" << '\n';
 #define rr std::cerr << "----2222----" << '\n';
 
-struct treeNode {
+class Logger {
+private:
+    std::string log_file = "Logger.log";
+    std::vector<std::string> logs;
+
+    std::string get_time() {
+        static char t[100];
+        time_t timep;
+        time(&timep);
+        struct tm* p = gmtime(&timep);
+        sprintf(t, "%d-%02d-%02d %02d:%02d:%02d", 1900 + p->tm_year, 1 + p->tm_mon, p->tm_mday, 8 + p->tm_hour, p->tm_min, p->tm_sec);
+        return std::string(t);
+    }
+
+    ~Logger() {
+        std::ofstream out(log_file, std::ios_base::app);
+        for (auto &it : logs) {
+            out << it << '\n';
+        }
+    }
+public:
+    Logger() = default;
+    Logger(const Logger&) = delete;
+    Logger& operator=(const Logger&) = delete;
+    static Logger& get_logger() {
+        static Logger logger;
+        return logger;
+    }
+    void log(std::string content) {
+        logs.push_back("(" + get_time() + ") " + content);
+    }
+};
+
+class treeNode {
+public:
     std::string name, content;
     int type;   // 0: 文件  1: 文件夹   2: 头节点
     int cnt;
