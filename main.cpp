@@ -40,14 +40,14 @@ private:
         if (p == nullptr) return;
         recursive_delete_nodes(p->first_son, true);
         if (delete_brother) recursive_delete_nodes(p->next_brother, true);
-        if (--p->cnt == 0) delete p;
+        decrease_counter(p);
     }
 
     void delete_node() {
         treeNode *t = path.back();
         path.pop_back();
         rebuild_nodes(t->next_brother);
-        if (--t->cnt == 0) delete t;
+        decrease_counter(t);
     }
 
     void recursive_modify_counter(treeNode *p, int diff, bool modify_brother=false) {
@@ -73,7 +73,7 @@ private:
             else t->next_brother = stk.top();
             relation = is_son();
             stk.push(t);
-            if (--path.back()->cnt == 0) delete path.back();
+            decrease_counter(path.back());
         }
         // std::cout << path.back()->cnt << ' ';
         (relation ? path.back()->first_son : path.back()->next_brother) = stk.top();
