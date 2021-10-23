@@ -32,11 +32,22 @@ class FileSystem {
 private:
     std::vector<treeNode*> path, version;
 
+    void decrease_counter(treeNode *p) {
+        if (--p->cnt == 0) delete p;
+    }
+
     void recursive_delete_nodes(treeNode *p, bool delete_brother=false) {
         if (p == nullptr) return;
         recursive_delete_nodes(p->first_son, true);
         if (delete_brother) recursive_delete_nodes(p->next_brother, true);
         if (--p->cnt == 0) delete p;
+    }
+
+    void delete_node() {
+        treeNode *t = path.back();
+        path.pop_back();
+        rebuild_nodes(t->next_brother);
+        if (--t->cnt == 0) delete t;
     }
 
     void recursive_modify_counter(treeNode *p, int diff, bool modify_brother=false) {
@@ -62,6 +73,7 @@ private:
             else t->next_brother = stk.top();
             relation = is_son();
             stk.push(t);
+            if (--path.back()->cnt == 0) delete path.back();
         }
         // std::cout << path.back()->cnt << ' ';
         (relation ? path.back()->first_son : path.back()->next_brother) = stk.top();
@@ -84,28 +96,21 @@ private:
         path.push_back(p->first_son);
     }
 
-    void adjust_tail() {
+    void goto_tail() {
         while (path.back()->next_brother != nullptr) {
             path.push_back(path.back()->next_brother);
         }
     }
 
-    void adjust_head() {
+    void goto_head() {
         while (!is_son()) {
             // std::cout << path.size() << ' ' << path.back()->type << '\n';
             path.pop_back();
         }
     }
 
-    void delete_node() {
-        treeNode *t = path.back();
-        path.pop_back();
-        rebuild_nodes(t->next_brother);
-        if (--t->cnt == 0) delete t;
-    }
-
     bool name_exist(std::string name) {
-        auto dir_content = get_dir_content();
+        auto dir_content = list_directory_contents();
         for (auto &nm : dir_content) {
             if (nm == name) return true;
         }
@@ -117,7 +122,7 @@ private:
             std::cerr << "no file or directory named " << name << '\n';
             return false;
         }
-        adjust_head();
+        goto_head();
         while (path.back()->name != name) {
             if (path.back()->next_brother == nullptr) {
                 return false;
@@ -129,11 +134,11 @@ private:
 
 public:
     FileSystem() {
-        add_version();
+        commit_version();
     }
 
-    void adjust_last_dir() {
-        adjust_head();
+    void goto_last_dir() {
+        goto_head();
         if (path.size() > 2) {
             path.pop_back();
         }
@@ -145,7 +150,7 @@ public:
         path.push_back(path.back()->first_son);
     }
 
-    void add_version(int model_version=-1) {
+    void commit_version(int model_version=-1) {
         version.push_back(new treeNode("root dir" + std::to_string(version.size()), 1, 0));
         // 内存泄漏！！！！path->first_son
         // std::cout << version.back()->type << ' ' << version.back()->first_son->type << '\n';
@@ -154,9 +159,9 @@ public:
         init_version(version.back(), model);
     }
 
-    std::vector<std::string> get_dir_content() {
+    std::vector<std::string> list_directory_contents() {
         std::vector<std::string> content;
-        adjust_head();
+        goto_head();
         while (path.back()->next_brother != nullptr) {
             content.push_back(path.back()->next_brother->name);
             path.push_back(path.back()->next_brother);
@@ -164,22 +169,22 @@ public:
         return content;
     }
 
-    void add_file(std::string name) {
+    void make_file(std::string name) {
         if (name_exist(name)) {
             std::cerr << name << ": name exist" << '\n';
         }
-        adjust_tail();
+        goto_tail();
         treeNode *t = new treeNode(name, 0);
         // std::cout << path.front()->name << ' ';
         // std::cout << name << ' ' << path.back()->cnt << '\n';
         rebuild_nodes(t);
     }
 
-    void add_dir(std::string name) {
+    void make_dir(std::string name) {
         if (name_exist(name)) {
             std::cerr << name << ": name exist" << '\n';
         }
-        adjust_tail();
+        goto_tail();
         treeNode *t = new treeNode(name, 1);
         rebuild_nodes(t);
     }
@@ -193,7 +198,7 @@ public:
         path.push_back(path.back()->first_son);
     }
 
-    void delete_file(std::string name) {
+    void remove_file(std::string name) {
         if (!go_to(name)) return;
         if (path.back()->type != 1) {
             std::cerr << name << ": not a file" << '\n';
@@ -201,7 +206,7 @@ public:
         delete_node();
     }
 
-    void delete_dir(std::string name) {
+    void remove_dir(std::string name) {
         if (!go_to(name)) return;
         if (path.back()->type != 1) {
             std::cerr << name << ": not a directory" << '\n';
@@ -217,36 +222,36 @@ public:
 void test() {
     FileSystem fs;
     // for (int i = 0; i < 10; i++) {
-    //     if (i & 1) fs.add_file(std::to_string(i));
-    //     else fs.add_dir(std::to_string(i));
+    //     if (i & 1) fs.make_file(std::to_string(i));
+    //     else fs.make_dir(std::to_string(i));
     // }
-    // auto content = fs.get_dir_content();
+    // auto content = fs.list_directory_contents();
     // std::cout << content.size() << '\n';
     // for (auto it : content) std::cout << it << ' ';
     // std::cout << '\n';
 
-    // fs.delete_file("0");
-    // fs.delete_file("3");
-    // fs.delete_file("6");
-    // fs.delete_file("9");
-    // fs.delete_dir("3");
-    // fs.delete_dir("0");
-    // fs.delete_dir("3");
-    // fs.delete_dir("5");
+    // fs.remove_file("0");
+    // fs.remove_file("3");
+    // fs.remove_file("6");
+    // fs.remove_file("9");
+    // fs.remove_dir("3");
+    // fs.remove_dir("0");
+    // fs.remove_dir("3");
+    // fs.remove_dir("5");
     // return 0;
     // for (int i = 0; i < 10; i++) {
     //     if (i % 3 == 0) {
-    //         fs.delete_file(std::to_string(i));
+    //         fs.remove_file(std::to_string(i));
     //     }
     // }
 
-    // content = fs.get_dir_content();
-    // // auto content = fs.get_dir_content();
+    // content = fs.list_directory_contents();
+    // // auto content = fs.list_directory_contents();
     // for (auto it : content) std::cout << it << ' ';
 }
 
 void print(FileSystem &fs) {
-    auto content = fs.get_dir_content();
+    auto content = fs.list_directory_contents();
     for (auto &it : content) {
         std::cout << it << ' ';
     }
@@ -254,29 +259,30 @@ void print(FileSystem &fs) {
 }
 
 void do_cmd(FileSystem &fs, int op, int nm=-1) {
-    // 0: add_file  1: add_dir  2: cd   3: cd ..
-    if (op == 0) fs.add_file(std::to_string(nm));
-    else if (op == 1) fs.add_dir(std::to_string(nm));
+    // 0: make_file  1: make_dir  2: cd   3: cd ..
+    if (op == 0) fs.make_file(std::to_string(nm));
+    else if (op == 1) fs.make_dir(std::to_string(nm));
     else if (op == 2) fs.change_directory(std::to_string(nm));
-    else fs.adjust_last_dir();
+    else fs.goto_last_dir();
 }
 
 void test1() {
     FileSystem fs;
-    // 0: add_file  1: add_dir  2: cd   3: cd ..
+    // 0: make_file  1: make_dir  2: cd   3: cd ..
     std::vector<int> op({1, 0, 1, 2, 0, 1,  3, 2, 0, 0,  3, 0, 2, 2, 0});
     std::vector<int> nm({1, 2, 3, 1, 4, 5, -1, 3, 6, 7, -1, 8, 1, 5, 9});
     for (int i = 0; i < op.size(); i++) {
         do_cmd(fs, op[i], nm[i]);
     }
-    fs.adjust_last_dir();
-    fs.adjust_last_dir();
-
-    fs.add_version(0);
-    fs.add_file("10");
+    print(fs);
+    fs.goto_last_dir();
+    fs.goto_last_dir();
+    print(fs);
+    fs.commit_version(0);
+    fs.make_file("10");
     fs.switch_version(0);
     print(fs);
-    fs.delete_dir("3");
+    fs.remove_dir("3");
     print(fs);
     fs.switch_version(1);
     print(fs);
