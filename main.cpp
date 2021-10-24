@@ -36,10 +36,12 @@ public:
     Logger() = default;
     Logger(const Logger&) = delete;
     Logger& operator=(const Logger&) = delete;
+
     static Logger& get_logger() {
         static Logger logger;
         return logger;
     }
+
     void log(std::string content) {
         logs.push_back("(" + get_time() + ") " + content);
     }
@@ -47,18 +49,17 @@ public:
 
 class treeNode {
 public:
-    std::string name, content;
+    std::string name;
     int type;   // 0: 文件  1: 文件夹   2: 头节点
     int cnt;
-    treeNode *next_brother, *first_son;
 
+    treeNode *next_brother, *first_son;
     treeNode() = default;
     treeNode(std::string name, int type, int cnt=1) {
         this->name = name, this->type = type;
-        this->content = "";
         this->cnt = cnt;
         this->next_brother = nullptr;
-        if (type == 0) this->first_son = nullptr;
+        if (type == 0 || type == 2) this->first_son = nullptr;
         else if (type == 1) this->first_son = new treeNode("head node", 2, cnt);
     }
 };
@@ -66,9 +67,34 @@ public:
 class FileSystem {
 private:
     std::vector<treeNode*> path, version;
+    Logger &logger = Logger::get_logger();
+
+    void travel_tree(treeNode *p) {
+        if (p == nullptr) return;
+        static int tab_cnt = 1;
+        for (unsigned int i = 0; i < tab_cnt; i++) {
+            if (i < tab_cnt - 1) {
+                std::cout << "    ";
+            } else if (p->next_brother != nullptr) {
+                std::cout << "├── ";
+            } else {
+                std::cout << "└── ";
+            }
+        }
+        std::cout << p->name << '\n';
+        // std::cout << p << ' ' << p->first_son << '\n';
+        tab_cnt++;
+        travel_tree(p->first_son);
+        tab_cnt--;
+        travel_tree(p->next_brother);
+    }
 
     void decrease_counter(treeNode *p) {
-        if (--p->cnt == 0) delete p;
+        if (--p->cnt == 0) {
+            logger.log("Node " + p->name + " will be deleted...");
+            delete p;
+            logger.log("Deleting completed.");
+        }
     }
 
     void recursive_delete_nodes(treeNode *p, bool delete_brother=false) {
@@ -90,6 +116,7 @@ private:
         recursive_modify_counter(p->first_son, diff, true);
         if (modify_brother) recursive_modify_counter(p->next_brother, diff, true);
         p->cnt += diff;
+        logger.log("The counter for node " + p->name + " has been incremented by one.");
     }
 
     bool is_son() {
@@ -97,10 +124,12 @@ private:
     }
 
     void rebuild_nodes(treeNode *p) {
-        // std::cout << p->name << ' ';
-        int relation = 0;
+        int relation = 0;   // 0 next_brother 1 first_son
         std::stack<treeNode*> stk;
         stk.push(p);
+        // for (int i = 0; i < path.size(); i++) {
+        //     std::cout << path[i]->name << '\n';
+        // }
         for (; path.back()->cnt > 1; path.pop_back()) {
             treeNode *t = new treeNode();
             (*t) = (*path.back());
@@ -110,25 +139,17 @@ private:
             stk.push(t);
             decrease_counter(path.back());
         }
-        // std::cout << path.back()->cnt << ' ';
         (relation ? path.back()->first_son : path.back()->next_brother) = stk.top();
         for (; !stk.empty(); stk.pop()) {
             path.push_back(stk.top());
         }
         if (path.back() == nullptr) path.pop_back();
-        // std::cout << '\n';
     }
 
     void init_version(treeNode *p, treeNode *vp) {
-        if (vp == nullptr) vp = p;
         p->first_son = vp->first_son;
-        // std::cout << p->name << ' ' << vp->name << '\n';
-        // std::cout << p->cnt << ' ' << vp->cnt << '\n';
-        // std::cout << p->first_son->cnt << '\n';
         recursive_modify_counter(p, 1);
-        // std::cout << p->first_son->cnt << '\n';
-        path.push_back(p);
-        path.push_back(p->first_son);
+        switch_version(version.size() - 1);
     }
 
     void goto_tail() {
@@ -139,7 +160,6 @@ private:
 
     void goto_head() {
         while (!is_son()) {
-            // std::cout << path.size() << ' ' << path.back()->type << '\n';
             path.pop_back();
         }
     }
@@ -166,7 +186,6 @@ private:
         }
         return true;
     }
-
 public:
     FileSystem() {
         commit_version();
@@ -187,10 +206,8 @@ public:
 
     void commit_version(int model_version=-1) {
         version.push_back(new treeNode("root dir" + std::to_string(version.size()), 1, 0));
-        // 内存泄漏！！！！path->first_son
-        // std::cout << version.back()->type << ' ' << version.back()->first_son->type << '\n';
         if (model_version != -1) delete version.back()->first_son;
-        treeNode *model = model_version == -1 ? nullptr : version[model_version];
+        treeNode *model = model_version == -1 ? version.back() : version[model_version];
         init_version(version.back(), model);
     }
 
@@ -207,20 +224,21 @@ public:
     void make_file(std::string name) {
         if (name_exist(name)) {
             std::cerr << name << ": name exist" << '\n';
+            return;
         }
         goto_tail();
         treeNode *t = new treeNode(name, 0);
-        // std::cout << path.front()->name << ' ';
-        // std::cout << name << ' ' << path.back()->cnt << '\n';
         rebuild_nodes(t);
     }
 
     void make_dir(std::string name) {
         if (name_exist(name)) {
             std::cerr << name << ": name exist" << '\n';
+            return;
         }
         goto_tail();
         treeNode *t = new treeNode(name, 1);
+        // std::cout << t->name << ' ' << t->next_brother << ' ' << t->first_son << ' ' << t->first_son->name << '\n';
         rebuild_nodes(t);
     }
 
@@ -248,42 +266,15 @@ public:
             return;
         }
         treeNode *t = path.back();
-        path.pop_back();
+        path.pop_back();        // 20211023
         rebuild_nodes(t->next_brother);
-        recursive_delete_nodes(path.back());
+        recursive_delete_nodes(t);
+    }
+
+    void tree() {
+        travel_tree(path.front());
     }
 };
-
-void test() {
-    FileSystem fs;
-    // for (int i = 0; i < 10; i++) {
-    //     if (i & 1) fs.make_file(std::to_string(i));
-    //     else fs.make_dir(std::to_string(i));
-    // }
-    // auto content = fs.list_directory_contents();
-    // std::cout << content.size() << '\n';
-    // for (auto it : content) std::cout << it << ' ';
-    // std::cout << '\n';
-
-    // fs.remove_file("0");
-    // fs.remove_file("3");
-    // fs.remove_file("6");
-    // fs.remove_file("9");
-    // fs.remove_dir("3");
-    // fs.remove_dir("0");
-    // fs.remove_dir("3");
-    // fs.remove_dir("5");
-    // return 0;
-    // for (int i = 0; i < 10; i++) {
-    //     if (i % 3 == 0) {
-    //         fs.remove_file(std::to_string(i));
-    //     }
-    // }
-
-    // content = fs.list_directory_contents();
-    // // auto content = fs.list_directory_contents();
-    // for (auto it : content) std::cout << it << ' ';
-}
 
 void print(FileSystem &fs) {
     auto content = fs.list_directory_contents();
@@ -301,30 +292,30 @@ void do_cmd(FileSystem &fs, int op, int nm=-1) {
     else fs.goto_last_dir();
 }
 
-void test1() {
+void test() {
     FileSystem fs;
     // 0: make_file  1: make_dir  2: cd   3: cd ..
-    std::vector<int> op({1, 0, 1, 2, 0, 1,  3, 2, 0, 0,  3, 0, 2, 2, 0});
-    std::vector<int> nm({1, 2, 3, 1, 4, 5, -1, 3, 6, 7, -1, 8, 1, 5, 9});
+    std::vector<int> op({1, 0, 1, 2, 1, 3, 2, 0, 0, 3, 1, 2, 0, 3, 2, 2, 0});
+    std::vector<int> nm({1, 2, 3, 1, 5, -1, 3, 6, 7, -1, 8, 8, 4, -1, 1, 5, 9});
     for (int i = 0; i < op.size(); i++) {
         do_cmd(fs, op[i], nm[i]);
     }
-    print(fs);
+    fs.tree();
     fs.goto_last_dir();
     fs.goto_last_dir();
-    print(fs);
+    fs.goto_last_dir();
+    fs.goto_last_dir();
     fs.commit_version(0);
-    fs.make_file("10");
-    fs.switch_version(0);
-    print(fs);
+    fs.remove_dir("1");
     fs.remove_dir("3");
-    print(fs);
-    fs.switch_version(1);
-    print(fs);
+    puts("");
+    fs.tree();
+    fs.switch_version(0);
+    fs.tree();
+    // head node
 }
 
 int main() {
-    // test();
-    test1();
+    test();
     return 0;
 }
