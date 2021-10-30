@@ -51,7 +51,7 @@ private:
     bool node_exist(int id);
     int get_new_id();
 public:
-    int get_new_node(std::string name = "");
+    int get_new_node(std::string name);
     void delete_node(int idx);
     int update_content(int idx, std::string content);
     int update_name(int idx, std::string name);
@@ -65,18 +65,18 @@ public:
 
 class FileSystem {
 private:
-    class treeNode {
+    struct treeNode {
     public:
-        std::string name;
         int type;   // 0: 文件  1: 文件夹   2: 头节点
         int cnt, link;
         treeNode *next_brother, *first_son;
 
         treeNode();
-        treeNode(std::string name, int type, int cnt=1);
+        treeNode(int type, int cnt=1);
     };
 
-    std::vector<treeNode*> path, version;
+    std::vector<treeNode*> version;
+    std::vector<treeNode*> path;
     Logger &logger = Logger::get_logger();
     NodeManager node_manager;
 
@@ -262,12 +262,13 @@ int NodeManager::_get_counter(int idx) {
 
                         /* ======= class treeNode ======= */
 FileSystem::treeNode::treeNode() = default;
-FileSystem::treeNode::treeNode(std::string name, int type, int cnt) {
-    this->name = name, this->type = type;
+FileSystem::treeNode::treeNode(int type, int cnt) {
+    this->type = type;
     this->cnt = cnt;
     this->next_brother = nullptr;
+    this->link = -1;
     if (type == 0 || type == 2) this->first_son = nullptr;
-    else if (type == 1) this->first_son = new treeNode("head node", 2, cnt);
+    else if (type == 1) this->first_son = new treeNode(2, cnt);
 }
 
 
@@ -276,6 +277,10 @@ FileSystem::treeNode::treeNode(std::string name, int type, int cnt) {
 void FileSystem::travel_tree(treeNode *p) {
     if (p == nullptr) return;
     static int tab_cnt = 1;
+    if (p->type == 2) {
+        travel_tree(p->next_brother);
+        return;
+    }
     for (unsigned int i = 0; i < tab_cnt; i++) {
         if (i < tab_cnt - 1) {
             std::cout << "    ";
@@ -285,7 +290,8 @@ void FileSystem::travel_tree(treeNode *p) {
             std::cout << "└── ";
         }
     }
-    std::cout << p->name << ": " << node_manager._get_counter(p->link) << '\n';
+    std::cout << node_manager.get_name(p->link) << '\n';
+    // std::cout << (p->link == -1 ? "head node" : node_manager.get_name(p->link)) << ": " << node_manager._get_counter(p->link) << '\n';
     // std::cout << p << ' ' << p->first_son << '\n';
     tab_cnt++;
     travel_tree(p->first_son);
@@ -295,7 +301,7 @@ void FileSystem::travel_tree(treeNode *p) {
 
 void FileSystem::decrease_counter(treeNode *p) {
     if (--p->cnt == 0) {
-        logger.log("Node " + p->name + " will be deleted...");
+        logger.log("Node " + node_manager.get_name(p->link) + " will be deleted...");
         node_manager.delete_node(p->link);
         delete p;
         logger.log("Deleting completed.");
@@ -321,7 +327,7 @@ void FileSystem::recursive_modify_counter(treeNode *p, int diff, bool modify_bro
     recursive_modify_counter(p->first_son, diff, true);
     if (modify_brother) recursive_modify_counter(p->next_brother, diff, true);
     p->cnt += diff;
-    logger.log("The counter for node " + p->name + " has been incremented by one.");
+    logger.log("The counter for node " + node_manager.get_name(p->link) + " has been incremented by one.");
 }
 
 bool FileSystem::is_son() {
@@ -381,7 +387,7 @@ bool FileSystem::go_to(std::string name) {
         return false;
     }
     goto_head();
-    while (path.back()->name != name) {
+    while (node_manager.get_name(path.back()->link) != name) {
         if (path.back()->next_brother == nullptr) {
             return false;
         }
@@ -408,7 +414,8 @@ void FileSystem::switch_version(int version_id) {
 }
 
 void FileSystem::commit_version(int model_version) {
-    version.push_back(new treeNode("root dir" + std::to_string(version.size()), 1, 0));
+    version.push_back(new treeNode(1, 0));
+    version.back()->link = node_manager.get_new_node("root");
     if (model_version != -1) delete version.back()->first_son;
     treeNode *model = model_version == -1 ? version.back() : version[model_version];
     init_version(version.back(), model);
@@ -418,7 +425,7 @@ std::vector<std::string> FileSystem::list_directory_contents() {
     std::vector<std::string> content;
     goto_head();
     while (path.back()->next_brother != nullptr) {
-        content.push_back(path.back()->next_brother->name);
+        content.push_back(node_manager.get_name(path.back()->next_brother->link));
         path.push_back(path.back()->next_brother);
     }
     return content;
@@ -430,8 +437,8 @@ void FileSystem::make_file(std::string name) {
         return;
     }
     goto_tail();
-    treeNode *t = new treeNode(name, 0);
-    t->link = node_manager.get_new_node();
+    treeNode *t = new treeNode(0);
+    t->link = node_manager.get_new_node(name);
     rebuild_nodes(t);
 }
 
@@ -441,8 +448,8 @@ void FileSystem::make_dir(std::string name) {
         return;
     }
     goto_tail();
-    treeNode *t = new treeNode(name, 1);
-    t->link = node_manager.get_new_node();
+    treeNode *t = new treeNode(1);
+    t->link = node_manager.get_new_node(name);
     // std::cout << t->name << ' ' << t->next_brother << ' ' << t->first_son << ' ' << t->first_son->name << '\n';
     rebuild_nodes(t);
 }
