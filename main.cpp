@@ -84,7 +84,7 @@ private:
     void decrease_counter(treeNode *p);
     void recursive_delete_nodes(treeNode *p, bool delete_brother=false);
     void delete_node();
-    void recursive_modify_counter(treeNode *p, int diff, bool modify_brother=false);
+    void recursive_increase_counter(treeNode *p, bool modify_brother=false);
     bool is_son();
     void rebuild_nodes(treeNode *p);
     void init_version(treeNode *p, treeNode *vp);
@@ -104,6 +104,40 @@ public:
     void change_directory(std::string name);
     void remove_file(std::string name);
     void remove_dir(std::string name);
+    void update_name(std::string fr_name, std::string to_name) {
+        if (!go_to(fr_name)) return;
+        treeNode *t = new treeNode();
+        treeNode *back = path.back();
+        *t = *back;
+        t->cnt = 1;
+        t->link = node_manager.update_name(t->link, to_name);
+        path.pop_back();
+        rebuild_nodes(t);
+        decrease_counter(back);  // 这里必须最后decrease，如果提前回导致节点丢失
+    }
+    void update_content(std::string name, std::string content) {
+        if (!go_to(name)) return;
+        if (path.back()->type != 0) {
+            std::cerr << name << " is not a file." << '\n';
+            return;
+        }
+        treeNode *t = new treeNode();
+        treeNode *back = path.back();
+        *t = *back;
+        t->cnt = 1;
+        t->link = node_manager.update_content(t->link, content);
+        path.pop_back();
+        rebuild_nodes(t);
+        decrease_counter(back);
+    }
+    std::string get_content(std::string name) {
+        if (!go_to(name)) return "";
+        if (path.back()->type != 0) {
+            std::cerr << name << " is not a file." << '\n';
+            return "";
+        }
+        return node_manager.get_content(path.back()->link);
+    }
     void tree();
 };
 
@@ -115,11 +149,11 @@ void print(FileSystem &fs) {
     std::cout << '\n';
 }
 
-void do_cmd(FileSystem &fs, int op, int nm=-1) {
+void do_cmd(FileSystem &fs, int op, std::string nm="-1") {
     // 0: make_file  1: make_dir  2: cd   3: cd ..
-    if (op == 0) fs.make_file(std::to_string(nm));
-    else if (op == 1) fs.make_dir(std::to_string(nm));
-    else if (op == 2) fs.change_directory(std::to_string(nm));
+    if (op == 0) fs.make_file(nm);
+    else if (op == 1) fs.make_dir(nm);
+    else if (op == 2) fs.change_directory(nm);
     else fs.goto_last_dir();
 }
 
@@ -127,14 +161,19 @@ void test() {
     FileSystem fs;
     // 0: make_file  1: make_dir  2: cd   3: cd ..
     std::vector<int> op({1, 0, 1, 2, 1, 3, 2, 0, 0, 3, 1, 2, 0, 3, 2, 2, 0, 3, 3, 3});
-    std::vector<int> nm({1, 2, 3, 1, 5, -1, 3, 6, 7, -1, 8, 8, 4, -1, 1, 5, 9, -1, -1, -1});
+    std::vector<std::string> nm({"1", "2", "3", "1", "5", "-1", "3", "6", "7", "-1", "8", "8", "4", "-1", "1", "5", "9", "-1", "-1", "-1"});
     for (int i = 0; i < op.size(); i++) {
         do_cmd(fs, op[i], nm[i]);
     }
+    fs.update_content("2", "123123123");
     fs.commit_version(0);
-    fs.remove_dir("8");
+    fs.update_content("2", "312312312312");
     fs.switch_version(0);
+    fs.commit_version(0);
     fs.tree();
+    fs.remove_file("2");
+    fs.tree();
+    fs.switch_version(0);
 }
 
 int main() {
@@ -322,11 +361,12 @@ void FileSystem::delete_node() {
     decrease_counter(t);
 }
 
-void FileSystem::recursive_modify_counter(treeNode *p, int diff, bool modify_brother) {
+void FileSystem::recursive_increase_counter(treeNode *p, bool modify_brother) {
     if (p == nullptr) return;
-    recursive_modify_counter(p->first_son, diff, true);
-    if (modify_brother) recursive_modify_counter(p->next_brother, diff, true);
-    p->cnt += diff;
+    recursive_increase_counter(p->first_son, true);
+    if (modify_brother) recursive_increase_counter(p->next_brother, true);
+    p->cnt ++;
+    node_manager.increase_counter(p->link);
     logger.log("The counter for node " + node_manager.get_name(p->link) + " has been incremented by one.");
 }
 
@@ -357,7 +397,7 @@ void FileSystem::rebuild_nodes(treeNode *p) {
 
 void FileSystem::init_version(treeNode *p, treeNode *vp) {
     p->first_son = vp->first_son;
-    recursive_modify_counter(p, 1);
+    recursive_increase_counter(p, 1);
     switch_version(version.size() - 1);
 }
 
@@ -469,7 +509,11 @@ void FileSystem::remove_file(std::string name) {
         std::cerr << name << ": not a file" << '\n';
         return;
     }
-    delete_node();
+    treeNode *t = path.back();
+    path.pop_back();
+    // std::cout << node_manager.get_content(t->next_brother->link) << '\n';
+    rebuild_nodes(t->next_brother);
+    decrease_counter(t);
 }
 
 void FileSystem::remove_dir(std::string name) {
@@ -486,6 +530,7 @@ void FileSystem::remove_dir(std::string name) {
 
 void FileSystem::tree() {
     travel_tree(path.front());
+    puts("");
 }
 
 
