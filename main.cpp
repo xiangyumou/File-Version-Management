@@ -34,7 +34,7 @@ public:
      * successfully executed, the reason for not being successfully executed 
      * will be stored in this variable.
     */
-    std::string informaion;
+    std::string *information;
 
     /**
      * This function can be used in multiple places to obtain a logger.
@@ -136,7 +136,7 @@ private:
 
     bool check_path();
     bool check_node(treeNode *p, int line);
-    bool travel_tree(treeNode *p);
+    bool travel_tree(treeNode *p, std::string &tree_info);
     bool decrease_counter(treeNode *p);
     bool recursive_delete_nodes(treeNode *p, bool delete_brother=false);
     bool delete_node();
@@ -154,51 +154,21 @@ public:
     bool goto_last_dir();
     bool switch_version(int version_id);
     bool commit_version(int model_version=-1);
-    std::vector<std::string> list_directory_contents();
+    bool list_directory_contents(std::vector<std::string> &content);
     bool make_file(std::string name);
     bool make_dir(std::string name);
     bool change_directory(std::string name);
     bool remove_file(std::string name);
     bool remove_dir(std::string name);
-    void update_name(std::string fr_name, std::string to_name) {
-        if (!go_to(fr_name)) return;
-        treeNode *t = new treeNode();
-        treeNode *back = path.back();
-        *t = *back;
-        t->cnt = 1;
-        t->link = node_manager.update_name(t->link, to_name);
-        path.pop_back();
-        rebuild_nodes(t);
-        decrease_counter(back);  // 这里必须最后decrease，如果提前回导致节点丢失
-    }
-    void update_content(std::string name, std::string content) {
-        if (!go_to(name)) return;
-        if (path.back()->type != 0) {
-            std::cerr << name << " is not a file." << '\n';
-            return;
-        }
-        treeNode *t = new treeNode();
-        treeNode *back = path.back();
-        *t = *back;
-        t->cnt = 1;
-        t->link = node_manager.update_content(t->link, content);
-        path.pop_back();
-        rebuild_nodes(t);
-        decrease_counter(back);
-    }
-    std::string get_content(std::string name) {
-        if (!go_to(name)) return "";
-        if (path.back()->type != 0) {
-            std::cerr << name << " is not a file." << '\n';
-            return "";
-        }
-        return node_manager.get_content(path.back()->link);
-    }
-    bool tree();
+    bool update_name(std::string fr_name, std::string to_name);
+    bool update_content(std::string name, std::string content);
+    bool get_content(std::string name, std::string &content);
+    bool tree(std::string &tree_info);
 };
 
 void print(FileSystem &fs) {
-    auto content = fs.list_directory_contents();
+    std::vector<std::string> content;
+    fs.list_directory_contents(content);
     for (auto &it : content) {
         std::cout << it << ' ';
     }
@@ -208,14 +178,31 @@ void print(FileSystem &fs) {
 void do_cmd(FileSystem &fs, int op, std::string nm="-1") {
     // 0: make_file  1: make_dir  2: cd   3: cd ..
     Logger &logger = Logger::get_logger();
-    if (op == 0) fs.make_file(nm);
-    else if (op == 1) fs.make_dir(nm);
-    else if (op == 2) fs.change_directory(nm);
-    else fs.goto_last_dir();
+    if (op == 0) {
+        if (!fs.make_file(nm)) {
+            std::cout << logger.information << '\n';
+        }
+    } else if (op == 1) {
+        if (!fs.make_dir(nm)) {
+            std::cout << logger.information << '\n';
+        }
+    } else if (op == 2) {
+        if (!fs.change_directory(nm)) {
+            std::cout << logger.information << '\n';
+        }
+    } else {
+        if (!fs.goto_last_dir()) {
+            std::cout << logger.information << '\n';
+        }
+    }
 }
 
 void test() {
+    Logger logger = Logger::get_logger();
     FileSystem fs;
+    if (!fs.remove_dir("3")) {
+        std::cout << *logger.information << '\n';
+    }
     // 0: make_file  1: make_dir  2: cd   3: cd ..
     std::vector<int> op({1, 0, 1, 2, 1, 3, 2, 0, 0, 3, 1, 2, 0, 3, 2, 2, 0, 3, 3, 3});
     std::vector<std::string> nm({"1", "2", "3", "1", "5", "-1", "3", "6", "7", "-1", "8", "8", "4", "-1", "1", "5", "9", "-1", "-1", "-1"});
@@ -230,7 +217,9 @@ void test() {
     fs.remove_file("2");
     fs.switch_version(0);
     fs.remove_dir("3");
-    fs.tree();
+    std::string tree_info;
+    fs.tree(tree_info);
+    std::cout << tree_info;
 }
 
 int main() {
@@ -390,30 +379,30 @@ bool FileSystem::check_node(treeNode *p, int line) {
     return true;
 }
 
-bool FileSystem::travel_tree(treeNode *p) {
+bool FileSystem::travel_tree(treeNode *p,std::string &tree_info) {
     if (p == nullptr) {
         logger.log("Get a null pointer in line " + std::to_string(__LINE__));
         return false;
     }
     static int tab_cnt = 1;
     if (p->type == 2) {
-        travel_tree(p->next_brother);
+        travel_tree(p->next_brother, tree_info);
         return true;
     }
     for (unsigned int i = 0; i < tab_cnt; i++) {
         if (i < tab_cnt - 1) {
-            std::cout << "    ";
+            tree_info += "    ";
         } else if (p->next_brother != nullptr) {
-            std::cout << "├── ";
+            tree_info += "├── ";
         } else {
-            std::cout << "└── ";
+            tree_info += "└── ";
         }
     }
-    std::cout << node_manager.get_name(p->link) << '\n';
+    tree_info += node_manager.get_name(p->link) + '\n';
     tab_cnt++;
-    travel_tree(p->first_son);
+    travel_tree(p->first_son, tree_info);
     tab_cnt--;
-    travel_tree(p->next_brother);
+    travel_tree(p->next_brother, tree_info);
     return true;
 }
 
@@ -520,7 +509,8 @@ bool FileSystem::goto_head() {
 }
 
 bool FileSystem::name_exist(std::string name) {
-    auto dir_content = list_directory_contents();
+    std::vector<std::string> dir_content;
+    if (!list_directory_contents(dir_content)) return false;
     for (auto &nm : dir_content) {
         if (nm == name) return true;
     }
@@ -529,7 +519,7 @@ bool FileSystem::name_exist(std::string name) {
 
 bool FileSystem::go_to(std::string name) {
     if (!name_exist(name)) {
-        logger.log("no file or directory named " + name);
+        logger.log("no file or directory named " + name, Logger::WARNING, __LINE__);
         return false;
     }
     if (!goto_head()) return false;
@@ -580,14 +570,14 @@ bool FileSystem::commit_version(int model_version) {
     return true;
 }
 
-std::vector<std::string> FileSystem::list_directory_contents() {
-    std::vector<std::string> content;
-    if (!goto_head()) return content;
+bool FileSystem::list_directory_contents(std::vector<std::string> &content) {
+    if (!goto_head()) return false;
+    if (!check_path()) return false;
     while (path.back()->next_brother != nullptr) {
         content.push_back(node_manager.get_name(path.back()->next_brother->link));
         path.push_back(path.back()->next_brother);
     }
-    return content;
+    return true;
 }
 
 bool FileSystem::make_file(std::string name) {
@@ -657,9 +647,61 @@ bool FileSystem::remove_dir(std::string name) {
     return true;
 }
 
-bool FileSystem::tree() {
+bool FileSystem::update_name(std::string fr_name, std::string to_name) {
+    if (!go_to(fr_name)) return false;
+    treeNode *t = new treeNode();
+    if (t == nullptr) {
+        logger.log("The system did not allocate memory for this operation.", Logger::FATAL, __LINE__);
+        return false;
+    }
     if (!check_path()) return false;
-    if (!travel_tree(path.front())) return false;
+    treeNode *back = path.back();
+    *t = *back;
+    t->cnt = 1;
+    t->link = node_manager.update_name(t->link, to_name);
+    path.pop_back();
+    if (!rebuild_nodes(t)) return false;
+    if (!decrease_counter(back)) return false; 
+    // 这里必须最后decrease，如果提前回导致节点丢失
+    return true;
+}
+
+bool FileSystem::update_content(std::string name, std::string content) {
+    if (!go_to(name)) false;
+    if (!check_path()) return false;
+    if (path.back()->type != 0) {
+        logger.log(name + ": Not a file.");
+        return false;
+    }
+    treeNode *back = path.back();
+    treeNode *t = new treeNode();
+    if (t == nullptr) {
+        logger.log("The system did not allocate memory for this operation.", Logger::FATAL, __LINE__);
+        return false;
+    }
+    *t = *back;
+    t->cnt = 1;
+    t->link = node_manager.update_content(t->link, content);
+    path.pop_back();
+    if (!rebuild_nodes(t)) return false;
+    if (!decrease_counter(back)) return false;
+    return true;
+}
+
+bool FileSystem::get_content(std::string name, std::string &content) {
+    if (!go_to(name)) return "";
+    if (!check_path()) return false;
+    if (path.back()->type != 0) {
+        logger.log(name + ": Not a file.");
+        return false;
+    }
+    content = node_manager.get_content(path.back()->link);
+    return true;
+}
+
+bool FileSystem::tree(std::string &tree_info) {
+    if (!check_path()) return false;
+    if (!travel_tree(path.front(), tree_info)) return false;
     puts("");
     return true;
 }
@@ -677,7 +719,9 @@ std::string Logger::get_time() {
     return std::string(t);
 }
 
-Logger::Logger() = default;
+Logger::Logger() {
+    information = new std::string();
+}
 
 Logger& Logger::get_logger() {
     static Logger logger;
@@ -686,16 +730,17 @@ Logger& Logger::get_logger() {
 
 void Logger::log(std::string content, LOG_LEVEL level, int line) {
     static std::ofstream out(log_file, std::ios_base::app);
-    std::string informaion = " (" + get_time() + ") " + content;
+    *information = std::string(' ' + content);
+    std::string app_tm = "(" + get_time() + ")" + *information;
     if (level == INFO) {
-        out << "level: INFO " << '\n' << informaion << std::endl;
+        out << "level: INFO " << '\n' << app_tm << std::endl;
     } else if (level == DEBUG) {
-        out << "level: DEBUG " << '\n' <<  "line: " << line << informaion << std::endl;
-        std::cerr << informaion << std::endl;
+        out << "level: DEBUG " << '\n' << "line: " << line << ' ' << app_tm << std::endl;
+        std::cerr << "line: " << line << ' ' << app_tm << std::endl;
     } else if (level == WARNING) {
-        out << "level: WARNING " << '\n' << "line: " << line << informaion << std::endl;
+        out << "level: WARNING " << '\n' << "line: " << line << ' ' << app_tm << std::endl;
     } else {
-        out << "level: FATAL " << '\n' << "line: " << line << informaion << std::endl;
-        std::cerr << "level: FATAL " << '\n' << "line: " << line << informaion << std::endl;
+        out << "level: FATAL " << '\n' << "line: " << line << ' ' << app_tm << std::endl;
+        std::cerr << "level: FATAL " << '\n' << "line: " << line << ' ' << app_tm << std::endl;
     }
 }
