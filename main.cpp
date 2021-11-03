@@ -2,8 +2,10 @@
 #include <cstring>
 #include <cstdlib>
 #include <ctime>
+#include <cmath>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include <vector>
 #include <stack>
@@ -13,10 +15,12 @@
 #define ll std::cerr << "----1111----" << '\n';
 #define rr std::cerr << "----2222----" << '\n';
 
+typedef std::vector<std::vector<std::string>> vvs;
+
 class Logger {
 private:
     // Set the log file name here
-    std::string log_file = "Logger.log";
+    std::string log_file = "log.chm";
 
     // Gets the current time as a string
     std::string get_time();
@@ -80,6 +84,79 @@ public:
      * number where the log function is called, that is, __LINE__.
     */
     void log(std::string content, LOG_LEVEL level=INFO, int line=__LINE__);
+};
+
+class Encryptor {
+protected:
+static const int N = 1 << 10;
+private:
+    static const char PLACEHOLDER = '\0';
+
+    struct Complex {
+        double a, b;
+        Complex();
+        Complex(double a, double b);
+        Complex operator+(const Complex &r) const;
+        Complex operator-(const Complex &r) const;
+        Complex operator*(const Complex &r) const;
+    } buf[N << 1], block[N];
+
+    void fft(Complex a[], int n, int type);
+    bool encrypt_block(std::vector<std::pair<double, double>> &res);
+    bool decrypt_block(std::vector<int> &res);
+
+protected:
+
+    bool encrypt_sequence(std::vector<int> &sequence, std::vector<std::pair<double, double>> &res);
+    bool decrypt_sequence(std::vector<std::pair<double, double>> &sequence, std::vector<int> &res);
+};
+
+class Saver : private Encryptor {
+private:
+    struct dataNode {
+        unsigned long long name_hash, data_hash;
+        int len;
+        std::vector<std::pair<double, double>> data;
+
+        dataNode();
+        dataNode(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> &data);
+    };
+
+    std::string data_file = "data.chm";
+    std::map<unsigned long long, dataNode> mp;
+    Logger logger = Logger::get_logger();
+
+    template <class T>
+    unsigned long long get_hash(T &s);
+
+    bool load_file();
+
+    /**
+     * 在map中的存储方式
+     * 以name_hash作为主键，会检索出一个dataNode，里面包括了name_hash, data_hash, len, data.
+     * 其中 len为data的pair的对数 / N
+    */
+    void save_data(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> data);
+
+public:
+    Saver();
+
+    /**
+     * 保存的格式：
+     * name_hash data_hash len 后面跟len对浮点数
+    */
+    ~Saver();
+
+    /**
+     * data字符串的格式:
+     * 数据块的个数 
+     * 每个数据块中数据的个数
+     * 数据的长度
+     * 数据的字符表示
+     * 每个单元之间都用空格隔开
+    */
+    bool save(std::string name, std::vector<std::vector<std::string>> &content);
+    bool load(std::string name, std::vector<std::vector<std::string>> &content, bool mandatory_access = false);
 };
 
 class NodeManager {
@@ -743,4 +820,268 @@ void Logger::log(std::string content, LOG_LEVEL level, int line) {
         out << "level: FATAL " << '\n' << "line: " << line << ' ' << app_tm << std::endl;
         std::cerr << "level: FATAL " << '\n' << "line: " << line << ' ' << app_tm << std::endl;
     }
+}
+
+
+
+
+
+                        /* ======= class Encryptor ======= */
+Encryptor::Complex::Complex() = default;
+Encryptor::Complex::Complex(double a, double b) : a(a), b(b) {}
+Encryptor::Complex Encryptor::Complex::operator+(const Complex &r) const {
+    return Complex(a + r.a, b + r.b);
+}
+Encryptor::Complex Encryptor::Complex::operator-(const Complex &r) const {
+    return Complex(a - r.a, b - r.b);
+}
+Encryptor::Complex Encryptor::Complex::operator*(const Complex &r) const {
+    return Complex(a * r.a - b * r.b, a * r.b + b * r.a);
+}
+
+    void Encryptor::fft(Complex a[], int n, int type) {
+        const static double Pi = acos(-1.0);
+        if (n == 1) return;
+        int m = n >> 1;
+        for (int i = 0; i < m; i++) {
+            buf[i] = a[i << 1];
+            buf[i + m] = a[i << 1 | 1];
+        }
+        memcpy(a, buf, sizeof(Complex) * n);
+        Complex *a1 = a, *a2 = a + m;
+        fft(a, m, type);
+        fft(a + m, m, type);
+        Complex wn = Complex(1, 0), u = Complex(cos(2 * Pi / n), type * sin(2 *Pi / n));
+        for (int i = 0; i < m; i++) {
+            Complex t = wn * a[m + i];
+            wn = wn * u;
+            buf[i] = a[i] + t;
+            buf[i + m] = a[i] - t;
+        }
+        memcpy(a, buf, sizeof(Complex) * n);
+    }
+
+    bool Encryptor::encrypt_block(std::vector<std::pair<double, double>> &res) {
+        fft(block, N, 1);
+        res.clear();
+        for (int i = 0; i < N; i++) {
+            res.push_back(std::make_pair(block[i].a, block[i].b));
+        }
+        return true;
+    }
+
+    bool Encryptor::decrypt_block(std::vector<int> &res) {
+        fft(block, N, -1);
+        res.clear();
+        for (int i = 0; i < N; i++) {
+            res.push_back((int)(block[i].a / N + 0.5));
+            if (block[i].a < 0.0 && std::abs(block[i].a) > 1e-2) res.back()--;
+        }
+        return true;
+    }
+
+    bool Encryptor::encrypt_sequence(std::vector<int> &sequence, std::vector<std::pair<double, double>> &res) {
+        int len = sequence.size(), idx = 1;
+        while (sequence.size() % N != 0) sequence.push_back(PLACEHOLDER);
+        memset(block, 0, sizeof block);
+        block[0].a = len;
+        res.clear();
+        std::vector<std::pair<double, double>> tmp;
+        for (auto &it : sequence) {
+            block[idx++].a = it;
+            if (idx == N) {
+                encrypt_block(tmp);
+                res.insert(res.end(), tmp.begin(), tmp.end());
+                idx = 0;
+                memset(block, 0, sizeof block);
+                tmp.clear();
+            }
+        }
+        return true;
+    }
+
+    bool Encryptor::decrypt_sequence(std::vector<std::pair<double, double>> &sequence, std::vector<int> &res) {
+        if (sequence.size() % N != 0) return false;
+        memset(block, 0, sizeof block);
+        int idx = 0;
+        res.clear();
+        int len = -1;
+        std::vector<int> tmp;
+        for (auto &it : sequence) {
+            block[idx].a = it.first;
+            block[idx++].b = it.second;
+            if (idx == N) {
+                decrypt_block(tmp);
+                if (len != -1) {
+                    res.insert(res.end(), tmp.begin(), tmp.end());
+                } else {
+                    len = tmp.front();
+                    res.insert(res.end(), tmp.begin() + 1, tmp.end());
+                }
+                idx = 0;
+                memset(block, 0, sizeof block);
+                tmp.clear();
+            }
+        }
+        res.erase(res.begin() + len, res.end());
+        return true;
+    }
+
+
+
+
+
+
+                        /* ======= class Saver ======= */
+Saver::dataNode::dataNode() = default;
+Saver::dataNode::dataNode(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> &data) : name_hash(name_hash), data_hash(data_hash), len(data.size() / N), data(data) {}
+
+template <class T>
+unsigned long long Saver::get_hash(T &s) {
+    unsigned long long seed = 13331, hash = 0;
+    for (auto &ch : s) {
+        hash = hash * seed + ch;
+    }
+    return hash;
+}
+
+bool Saver::load_file() {
+    std::ifstream in(data_file);
+    if (!in.good()) {
+        logger.log("load_file: No data file.", Logger::WARNING, __LINE__);
+        return false;
+    }
+    mp.clear();
+    unsigned long long name_hash, data_hash, len;
+    std::vector<std::pair<double, double>> data;
+    while (in >> name_hash) {
+        data.clear();
+        in >> data_hash >> len;
+        if (in.eof()) {
+            mp.clear();
+            logger.log("Read interrupted, please check data integrity.", Logger::WARNING, __LINE__);
+            return false;
+        }
+        for (int i = 0; i < len * N; i++) {
+            double a, b;
+            in >> a >> b;
+            data.push_back(std::make_pair(a, b));
+        }
+        save_data(name_hash, data_hash, data);
+    }
+    return true;
+}
+
+/**
+ * 在map中的存储方式
+ * 以name_hash作为主键，会检索出一个dataNode，里面包括了name_hash, data_hash, len, data.
+ * 其中 len为data的pair的对数 / N
+*/
+void Saver::save_data(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> data) {
+    if (mp.count(name_hash)) {
+        mp.erase(mp.find(name_hash));
+    }
+    mp[name_hash] = dataNode(name_hash, data_hash, data);
+}
+
+Saver::Saver() {
+    load_file();
+}
+
+/**
+ * 保存的格式：
+ * name_hash data_hash len 后面跟len对浮点数
+*/
+Saver::~Saver() {
+    std::ofstream out(data_file);
+    for (auto &data : mp) {
+        dataNode &dn = data.second;
+        out << data.first << ' ' << dn.data_hash << ' ' << dn.len;
+        for (auto &pr : dn.data) {
+            out << ' ' << pr.first << ' ' << pr.second;
+        }
+        out << '\n';
+    }
+}
+
+/**
+ * data字符串的格式:
+ * 数据块的个数 
+ * 每个数据块中数据的个数
+ * 数据的长度
+ * 数据的字符表示
+ * 每个单元之间都用空格隔开
+*/
+bool Saver::save(std::string name, std::vector<std::vector<std::string>> &content) {
+    std::stringstream ss;
+    ss << content.size();
+    for (auto &data_block : content) {
+        ss << ' ' << data_block.size();
+        for (auto &data : data_block) {
+            ss << ' ' << data.size();
+            for (auto &ch : data) {
+                ss << ' ' << ch;
+            }
+        }
+    }
+    ss << '\n';
+    std::string data;
+    std::getline(ss, data);
+    std::vector<int> sequence;
+    for (auto &it : data) {
+        sequence.push_back((int)it);
+    }
+    std::vector<std::pair<double, double>> res;
+    encrypt_sequence(sequence, res);
+    unsigned long long name_hash = get_hash(name);
+    unsigned long long data_hash = get_hash(data);
+    save_data(name_hash, data_hash, res);
+    return true;
+}
+
+bool Saver::load(std::string name, std::vector<std::vector<std::string>> &content, bool mandatory_access) {
+    unsigned long long name_hash = get_hash(name);
+    if (!mp.count(name_hash)) {
+        logger.log("Failed to load data. No data named A exists. ", Logger::WARNING, __LINE__);
+        return false;
+    }
+    dataNode &data = mp[name_hash];
+    std::vector<int> sequence;
+    decrypt_sequence(data.data, sequence);
+    if (get_hash(sequence) != data.data_hash) {
+        logger.log("Data failed to pass integrity verification.", Logger::WARNING, __LINE__);
+        if (!mandatory_access) return false;
+    }
+    std::string str;
+    for (auto &it : sequence) {
+        str.push_back(it);
+    }
+    std::stringstream ss(str);
+    /**
+     * data字符串的格式:
+     * 数据块的个数 
+     * 每个数据块中数据的个数
+     * 数据的长度
+     * 数据的字符表示
+     * 每个单元之间都用空格隔开
+    */
+    content.clear();
+    int block_num, data_num, data_len;
+    std::string tmp;
+    ss >> block_num;
+    for (int i = 0; i < block_num; i++) {
+        content.push_back(std::vector<std::string>());
+        ss >> data_num;
+        for (int j = 0; j < data_num; j++) {
+            ss >> data_len;
+            tmp.clear();
+            for (int k = 0; k < data_len; k++) {
+                char ch;
+                ss >> ch;
+                tmp.push_back(ch);
+            }
+            content.back().push_back(tmp);
+        }
+    }
+    return true;
 }
