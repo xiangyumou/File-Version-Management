@@ -1,3 +1,5 @@
+/* Author: MuXiangyu, Chant Mee */
+
 #ifndef NODE_MANAGER_CPP
 #define NODE_MANAGER_CPP
 

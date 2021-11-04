@@ -1,3 +1,5 @@
+/* Author: MuXiangyu, Chant Mee */
+
 #ifndef VERSION_MANAGER_CPP
 #define VERSION_MANAGER_CPP
 

@@ -1,3 +1,5 @@
+/* Author: MuXiangyu, Chant Mee */
+
 #ifndef ENCRYPTOR_CPP
 #define ENCRYPTOR_CPP
 

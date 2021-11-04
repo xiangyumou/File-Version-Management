@@ -1,3 +1,5 @@
+/* Author: MuXiangyu, Chant Mee */
+
 #ifndef BS_TREE_CPP
 #define BS_TREE_CPP
 
