@@ -1,35 +1,51 @@
-#include <cstdio>
-#include <cstdlib>
+#ifndef ENCRYPTOR_CPP
+#define ENCRYPTOR_CPP
+
 #include <cstring>
 #include <cmath>
-#include <ctime>
-#include <iostream>
 #include <vector>
-#include <string>
-#include <sstream>
-#include <fstream>
 
 class Encryptor {
-public:
-    static const int N = 1 << 10;
+protected:
+static const int N = 1 << 10;
+private:
     static const char PLACEHOLDER = '\0';
 
     struct Complex {
         double a, b;
-        Complex() {}
-        Complex(double a, double b) : a(a), b(b) {}
-        Complex operator+(const Complex &r) const {
-            return Complex(a + r.a, b + r.b);
-        }
-        Complex operator-(const Complex &r) const {
-            return Complex(a - r.a, b - r.b);
-        }
-        Complex operator*(const Complex &r) const {
-            return Complex(a * r.a - b * r.b, a * r.b + b * r.a);
-        }
+        Complex();
+        Complex(double a, double b);
+        Complex operator+(const Complex &r) const;
+        Complex operator-(const Complex &r) const;
+        Complex operator*(const Complex &r) const;
     } buf[N << 1], block[N];
 
-    void fft(Complex a[], int n, int type) {
+    void fft(Complex a[], int n, int type);
+    bool encrypt_block(std::vector<std::pair<double, double>> &res);
+    bool decrypt_block(std::vector<int> &res);
+
+protected:
+
+    bool encrypt_sequence(std::vector<int> &sequence, std::vector<std::pair<double, double>> &res);
+    bool decrypt_sequence(std::vector<std::pair<double, double>> &sequence, std::vector<int> &res);
+};
+
+
+
+                        /* ======= class Encryptor ======= */
+Encryptor::Complex::Complex() = default;
+Encryptor::Complex::Complex(double a, double b) : a(a), b(b) {}
+Encryptor::Complex Encryptor::Complex::operator+(const Complex &r) const {
+    return Complex(a + r.a, b + r.b);
+}
+Encryptor::Complex Encryptor::Complex::operator-(const Complex &r) const {
+    return Complex(a - r.a, b - r.b);
+}
+Encryptor::Complex Encryptor::Complex::operator*(const Complex &r) const {
+    return Complex(a * r.a - b * r.b, a * r.b + b * r.a);
+}
+
+    void Encryptor::fft(Complex a[], int n, int type) {
         const static double Pi = acos(-1.0);
         if (n == 1) return;
         int m = n >> 1;
@@ -51,7 +67,7 @@ public:
         memcpy(a, buf, sizeof(Complex) * n);
     }
 
-    bool encrypt_block(std::vector<std::pair<double, double>> &res) {
+    bool Encryptor::encrypt_block(std::vector<std::pair<double, double>> &res) {
         fft(block, N, 1);
         res.clear();
         for (int i = 0; i < N; i++) {
@@ -60,7 +76,7 @@ public:
         return true;
     }
 
-    bool decrypt_block(std::vector<int> &res) {
+    bool Encryptor::decrypt_block(std::vector<int> &res) {
         fft(block, N, -1);
         res.clear();
         for (int i = 0; i < N; i++) {
@@ -70,7 +86,7 @@ public:
         return true;
     }
 
-    bool encrypt_sequence(std::vector<int> &sequence, std::vector<std::pair<double, double>> &res) {
+    bool Encryptor::encrypt_sequence(std::vector<int> &sequence, std::vector<std::pair<double, double>> &res) {
         int len = sequence.size(), idx = 1;
         while (sequence.size() % N != 0) sequence.push_back(PLACEHOLDER);
         memset(block, 0, sizeof block);
@@ -90,7 +106,7 @@ public:
         return true;
     }
 
-    bool decrypt_sequence(std::vector<std::pair<double, double>> &sequence, std::vector<int> &res) {
+    bool Encryptor::decrypt_sequence(std::vector<std::pair<double, double>> &sequence, std::vector<int> &res) {
         if (sequence.size() % N != 0) return false;
         memset(block, 0, sizeof block);
         int idx = 0;
@@ -116,38 +132,5 @@ public:
         res.erase(res.begin() + len, res.end());
         return true;
     }
-} ec;
 
-void test_fft() {
-    Encryptor::Complex a[1 << 10];
-    memset(a, 0, sizeof a);
-    for (int i = 0; i < 10; i++) {
-        a[i].a = i - 5;
-    }
-    ec.fft(a, 1 << 10, 1);
-    ec.fft(a, 1 << 10, -1);
-    for (int i = 0; i < 20; i++) {
-        int t = a[i].a / (1 << 10) + 0.5;
-        if (a[i].a < 0.0 && std::fabs(a[i].a) > 1e-2) t--;
-        std::cout << t << ' ';
-    }
-}
-
-int main() {
-    srand(time(0));
-    std::vector<int> a, aa;
-    std::vector<std::pair<double, double>> b;
-    for (int i = 0; i < 10; i++) {
-        a.push_back(rand() - rand());
-        aa.push_back(a.back());
-    }
-    ec.encrypt_sequence(a, b);
-    ec.decrypt_sequence(b, a);
-    for (int i = 0; i < a.size(); i++) {
-        if (a[i] != aa[i]) {
-            std::cout << "wrong";
-            return 0;
-        }
-    }
-    return 0;
-}
+#endif
