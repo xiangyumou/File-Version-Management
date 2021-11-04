@@ -17,16 +17,6 @@
 #include <stack>
 #include <map>
 
-#define wa std::cerr << "----WARN----" << '\n';
-#define ll std::cerr << "----1111----" << '\n';
-#define rr std::cerr << "----2222----" << '\n';
-
-typedef std::vector<std::vector<std::string>> vvs;
-
-
-
-
-
 class FileSystem {
 private:
     struct treeNode {

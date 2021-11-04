@@ -1,4 +1,5 @@
 #include "lib/file_system.cpp"
+#include "lib/saver.cpp"
 
 void print(FileSystem &fs) {
     std::vector<std::string> content;
@@ -31,7 +32,14 @@ void do_cmd(FileSystem &fs, int op, std::string nm="-1") {
     }
 }
 
-void test() {
+void print_tree(FileSystem &fs) {
+    std::string tree_info;
+    fs.tree(tree_info);
+    std::cout << tree_info;
+}
+
+void test_file_system() {
+    std::string content;
     Logger logger = Logger::get_logger();
     FileSystem fs;
     if (!fs.remove_dir("3")) {
@@ -43,32 +51,49 @@ void test() {
     for (int i = 0; i < op.size(); i++) {
         do_cmd(fs, op[i], nm[i]);
     }
-    std::string tree_info;
-    fs.tree(tree_info);
-    std::cout << tree_info;
     fs.commit_version(0);
-    fs.remove_dir("3");
-    fs.tree(tree_info);
-    std::cout << tree_info;
-    fs.switch_version(0);
-    fs.tree(tree_info);
-    std::cout << tree_info;
+    print_tree(fs);
+    fs.change_directory("1");
+    fs.make_dir("1");
+    fs.change_directory("5");
+    fs.remove_file("9");
+    fs.make_file("罗滨是神仙");
+    fs.make_file("1");
+    fs.make_file("123133");
+    fs.make_file("124123");
+    fs.update_content("1", "罗滨确实是神仙");
+    fs.get_content("1", content);
+    fs.commit_version(1);
+    fs.change_directory("1");
+    fs.remove_dir("5");
+    print_tree(fs);
+    fs.switch_version(1);
+    print_tree(fs);
+}
 
-
-    // fs.update_content("2", "123123123");
-    // fs.commit_version(0);
-    // fs.update_content("2", "312312312312");
-    // fs.switch_version(0);
-    // fs.commit_version(0);
-    // fs.remove_file("2");
-    // fs.switch_version(0);
-    // fs.remove_dir("3");
-    // std::string tree_info;
-    // fs.tree(tree_info);
-    // std::cout << tree_info;
+void test_saver() {
+    Saver sa;
+    vvs a;
+    for (int i = 0; i < 5; i++) {
+        a.push_back(std::vector<std::string>());
+        for (int j = 0; j < 3; j++) {
+            if (j % 2) a.back().push_back(std::to_string(i) + "罗滨是神仙");
+            else a.back().push_back(std::to_string(i) + "mxy是神仙");
+        }
+    }
+    sa.save("罗滨", a);
+    // sa.load("罗滨", a);
+    // for (int i = 0; i < a.size(); i++) {
+    //     for (int j = 0; j < a[i].size(); j++) {
+    //         std::cout << a[i][j] << '\n';
+    //     }
+    //     puts("");
+    // }
 }
 
 int main() {
-    test();
+    // test_file_system();
+    test_saver();
+    
     return 0;
 }
