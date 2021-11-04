@@ -7,17 +7,9 @@
 #include "saver.cpp"
 #include "encryptor.cpp"
 #include "logger.cpp"
-#include <cstring>
-#include <cstdlib>
 #include <ctime>
-#include <cmath>
-#include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
-#include <vector>
 #include <stack>
-#include <map>
 
 class FileSystem : private BSTree {
 private:
@@ -46,7 +38,10 @@ public:
     bool tree(std::string &tree_info);
     bool goto_last_dir();
     bool list_directory_contents(std::vector<std::string> &content);
-    bool create_version(int model_version=-1);
+    bool create_version(unsigned long long model_version=NO_MODEL_VERSION, std::string info="");
+    bool create_version(std::string info = "", unsigned long long model_version=NO_MODEL_VERSION);
+    bool version(std::vector<std::pair<unsigned long long, versionNode>> &version_log);
+    int get_current_version();
 };
 
 
@@ -84,6 +79,13 @@ void NodeManager::Node::update_update_time() {
 
 
                         /* ======= class FileSystem ======= */
+
+FileSystem::FileSystem() {
+    version_manager.create_version();
+    unsigned long long latest_version_id;
+    if (!version_manager.get_latest_version(latest_version_id)) return;
+    switch_version(latest_version_id);
+}
 
 bool FileSystem::decrease_counter(treeNode *p) {
     if (!check_node(p, __LINE__)) return false;
@@ -142,20 +144,22 @@ bool FileSystem::rebuild_nodes(treeNode *p) {
     return true;
 }
 
-FileSystem::FileSystem() {
-    version_manager.create_version();
-    switch_version(0);
-    CURRENT_VERSION = 0;
-}
-
 bool FileSystem::switch_version(int version_id) {
-    if (version_id < 0 || version_id >= version_manager.version.size()) {
+    if (!version_manager.version_exist(version_id)) {
         logger.log("This version is not in the system.");
         return false;
     }
     CURRENT_VERSION = version_id;
+    treeNode *p;
+    if (!version_manager.get_version_pointer(version_id, p)) {
+        return false;
+    }
     path.clear();
-    path.push_back(version_manager.version[version_id]);
+    path.push_back(p);
+    if (p->first_son == nullptr) {
+        logger.log("The root directory does not have a \"first son\" folder, which is abnormal. Please check that the procedure is correct.", Logger::FATAL, __LINE__);
+        return false;
+    }
     path.push_back(path.back()->first_son);
     return true;
 }
@@ -293,8 +297,26 @@ bool FileSystem::list_directory_contents(std::vector<std::string> &content) {
     return BSTree::list_directory_contents(content);
 }
 
-bool FileSystem::create_version(int model_version) {
-    return version_manager.create_version(model_version);
+bool FileSystem::create_version(unsigned long long model_version, std::string info) {
+    if (!version_manager.create_version(model_version, info)) return false;
+    unsigned long long latest_version;
+    if (!version_manager.get_latest_version(latest_version)) {
+        return false;
+    }
+    if (!switch_version(latest_version)) return false;
+    return true;
+}
+
+bool FileSystem::create_version(std::string info, unsigned long long model_version) {
+    return create_version(model_version, info);
+}
+
+bool FileSystem::version(std::vector<std::pair<unsigned long long, versionNode>> &version_log) {
+    return version_manager.get_version_log(version_log);
+}
+
+int FileSystem::get_current_version() {
+    return CURRENT_VERSION;
 }
 
 #endif

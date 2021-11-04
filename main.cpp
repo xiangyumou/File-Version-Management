@@ -1,6 +1,10 @@
 #include "lib/file_system.cpp"
 #include "lib/saver.cpp"
 
+#define ll std::cerr << "====== 11111 ======";
+#define rr std::cerr << "====== 22222 ======";
+#define wa std::cerr << "====== WARN ======";
+
 void print(FileSystem &fs) {
     std::vector<std::string> content;
     fs.list_directory_contents(content);
@@ -41,6 +45,7 @@ void print_tree(FileSystem &fs) {
 void test_file_system() {
     std::string content;
     Logger logger = Logger::get_logger();
+    NodeManager node_manager = NodeManager::get_node_manager();
     FileSystem fs;
     if (!fs.make_dir("3")) {
         std::cout << *logger.information << '\n';
@@ -51,7 +56,14 @@ void test_file_system() {
     for (int i = 0; i < op.size(); i++) {
         do_cmd(fs, op[i], nm[i]);
     }
-    fs.create_version(0);
+    fs.create_version(1001, "1001hahaha");
+    fs.create_version("1002hahaha", 1002);
+    fs.create_version(1003);
+    fs.create_version(1004);
+    fs.create_version(1005);
+    fs.create_version(1006);
+    fs.create_version(1007);
+    fs.create_version("new ");
     fs.change_directory("1");
     fs.make_dir("1");
     fs.change_directory("5");
@@ -61,11 +73,15 @@ void test_file_system() {
     fs.make_file("124123");
     fs.update_content("1", "罗滨确实是神仙");
     fs.get_content("1", content);
-    fs.create_version(1);
+    fs.create_version(1002);
     fs.change_directory("1");
-    fs.remove_dir("5");
-    fs.switch_version(1);
-    print_tree(fs);
+    // print_tree(fs);
+    fs.switch_version(1001);
+    std::vector<std::pair<unsigned long long, versionNode>> version;
+    fs.version(version);
+    for (auto it : version) {
+        std::cout << it.first << ' ' << it.second.info << ' ' << node_manager.get_name(it.second.p->link) << '\n';
+    }
 }
 
 void test_saver() {

@@ -59,6 +59,12 @@ bool BSTree::check_path() {
         logger.log("Path is empty. This not normal.", Logger::FATAL, __LINE__);
         return false;
     }
+    for (auto &it : path) {
+        if (it == nullptr) {
+            logger.log("Null pointer exists in path. This not normal.", Logger::FATAL, __LINE__);
+            return false;
+        }
+    }
     return true;
 }
 

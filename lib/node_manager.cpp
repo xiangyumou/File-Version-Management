@@ -23,9 +23,9 @@ private:
 
     std::map<int, std::pair<int, Node>> mp;
 
-    bool node_exist(int id);
     int get_new_id();
 public:
+    bool node_exist(int id);
     int get_new_node(std::string name);
     void delete_node(int idx);
     int update_content(int idx, std::string content);
