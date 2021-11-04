@@ -56,6 +56,8 @@ public:
     */
     bool save(std::string name, std::vector<std::vector<std::string>> &content);
     bool load(std::string name, std::vector<std::vector<std::string>> &content, bool mandatory_access = false);
+
+    static Saver& get_saver();
 };
 
 
@@ -212,6 +214,11 @@ bool Saver::load(std::string name, std::vector<std::vector<std::string>> &conten
         }
     }
     return true;
+}
+
+Saver& Saver::get_saver() {
+    static Saver saver;
+    return saver;
 }
 
 #endif

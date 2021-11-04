@@ -36,6 +36,7 @@ public:
     std::string get_create_time(int idx);
     void increase_counter(int idx);
     int _get_counter(int idx);
+    static NodeManager& get_node_manager();
 };
 
 
@@ -119,6 +120,11 @@ void NodeManager::increase_counter(int idx) {
 int NodeManager::_get_counter(int idx) {
     if (!node_exist(idx)) return -1;
     return mp[idx].first;
+}
+
+NodeManager& NodeManager::get_node_manager() {
+    static NodeManager node_manager;
+    return node_manager;
 }
 
 #endif

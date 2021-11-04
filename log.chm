@@ -2760,3 +2760,5273 @@ level: WARNING
 line: 173 (2021-11-04 10:49:57) Failed to load data. No data named A exists. 
 level: WARNING 
 line: 173 (2021-11-04 10:50:31) Failed to load data. No data named A exists. 
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node root has been incremented by one.
+level: WARNING 
+line: 255 (2021-11-04 11:12:07) no file or directory named 3
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 9 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:12:07) Deleting completed.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 124123 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 123133 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 罗滨是神仙 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:07) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:07) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node root has been incremented by one.
+level: WARNING 
+line: 255 (2021-11-04 11:12:21) no file or directory named 3
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 9 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:12:21) Deleting completed.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 124123 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 123133 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:21) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:21) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node root has been incremented by one.
+level: WARNING 
+line: 255 (2021-11-04 11:12:28) no file or directory named 3
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 9 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:12:28) Deleting completed.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 124123 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 123133 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 176
+level: INFO 
+(2021-11-04 11:12:28) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 155
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:12:28) Get a null pointer in line 117
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node root has been incremented by one.
+level: WARNING 
+line: 206 (2021-11-04 11:18:47) no file or directory named 3
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 9 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:18:47) Deleting completed.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 124123 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 123133 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 127
+level: INFO 
+(2021-11-04 11:18:47) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 106
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 106
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 106
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 106
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 106
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:18:47) Get a null pointer in line 71
+level: INFO 
+(2021-11-04 11:28:18) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:18) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:18) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:18) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:18) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:28:18) no file or directory named 3
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:28:45) no file or directory named 3
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 9 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:28:45) Deleting completed.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 124123 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 123133 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 5 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 7 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 6 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 4 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 8 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 3 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 2 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node 1 has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 122
+level: INFO 
+(2021-11-04 11:28:45) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 101
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 101
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 101
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 101
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 101
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:28:45) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 3
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 1
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 3
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 8
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 1
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 5
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 1
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 5
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 9
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 1
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 1
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:42:52) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 1
+level: FATAL 
+line: 59 (2021-11-04 11:42:52) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:42:52) no file or directory named 5
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:42:52) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:45:20) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:45:20) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:45:20) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:45:20) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:45:20) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:45:20) no file or directory named 3
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:45:20) no file or directory named 1
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:45:20) no file or directory named 3
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:45:20) no file or directory named 8
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:45:20) no file or directory named 1
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: WARNING 
+line: 136 (2021-11-04 11:45:20) no file or directory named 5
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:45:20) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:45:20) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:45:20) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:45:20) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:45:20) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:45:20) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:46:05) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:46:05) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:46:05) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:46:05) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:46:05) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:46:05) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:46:05) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:47:56) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:47:56) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:47:56) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:47:56) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:47:56) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:47:56) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:47:56) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:48:49) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:48:49) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:48:49) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:48:49) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:48:49) The counter for node root has been incremented by one.
+level: DEBUG 
+line: 172 (2021-11-04 11:48:49) 3
+level: FATAL 
+line: 59 (2021-11-04 11:48:49) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:48:49) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:49:18) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:49:18) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:49:18) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:49:18) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:49:18) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:49:18) Path is empty. This not normal.
+level: DEBUG 
+line: 176 (2021-11-04 11:49:18) 3
+level: FATAL 
+line: 59 (2021-11-04 11:49:18) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:49:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:49:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:49:52) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:49:52) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:49:52) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:49:52) Path is empty. This not normal.
+level: DEBUG 
+line: 176 (2021-11-04 11:49:52) 3====================
+level: FATAL 
+line: 59 (2021-11-04 11:49:52) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:50:10) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:50:10) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:50:10) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:50:10) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:50:10) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:50:10) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:50:10) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:51:41) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:51:41) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:51:41) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:51:41) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:51:41) The counter for node root has been incremented by one.
+level: FATAL 
+line: 59 (2021-11-04 11:51:41) Path is empty. This not normal.
+level: FATAL 
+line: 59 (2021-11-04 11:51:41) Path is empty. This not normal.
+level: INFO 
+(2021-11-04 11:52:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:06) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) 3: Name exist.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:52:27) Deleting completed.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:52:27) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:52:27) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 11:52:27) no file or directory named 5
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:52:27) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) 3: Name exist.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:53:17) Deleting completed.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:17) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:17) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 11:53:17) no file or directory named 5
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:17) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) 3: Name exist.
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:29) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:29) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:37) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:37) 3: Name exist.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) 3: Name exist.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:53:54) Deleting completed.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:53:54) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:53:54) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 11:53:54) no file or directory named 5
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:53:54) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) 3: Name exist.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:28) no file or directory named 9
+level: INFO 
+(2021-11-04 11:54:28) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:54:28) Deleting completed.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:28) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:28) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 11:54:28) no file or directory named 5
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:28) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:37) no file or directory named 5
+level: WARNING 
+line: 136 (2021-11-04 11:54:37) no file or directory named 9
+level: INFO 
+(2021-11-04 11:54:37) 1: Name exist.
+level: INFO 
+(2021-11-04 11:54:37) 1: Not a file.
+level: INFO 
+(2021-11-04 11:54:37) 1: Not a file.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:37) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:37) no file or directory named 5
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:37) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) 3: Name exist.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:42) no file or directory named 1
+level: WARNING 
+line: 136 (2021-11-04 11:54:42) no file or directory named 5
+level: WARNING 
+line: 136 (2021-11-04 11:54:42) no file or directory named 9
+level: INFO 
+(2021-11-04 11:54:42) 1: Name exist.
+level: INFO 
+(2021-11-04 11:54:42) 1: Not a file.
+level: INFO 
+(2021-11-04 11:54:42) 1: Not a file.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:42) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:42) no file or directory named 5
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:42) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) 3: Name exist.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:48) no file or directory named 5
+level: WARNING 
+line: 136 (2021-11-04 11:54:48) no file or directory named 9
+level: INFO 
+(2021-11-04 11:54:48) 1: Name exist.
+level: INFO 
+(2021-11-04 11:54:48) 1: Not a file.
+level: INFO 
+(2021-11-04 11:54:48) 1: Not a file.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:48) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:48) no file or directory named 5
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:55) no file or directory named 5
+level: WARNING 
+line: 136 (2021-11-04 11:54:55) no file or directory named 9
+level: INFO 
+(2021-11-04 11:54:55) 1: Name exist.
+level: INFO 
+(2021-11-04 11:54:55) 1: Not a file.
+level: INFO 
+(2021-11-04 11:54:55) 1: Not a file.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:54:55) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:54:55) no file or directory named 5
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:54:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) 3: Name exist.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:55:39) Deleting completed.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:39) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:39) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 11:55:39) no file or directory named 5
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:39) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) 3: Name exist.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:55:55) no file or directory named 5
+level: WARNING 
+line: 136 (2021-11-04 11:55:55) no file or directory named 9
+level: INFO 
+(2021-11-04 11:55:55) 1: Name exist.
+level: INFO 
+(2021-11-04 11:55:55) 1: Not a file.
+level: INFO 
+(2021-11-04 11:55:55) 1: Not a file.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:55:55) The counter for node root has been incremented by one.
+level: WARNING 
+line: 136 (2021-11-04 11:55:55) no file or directory named 5
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:55:55) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) 3: Name exist.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:57:50) Deleting completed.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:57:50) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:57:50) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 11:57:50) no file or directory named 5
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:57:50) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:22) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:22) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:22) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:22) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:22) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:30) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:30) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:30) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:30) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:30) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:30) 3: Name exist.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) 3: Name exist.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Node  will be deleted...
+level: INFO 
+(2021-11-04 11:58:44) Deleting completed.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 11:58:44) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 11:58:44) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 11:58:44) no file or directory named 5
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 11:58:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) 3: Name exist.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:40:33) Deleting completed.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:40:33) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:40:33) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:40:33) no file or directory named 5
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:40:33) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) 3: Name exist.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:41:06) Deleting completed.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:06) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:06) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:41:06) no file or directory named 5
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) 3: Name exist.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:41:58) Deleting completed.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:41:58) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:41:58) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:41:58) no file or directory named 5
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:41:58) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) 3: Name exist.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:42:24) Deleting completed.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:24) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:24) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:42:24) no file or directory named 5
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:24) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) 3: Name exist.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:42:31) Deleting completed.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:31) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:31) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:42:31) no file or directory named 5
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) 3: Name exist.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:42:46) Deleting completed.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:42:46) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:42:46) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:42:46) no file or directory named 5
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:42:46) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) 3: Name exist.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:43:01) Deleting completed.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:01) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:01) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:43:01) no file or directory named 5
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:01) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) 3: Name exist.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:43:48) Deleting completed.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:43:48) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:43:48) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:43:48) no file or directory named 5
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:43:48) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) 3: Name exist.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Node  will be deleted...
+level: INFO 
+(2021-11-04 15:44:31) Deleting completed.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 15:44:31) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 15:44:31) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 15:44:31) no file or directory named 5
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 15:44:31) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) 3: Name exist.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Node  will be deleted...
+level: INFO 
+(2021-11-04 16:02:04) Deleting completed.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:04) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:04) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 16:02:04) no file or directory named 5
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:04) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) 3: Name exist.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Node  will be deleted...
+level: INFO 
+(2021-11-04 16:02:06) Deleting completed.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:06) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:06) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 16:02:06) no file or directory named 5
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:06) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) 3: Name exist.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Node  will be deleted...
+level: INFO 
+(2021-11-04 16:02:44) Deleting completed.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 22
+level: INFO 
+(2021-11-04 16:02:44) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-04 16:02:44) 1: Not a directory.
+level: WARNING 
+line: 136 (2021-11-04 16:02:44) no file or directory named 5
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79
+level: INFO 
+(2021-11-04 16:02:44) Get a null pointer in line 79

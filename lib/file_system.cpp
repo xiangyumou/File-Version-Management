@@ -1,6 +1,8 @@
 #ifndef FILE_SYSTEM_CPP
 #define FILE_SYSTEM_CPP
 
+#include "version_manager.cpp"
+#include "bs_tree.cpp"
 #include "node_manager.cpp"
 #include "saver.cpp"
 #include "encryptor.cpp"
@@ -17,47 +19,22 @@
 #include <stack>
 #include <map>
 
-class FileSystem {
+class FileSystem : private BSTree {
 private:
-    struct treeNode {
-        enum TYPE {
-            FILE = 0, DIR, HEAD_NODE
-        };
 
-        TYPE type;
-        int cnt, link;
-        treeNode *next_brother, *first_son;
-
-        treeNode();
-        treeNode(TYPE type);
-    };
-
-    std::vector<treeNode*> version;
-    std::vector<treeNode*> path;
+    VersionManager version_manager;
     Logger &logger = Logger::get_logger();
-    NodeManager node_manager;
+    NodeManager &node_manager = NodeManager::get_node_manager();
+    int CURRENT_VERSION;
 
-    bool check_path();
-    bool check_node(treeNode *p, int line);
-    bool travel_tree(treeNode *p, std::string &tree_info);
     bool decrease_counter(treeNode *p);
     bool recursive_delete_nodes(treeNode *p, bool delete_brother=false);
     bool delete_node();
-    bool recursive_increase_counter(treeNode *p, bool modify_brother=false);
-    bool is_son();
     bool rebuild_nodes(treeNode *p);
-    bool init_version(treeNode *p, treeNode *vp);
-    bool goto_tail();
-    bool goto_head();
-    bool name_exist(std::string name);
-    bool go_to(std::string name);
 
 public:
     FileSystem();
-    bool goto_last_dir();
     bool switch_version(int version_id);
-    bool commit_version(int model_version=-1);
-    bool list_directory_contents(std::vector<std::string> &content);
     bool make_file(std::string name);
     bool make_dir(std::string name);
     bool change_directory(std::string name);
@@ -67,6 +44,9 @@ public:
     bool update_content(std::string name, std::string content);
     bool get_content(std::string name, std::string &content);
     bool tree(std::string &tree_info);
+    bool goto_last_dir();
+    bool list_directory_contents(std::vector<std::string> &content);
+    bool create_version(int model_version=-1);
 };
 
 
@@ -100,66 +80,10 @@ void NodeManager::Node::update_update_time() {
 
 
 
-                        /* ======= class treeNode ======= */
-FileSystem::treeNode::treeNode() = default;
-FileSystem::treeNode::treeNode(TYPE type) {
-    this->type = type;
-    this->cnt = 1;
-    this->next_brother = nullptr;
-    this->link = -1;
-    if (type == FILE || type == HEAD_NODE) this->first_son = nullptr;
-    else if (type == DIR) this->first_son = new treeNode(HEAD_NODE);
-}
 
 
 
                         /* ======= class FileSystem ======= */
-bool FileSystem::check_path() {
-    if (path.empty()) {
-        logger.log("Path is empty. This not normal.", Logger::FATAL, __LINE__);
-        return false;
-    }
-    return true;
-}
-
-bool FileSystem::check_node(treeNode *p, int line) {
-    if (p == nullptr) {
-        logger.log("The pointer is empty, please check whether the program is correct.", Logger::FATAL, line);
-        return false;
-    }
-    if (p->cnt <= 0) {
-        logger.log("The node counter is already less than or equal to 0, please check the program!", Logger::FATAL, line);
-        return false;
-    }
-    return true;
-}
-
-bool FileSystem::travel_tree(treeNode *p,std::string &tree_info) {
-    if (p == nullptr) {
-        logger.log("Get a null pointer in line " + std::to_string(__LINE__));
-        return false;
-    }
-    static int tab_cnt = 1;
-    if (p->type == 2) {
-        travel_tree(p->next_brother, tree_info);
-        return true;
-    }
-    for (unsigned int i = 0; i < tab_cnt; i++) {
-        if (i < tab_cnt - 1) {
-            tree_info += "    ";
-        } else if (p->next_brother != nullptr) {
-            tree_info += "├── ";
-        } else {
-            tree_info += "└── ";
-        }
-    }
-    tree_info += node_manager.get_name(p->link) + '\n';
-    tab_cnt++;
-    travel_tree(p->first_son, tree_info);
-    tab_cnt--;
-    travel_tree(p->next_brother, tree_info);
-    return true;
-}
 
 bool FileSystem::decrease_counter(treeNode *p) {
     if (!check_node(p, __LINE__)) return false;
@@ -193,24 +117,6 @@ bool FileSystem::delete_node() {
     return true;
 }
 
-bool FileSystem::recursive_increase_counter(treeNode *p, bool modify_brother) {
-    if (p == nullptr) {
-        logger.log("Get a null pointer in line " + std::to_string(__LINE__));
-        return false;
-    }
-    recursive_increase_counter(p->first_son, true);
-    if (modify_brother) recursive_increase_counter(p->next_brother, true);
-    p->cnt ++;
-    node_manager.increase_counter(p->link);
-    logger.log("The counter for node " + node_manager.get_name(p->link) + " has been incremented by one.");
-    return true;
-}
-
-bool FileSystem::is_son() {
-    if (!check_path()) return false;
-    return path.back()->type == 2;
-}
-
 bool FileSystem::rebuild_nodes(treeNode *p) {
     if (!check_path()) return false;
     int relation = 0;   // 0 next_brother 1 first_son
@@ -236,102 +142,21 @@ bool FileSystem::rebuild_nodes(treeNode *p) {
     return true;
 }
 
-bool FileSystem::init_version(treeNode *p, treeNode *vp) {
-    if (p == nullptr || vp == nullptr) {
-        logger.log("Get a null pointer in line " + std::to_string(__LINE__), Logger::FATAL, __LINE__);
-        return false;
-    }
-    p->first_son = vp->first_son;
-    if (!recursive_increase_counter(p, 1)) return false;
-    if (!switch_version(version.size() - 1)) return false;
-    return true;
-}
-
-bool FileSystem::goto_tail() {
-    if (!check_path()) return false;
-    while (path.back()->next_brother != nullptr) {
-        path.push_back(path.back()->next_brother);
-    }
-    if (!check_path()) return false;
-    return true;
-}
-
-bool FileSystem::goto_head() {
-    if (!check_path()) return false;
-    for (; !path.empty() && !is_son(); path.pop_back());
-    if (!check_path()) return false;
-    return true;
-}
-
-bool FileSystem::name_exist(std::string name) {
-    std::vector<std::string> dir_content;
-    if (!list_directory_contents(dir_content)) return false;
-    for (auto &nm : dir_content) {
-        if (nm == name) return true;
-    }
-    return false;
-}
-
-bool FileSystem::go_to(std::string name) {
-    if (!name_exist(name)) {
-        logger.log("no file or directory named " + name, Logger::WARNING, __LINE__);
-        return false;
-    }
-    if (!goto_head()) return false;
-    while (node_manager.get_name(path.back()->link) != name) {
-        if (path.back()->next_brother == nullptr) {
-            return false;
-        }
-        path.push_back(path.back()->next_brother);
-    }
-    return true;
-}
-
 FileSystem::FileSystem() {
-    commit_version();
-}
-
-bool FileSystem::goto_last_dir() {
-    if (!goto_head()) return false;
-    if (path.size() > 2) {
-        path.pop_back();
-    }
-    if (!check_path()) return false;
-    return true;
+    version_manager.create_version();
+    switch_version(0);
+    CURRENT_VERSION = 0;
 }
 
 bool FileSystem::switch_version(int version_id) {
-    if (version_id < 0 || version_id >= version.size()) {
+    if (version_id < 0 || version_id >= version_manager.version.size()) {
         logger.log("This version is not in the system.");
         return false;
     }
+    CURRENT_VERSION = version_id;
     path.clear();
-    path.push_back(version[version_id]);
+    path.push_back(version_manager.version[version_id]);
     path.push_back(path.back()->first_son);
-    return true;
-}
-
-bool FileSystem::commit_version(int model_version) {
-    version.push_back(new treeNode(treeNode::DIR));
-    if (version.back() == nullptr) {
-        logger.log("The system did not allocate memory for this operation.", Logger::FATAL, __LINE__);
-        return false;
-    }
-    version.back()->cnt = 0;
-    version.back()->link = node_manager.get_new_node("root");
-    if (model_version != -1) delete version.back()->first_son;
-    treeNode *model = model_version == -1 ? version.back() : version[model_version];
-    if (!init_version(version.back(), model)) return false;
-    return true;
-}
-
-bool FileSystem::list_directory_contents(std::vector<std::string> &content) {
-    if (!goto_head()) return false;
-    if (!check_path()) return false;
-    while (path.back()->next_brother != nullptr) {
-        content.push_back(node_manager.get_name(path.back()->next_brother->link));
-        path.push_back(path.back()->next_brother);
-    }
     return true;
 }
 
@@ -459,6 +284,17 @@ bool FileSystem::tree(std::string &tree_info) {
     if (!travel_tree(path.front(), tree_info)) return false;
     puts("");
     return true;
+}
+
+bool FileSystem::goto_last_dir() {
+    return BSTree::goto_last_dir();
+}
+bool FileSystem::list_directory_contents(std::vector<std::string> &content) {
+    return BSTree::list_directory_contents(content);
+}
+
+bool FileSystem::create_version(int model_version) {
+    return version_manager.create_version(model_version);
 }
 
 #endif
