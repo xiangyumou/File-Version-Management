@@ -286,17 +286,29 @@ void test() {
     for (int i = 0; i < op.size(); i++) {
         do_cmd(fs, op[i], nm[i]);
     }
-    fs.update_content("2", "123123123");
-    fs.commit_version(0);
-    fs.update_content("2", "312312312312");
-    fs.switch_version(0);
-    fs.commit_version(0);
-    fs.remove_file("2");
-    fs.switch_version(0);
-    fs.remove_dir("3");
     std::string tree_info;
     fs.tree(tree_info);
     std::cout << tree_info;
+    fs.commit_version(0);
+    fs.remove_dir("3");
+    fs.tree(tree_info);
+    std::cout << tree_info;
+    fs.switch_version(0);
+    fs.tree(tree_info);
+    std::cout << tree_info;
+
+
+    // fs.update_content("2", "123123123");
+    // fs.commit_version(0);
+    // fs.update_content("2", "312312312312");
+    // fs.switch_version(0);
+    // fs.commit_version(0);
+    // fs.remove_file("2");
+    // fs.switch_version(0);
+    // fs.remove_dir("3");
+    // std::string tree_info;
+    // fs.tree(tree_info);
+    // std::cout << tree_info;
 }
 
 int main() {

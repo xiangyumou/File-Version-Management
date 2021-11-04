@@ -307,8 +307,17 @@ int main() {
         }
         puts("");
     }
-    sa.save("second", content);
-    std::cout << sa.load("second", content) << '\n';
+    sa.save("mx    y", content);
+    std::cout << sa.load("mx    y", content) << '\n';
+
+    for (int i = 0; i < content.size(); i++) {
+        for (int j = 0; j < content[i].size(); j++) {
+            std::cout << content[i][j] << '\n';
+        }
+        puts("");
+    }
+    std::cout << sa.load("anlinjiutai", content) << '\n';
+
     for (int i = 0; i < content.size(); i++) {
         for (int j = 0; j < content[i].size(); j++) {
             std::cout << content[i][j] << '\n';
