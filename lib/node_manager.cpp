@@ -13,6 +13,7 @@ Author: Mu Xiangyu, Chant Mee
 
 #include <cmath>
 #include <cstring>
+#include <cstdlib>
 #include <string>
 #include <map>
 
