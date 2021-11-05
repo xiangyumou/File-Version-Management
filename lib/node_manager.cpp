@@ -11,6 +11,7 @@ Author: Mu Xiangyu, Chant Mee
 #ifndef NODE_MANAGER_CPP
 #define NODE_MANAGER_CPP
 
+#include "file_manager.cpp"
 #include <cmath>
 #include <cstring>
 #include <cstdlib>
@@ -20,11 +21,13 @@ Author: Mu Xiangyu, Chant Mee
 class NodeManager {
 private:
     class Node {
+        private:
+            FileManager &file_manager = FileManager::get_file_manager();
         public:
             std::string name;
             std::string create_time;
             std::string update_time;
-            std::string content;
+            unsigned long long fid;
 
             std::string get_time();
             Node();
@@ -33,9 +36,13 @@ private:
     };
 
     std::map<int, std::pair<int, Node>> mp;
+    FileManager &file_manager = FileManager::get_file_manager();
+    Logger &logger = Logger::get_logger();
 
     int get_new_id();
 public:
+    std::map<int, std::pair<int, Node>> &MPP = mp;
+
     bool node_exist(int id);
     int get_new_node(std::string name);
     void delete_node(int idx);
@@ -50,6 +57,31 @@ public:
     static NodeManager& get_node_manager();
 };
 
+
+
+
+                        /* ======= class Node ======= */
+
+std::string NodeManager::Node::get_time() {
+    static char t[100];
+    time_t timep;
+    time(&timep);
+    struct tm* p = gmtime(&timep);
+    sprintf(t, "%d-%02d-%02d %02d:%02d:%02d", 1900 + p->tm_year, 1 + p->tm_mon, p->tm_mday, 8 + p->tm_hour, p->tm_min, p->tm_sec);
+    return std::string(t);
+}
+
+NodeManager::Node::Node() = default;
+NodeManager::Node::Node(std::string name) {
+    this->name = name;
+    this->create_time = get_time();
+    this->update_time = get_time();
+    this->fid = file_manager.create_file("");
+}
+
+void NodeManager::Node::update_update_time() {
+    this->update_time = get_time();
+}
 
 
                         /* ======= class NodeManager ======= */
@@ -70,13 +102,16 @@ int NodeManager::get_new_id() {
 
 int NodeManager::get_new_node(std::string name) {
     int new_id = get_new_id();
-    mp[new_id] = std::make_pair(1, Node(name));
+    auto t = std::make_pair(1, Node(name));
+    // mp[new_id] = t;
+    mp.insert(std::make_pair(new_id, t));
     return new_id;
 };
 
 void NodeManager::delete_node(int idx) {
     if (!node_exist(idx)) return;
     if (--mp[idx].first == 0) {
+        file_manager.decrease_counter(mp[idx].second.fid);
         mp.erase(mp.find(idx));
     }
 }
@@ -87,25 +122,31 @@ int NodeManager::update_content(int idx, std::string content) {
     std::string create_time = get_update_time(idx);
     delete_node(idx);
     idx = get_new_node(name);
-    mp[idx].second.content = content;
-    mp[idx].second.create_time = create_time;
+
+    unsigned long long fid = mp[idx].second.fid;
+    file_manager.update_content(mp[idx].second.fid, mp[idx].second.fid, content);
     return idx;
 }
 
 int NodeManager::update_name(int idx, std::string name) {
     if (!node_exist(idx)) return -1;
-    std::string content = get_content(idx);
     std::string create_time = get_update_time(idx);
-    delete_node(idx);
+    unsigned long long fid = mp[idx].second.fid;
+    unsigned long long old_idx = idx;
+    file_manager.increase_counter(fid);
     idx = get_new_node(name);
-    mp[idx].second.content = content;
     mp[idx].second.create_time = create_time;
+    file_manager.decrease_counter(mp[idx].second.fid);
+    mp[idx].second.fid = fid;
+    delete_node(old_idx);
     return idx;
 }
 
 std::string NodeManager::get_content(int idx) {
-    if (!node_exist(idx)) return "";
-    return mp[idx].second.content;
+    if (!node_exist(idx)) return "-1";
+    std::string content;
+    file_manager.get_content(mp[idx].second.fid, content);
+    return content;
 }
 
 std::string NodeManager::get_name(int idx) {
@@ -136,6 +177,34 @@ int NodeManager::_get_counter(int idx) {
 NodeManager& NodeManager::get_node_manager() {
     static NodeManager node_manager;
     return node_manager;
+}
+
+int test_node_manager() {
+// int main() {
+    unsigned long long fid;
+    NodeManager nm;
+    FileManager fm = FileManager::get_file_manager();
+    Logger &logger = Logger::get_logger();
+
+    typedef unsigned long long ull;
+    ull id = nm.get_new_node("123");
+    id = nm.update_content(id, "diyici");
+    nm.increase_counter(id);
+    ull id1 = nm.update_content(id, "diorci");
+    nm.increase_counter(id1);
+    ull id2 = nm.update_name(id1, "321");
+    /**
+     * 三个文件:    123、123、321
+     * 节点计数:    1 .  1 .  1
+     * 文件计数：   1 .  2 .  2
+     */
+    for (auto it : nm.MPP) {
+        std::cout << "cnt: " << it.second.first << ' ' << "name: " << it.second.second.name << ' ' << "fid: " << it.second.second.fid << '\n';
+    }
+    for (auto it : fm.MP) {
+        std::cout << "fid: " << it.first << ' ' << "cnt: " << it.second.cnt << '\n';
+    }
+    return 0;
 }
 
 #endif

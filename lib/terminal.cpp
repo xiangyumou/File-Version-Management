@@ -320,7 +320,8 @@ int Terminal::run() {
    return 0;
 }
 
-int main() {
+int test_terminal() {
+// int main() {
    Terminal tm;
    return tm.run();
 }
