@@ -243,6 +243,10 @@ bool FileSystem::remove_dir(std::string name) {
 
 bool FileSystem::update_name(std::string fr_name, std::string to_name) {
     if (!go_to(fr_name)) return false;
+    if (name_exist(to_name)) {
+        logger.log(to_name + ": Name exists.", Logger::WARNING, __LINE__);
+        return false;
+    }
     treeNode *t = new treeNode();
     if (t == nullptr) {
         logger.log("The system did not allocate memory for this operation.", Logger::FATAL, __LINE__);

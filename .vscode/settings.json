@@ -105,5 +105,6 @@
         "source_location": "cpp",
         "ranges": "cpp",
         "syncstream": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

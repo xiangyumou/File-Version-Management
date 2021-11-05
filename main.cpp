@@ -87,25 +87,29 @@ void test_file_system() {
 void test_saver() {
     Saver &sa = Saver::get_saver();
     vvs a;
-    for (int i = 0; i < 5; i++) {
-        a.push_back(std::vector<std::string>());
-        for (int j = 0; j < 3; j++) {
-            if (j % 2) a.back().push_back(std::to_string(i) + "罗滨是神仙");
-            else a.back().push_back(std::to_string(i) + "mxy是神仙");
-        }
-    }
-    sa.save("罗滨", a);
-    // sa.load("罗滨", a);
-    // for (int i = 0; i < a.size(); i++) {
-    //     for (int j = 0; j < a[i].size(); j++) {
-    //         std::cout << a[i][j] << '\n';
+    // for (int i = 0; i < 5; i++) {
+    //     a.push_back(std::vector<std::string>());
+    //     for (int j = 0; j < 3; j++) {
+    //         if (j % 2) a.back().push_back(std::to_string(i) + "罗滨是神仙");
+    //         else a.back().push_back(std::to_string(i) + "mxy是神仙");
     //     }
-    //     puts("");
     // }
+    // sa.save("罗滨", a);
+    sa.load("罗滨", a);
+    for (int i = 0; i < a.size(); i++) {
+        for (int j = 0; j < a[i].size(); j++) {
+            std::cout << a[i][j] << '\n';
+        }
+        puts("");
+    }
 }
 
 int main() {
-    test_file_system();
+    int64_t t = -1;
+    std::cout << t << '\n';
+    uint64_t s = -1;
+    std::cout << s << '\n';
+    // test_file_system();
     // test_saver();
     
     return 0;

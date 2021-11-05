@@ -110,6 +110,7 @@ bool VersionManager::get_latest_version(unsigned long long &id) {
 bool VersionManager::get_version_log(std::vector<std::pair<unsigned long long, versionNode>> &version_log) {
     for (auto &it : version) {
         version_log.push_back(it);
+        version_log.back().second.p = nullptr;
     }
     return true;
 }
