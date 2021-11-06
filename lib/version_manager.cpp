@@ -31,7 +31,12 @@ private:
     std::map<unsigned long long, versionNode> version;
     NodeManager &node_manager = NodeManager::get_node_manager();
     Logger logger = Logger::get_logger();
+    bool load();
+    bool save();
+    void dfs(treeNode *cur, std::map<treeNode *, unsigned long long> &label, std::vector<std::pair<unsigned, std::pair<unsigned long long, unsigned long long>>> &relation);
 public:
+    VersionManager();
+    ~VersionManager();
     bool recursive_increase_counter(treeNode *p, bool modify_brother=false);
     bool init_version(treeNode *p, treeNode *vp);
     bool create_version(unsigned long long model_version=NO_MODEL_VERSION, std::string info="");
@@ -40,6 +45,44 @@ public:
     bool get_latest_version(unsigned long long &id);
     bool get_version_log(std::vector<std::pair<unsigned long long, versionNode>> &version_log);
 };
+
+bool VersionManager::load() {
+    return false;
+}
+
+void VersionManager::dfs(treeNode *cur, std::map<treeNode *, unsigned long long> &label, std::vector<std::pair<unsigned, std::pair<unsigned long long, unsigned long long>>> &relation) {
+    if (cur == nullptr || label.count(cur)) return;
+    dfs(cur->next_brother, label, relation);
+    dfs(cur->first_son, label, relation);
+    label[cur] = label.size();
+    if (cur->next_brother != nullptr) {
+        relation.push_back(std::make_pair(0, std::make_pair(label[cur], label[cur->next_brother])));
+    }
+    if (cur->first_son != nullptr) {
+        relation.push_back(std::make_pair(1, std::make_pair(label[cur], label[cur->first_son])));
+    }
+}
+
+bool VersionManager::save() {
+    /**
+     * Each node is labeled and the relationship between nodes is recorded. 
+     */
+    std::map<treeNode*, unsigned long long> label;
+    std::vector<std::pair<unsigned, std::pair<unsigned long long, unsigned long long>>> relation;
+    for (auto &ver : version) {
+        dfs(ver.second.p, label, relation);
+    }
+    
+    return false;
+}
+
+VersionManager::VersionManager() {
+    if (!load()) return;
+}
+
+VersionManager::~VersionManager() {
+    if (!save()) return;
+}
 
 bool VersionManager::recursive_increase_counter(treeNode *p, bool modify_brother) {
     if (p == nullptr) {
