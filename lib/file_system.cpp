@@ -59,35 +59,6 @@ public:
 
 
 
-                        /* ======= class Node ======= */
-
-std::string NodeManager::Node::get_time() {
-    static char t[100];
-    time_t timep;
-    time(&timep);
-    struct tm* p = gmtime(&timep);
-    sprintf(t, "%d-%02d-%02d %02d:%02d:%02d", 1900 + p->tm_year, 1 + p->tm_mon, p->tm_mday, 8 + p->tm_hour, p->tm_min, p->tm_sec);
-    return std::string(t);
-}
-
-NodeManager::Node::Node() = default;
-NodeManager::Node::Node(std::string name) {
-    this->name = name;
-    this->create_time = get_time();
-    this->update_time = get_time();
-    this->content = "";
-};
-
-void NodeManager::Node::update_update_time() {
-    this->update_time = get_time();
-}
-
-
-
-
-
-
-
                         /* ======= class FileSystem ======= */
 
 FileSystem::FileSystem() {

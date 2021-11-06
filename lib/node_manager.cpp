@@ -41,7 +41,7 @@ private:
 
     int get_new_id();
 public:
-    std::map<int, std::pair<int, Node>> &MPP = mp;
+    // std::map<int, std::pair<int, Node>> &MPP = mp;
 
     bool node_exist(int id);
     int get_new_node(std::string name);
@@ -102,8 +102,9 @@ int NodeManager::get_new_id() {
 
 int NodeManager::get_new_node(std::string name) {
     int new_id = get_new_id();
+    // std::pair<int, NodeManager::Node> q = std::make_pair(0, Node(name));
     auto t = std::make_pair(1, Node(name));
-    // mp[new_id] = t;
+    // mp[new_id] = std::make_pair(1, Node(name));
     mp.insert(std::make_pair(new_id, t));
     return new_id;
 };
@@ -198,12 +199,12 @@ int test_node_manager() {
      * 节点计数:    1 .  1 .  1
      * 文件计数：   1 .  2 .  2
      */
-    for (auto it : nm.MPP) {
-        std::cout << "cnt: " << it.second.first << ' ' << "name: " << it.second.second.name << ' ' << "fid: " << it.second.second.fid << '\n';
-    }
-    for (auto it : fm.MP) {
-        std::cout << "fid: " << it.first << ' ' << "cnt: " << it.second.cnt << '\n';
-    }
+    // for (auto it : nm.MPP) {
+    //     std::cout << "cnt: " << it.second.first << ' ' << "name: " << it.second.second.name << ' ' << "fid: " << it.second.second.fid << '\n';
+    // }
+    // for (auto it : fm.MP) {
+    //     std::cout << "fid: " << it.first << ' ' << "cnt: " << it.second.cnt << '\n';
+    // }
     return 0;
 }
 

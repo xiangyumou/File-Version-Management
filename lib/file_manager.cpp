@@ -44,7 +44,7 @@ private:
     }
 
 public:
-    std::map<unsigned long long, fileNode> &MP = mp;
+    // std::map<unsigned long long, fileNode> &MP = mp;
 
     static FileManager& get_file_manager() {
         static FileManager file_manager;
