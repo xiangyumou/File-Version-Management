@@ -21,7 +21,8 @@ struct treeNode {
     };
 
     TYPE type;
-    int cnt, link;
+    int cnt;
+    unsigned long long link;
     treeNode *next_brother, *first_son;
 
     treeNode();

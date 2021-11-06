@@ -66,6 +66,8 @@ public:
     */
     bool save(std::string name, std::vector<std::vector<std::string>> &content);
     bool load(std::string name, std::vector<std::vector<std::string>> &content, bool mandatory_access = false);
+    bool is_all_digits(std::string &s);
+    bool str_to_ull(std::string &s);
 
     static Saver& get_saver();
 };
@@ -224,6 +226,21 @@ bool Saver::load(std::string name, std::vector<std::vector<std::string>> &conten
         }
     }
     return true;
+}
+
+bool Saver::is_all_digits(std::string &s) {
+    for (auto &ch : s) {
+        if (!isdigit(ch)) return false;
+    }
+    return true;
+}
+
+bool Saver::str_to_ull(std::string &s) {
+    unsigned long long res = 0;
+    for (auto &ch : s) {
+        res = res * 10 + ch - '0';
+    }
+    return res;
 }
 
 Saver& Saver::get_saver() {

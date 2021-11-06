@@ -2,6 +2,8 @@
 #define FILE_MANAGER_CPP
 
 #include "logger.cpp"
+#include "saver.cpp"
+#include <cctype>
 #include <string>
 #include <map>
 
@@ -9,13 +11,15 @@ class FileManager {
 private:
     struct fileNode {
         std::string content;
-        int cnt;
+        unsigned long long cnt;
 
         fileNode() = default;
         fileNode(std::string content) : content(content), cnt(1) {}
     };
 
+    std::string DATA_STORAGE_NAME = "FileManager::map_relation";
     std::map<unsigned long long, fileNode> mp;
+    Saver &saver = Saver::get_saver();
     Logger &logger = Logger::get_logger();
 
     unsigned long long get_new_id() {
@@ -43,8 +47,53 @@ private:
         return true;
     }
 
+    bool save() {
+        vvs data;
+        for (auto &it : mp) {
+            data.push_back(std::vector<std::string>());
+            data.back().push_back(std::to_string(it.first));
+            data.back().push_back(it.second.content);
+            data.back().push_back(std::to_string(it.second.cnt));
+        }
+        if (!saver.save(DATA_STORAGE_NAME, data)) return false;
+        return true;
+    }
+
+    bool load() {
+        vvs data;
+        if (!saver.load(DATA_STORAGE_NAME, data)) return false;
+        mp.clear();
+        for (auto &it : data) {
+            if (it.size() != 3) {
+                logger.log("FileSystem: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
+                mp.clear();
+                return false;
+            }
+            if (!saver.is_all_digits(it[0])) {
+                logger.log("FileSystem: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
+                mp.clear();
+                return false;
+            }
+            unsigned long long key = saver.str_to_ull(it[0]);
+            unsigned cnt = saver.str_to_ull(it[2]);
+            std::string &content = it[1];
+            auto t = std::make_pair(key, fileNode(content));
+            t.second.cnt = cnt;
+            mp.insert(t);
+        }
+        return true;
+    }
+
 public:
     // std::map<unsigned long long, fileNode> &MP = mp;
+
+    FileManager() {
+        if (!load()) return;
+    }
+
+    ~FileManager() {
+        save();
+    }
 
     static FileManager& get_file_manager() {
         static FileManager file_manager;

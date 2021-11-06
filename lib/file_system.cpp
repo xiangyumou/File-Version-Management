@@ -15,7 +15,6 @@ Author: Mu Xiangyu, Chant Mee
 #include "bs_tree.cpp"
 #include "node_manager.cpp"
 #include "saver.cpp"
-#include "encryptor.cpp"
 #include "logger.cpp"
 #include <ctime>
 #include <string>
