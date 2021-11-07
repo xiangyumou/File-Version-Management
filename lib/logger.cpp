@@ -15,6 +15,10 @@ Author: Mu Xiangyu, Chant Mee
 #include <fstream>
 #include <iostream>
 
+#define ll Logger::get_logger().log("===== 11111 =====", Logger::DEBUG, __LINE__);
+#define rr Logger::get_logger().log("===== 22222 =====", Logger::DEBUG, __LINE__);
+#define wa Logger::get_logger().log("===== WARN =====", Logger::DEBUG, __LINE__);
+
 class Logger {
 private:
     // Set the log file name here

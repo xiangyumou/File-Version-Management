@@ -220,6 +220,7 @@ bool Saver::load(std::string name, std::vector<std::vector<std::string>> &conten
         for (int j = 0; j < data_num; j++) {
             data_len = read(str);
             content.back().push_back(std::string(str.begin(), str.begin() + data_len));
+            str.erase(str.begin(), str.begin() + data_len);
         }
     }
     return true;
@@ -254,8 +255,15 @@ int test_saver() {
     std::string name = "test";
 
     data.push_back(std::vector<std::string>());
-    data.back().push_back("a b");
-    data.back().push_back("asdf 121 3123: 123 21: 213; 12jlfjafo2*((HGH87G*7g*6fg&F7FG7");
+
+    data.back().push_back("1");
+    data.back().push_back("2");
+    // data.push_back(std::vector<std::string>());
+    // data.back().push_back("3");
+    // data.back().push_back("4");
+
+    // std::cout << data.size() << '\n';
+
     saver.save(name, data);
 
     saver.load(name, data);
