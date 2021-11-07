@@ -41,16 +41,17 @@ private:
     bool load();
     bool save();
     void dfs(treeNode *cur, std::map<treeNode *, unsigned long long> &label);
+    bool recursive_increase_counter(treeNode *p, bool modify_brother=false);
 public:
     VersionManager();
     ~VersionManager();
-    bool recursive_increase_counter(treeNode *p, bool modify_brother=false);
     bool init_version(treeNode *p, treeNode *vp);
     bool create_version(unsigned long long model_version=NO_MODEL_VERSION, std::string info="");
     bool version_exist(unsigned long long id);
     bool get_version_pointer(unsigned long long id, treeNode *&p);
     bool get_latest_version(unsigned long long &id);
     bool get_version_log(std::vector<std::pair<unsigned long long, versionNode>> &version_log);
+    bool empty();
 };
 
 bool VersionManager::load() {
@@ -311,6 +312,10 @@ bool VersionManager::get_version_log(std::vector<std::pair<unsigned long long, v
         version_log.back().second.p = nullptr;
     }
     return true;
+}
+
+bool VersionManager::empty() {
+    return version.empty();
 }
 
 #endif

@@ -47,7 +47,6 @@ private:
     bool save();
 public:
     // std::map<unsigned long long, std::pair<unsigned long long, Node>> &MPP = mp;
-
     NodeManager();
     ~NodeManager();
     bool node_exist(unsigned long long id);
@@ -115,6 +114,12 @@ bool NodeManager::save() {
         data.back().push_back(it.second.second.create_time);
         data.back().push_back(it.second.second.update_time);
         data.back().push_back(std::to_string(it.second.second.fid));
+
+        for (auto &t : data.back()) {
+            std::cout << t << '\n';
+        }
+        std::cout << '\n';
+
     }
     if (!saver.save(DATA_STORAGE_NAME, data)) return false;
     return true;
@@ -126,7 +131,7 @@ bool NodeManager::load() {
     mp.clear();
     for (auto &it : data) {
         if (it.size() != 6) {
-            logger.log("FileSystem: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
+            logger.log("NodeManager: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
             mp.clear();
             return false;
         }
@@ -142,7 +147,7 @@ bool NodeManager::load() {
         }
         if (!flag) {
             mp.clear();
-            logger.log("FileSystem: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
+            logger.log("NodeManager: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
             return false;
         }
         unsigned long long key = saver.str_to_ull(it[0]);
@@ -252,29 +257,13 @@ NodeManager& NodeManager::get_node_manager() {
 
 int test_node_manager() {
 // int main() {
-    unsigned long long fid;
-    NodeManager nm;
-    FileManager fm = FileManager::get_file_manager();
+    typedef unsigned long long ull;
+    NodeManager &nm = NodeManager::get_node_manager();
+    FileManager &fm = FileManager::get_file_manager();
     Logger &logger = Logger::get_logger();
 
-    typedef unsigned long long ull;
-    ull id = nm.get_new_node("123");
-    id = nm.update_content(id, "diyici");
-    nm.increase_counter(id);
-    ull id1 = nm.update_content(id, "diorci");
-    nm.increase_counter(id1);
-    ull id2 = nm.update_name(id1, "321");
-    /**
-     * 三个文件:    123、123、321
-     * 节点计数:    1 .  1 .  1
-     * 文件计数：   1 .  2 .  2
-     */
-    // for (auto it : nm.MPP) {
-    //     std::cout << "cnt: " << it.second.first << ' ' << "name: " << it.second.second.name << ' ' << "fid: " << it.second.second.fid << '\n';
-    // }
-    // for (auto it : fm.MP) {
-    //     std::cout << "fid: " << it.first << ' ' << "cnt: " << it.second.cnt << '\n';
-    // }
+    ull n1 = nm.get_new_node("a");
+    ull n2 = nm.get_new_node("b");
     return 0;
 }
 

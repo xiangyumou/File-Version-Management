@@ -169,6 +169,9 @@ bool Saver::save(std::string name, std::vector<std::vector<std::string>> &conten
     ss << '\n';
     std::string data;
     std::getline(ss, data);
+
+    std::cout << data << '\n';
+
     std::vector<int> sequence;
     for (auto &it : data) {
         sequence.push_back((int)it);
@@ -246,6 +249,29 @@ unsigned long long Saver::str_to_ull(std::string &s) {
 Saver& Saver::get_saver() {
     static Saver saver;
     return saver;
+}
+
+// int test_saver() {
+int main() {
+    Logger &logger = Logger::get_logger();
+    Saver &saver = Saver::get_saver();
+    
+    vvs data;
+    std::string name = "test";
+
+    data.push_back(std::vector<std::string>());
+    data.back().push_back("a b");
+    saver.save(name, data);
+
+    saver.load(name, data);
+    for (auto &it : data) {
+        for (auto &t : it) {
+            std::cout << t << '\n';
+        }
+        std::cout << '\n';
+    }
+    
+    return 0;
 }
 
 #endif

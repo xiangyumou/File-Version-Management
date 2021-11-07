@@ -61,7 +61,9 @@ public:
                         /* ======= class FileSystem ======= */
 
 FileSystem::FileSystem() {
-    version_manager.create_version();
+    if (version_manager.empty()) {
+        version_manager.create_version();
+    }
     unsigned long long latest_version_id;
     if (!version_manager.get_latest_version(latest_version_id)) return;
     switch_version(latest_version_id);
