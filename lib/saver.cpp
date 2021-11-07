@@ -219,6 +219,10 @@ bool Saver::load(std::string name, std::vector<std::vector<std::string>> &conten
         data_num = read(str);
         for (int j = 0; j < data_num; j++) {
             data_len = read(str);
+            if (str.size() < data_len) {
+                logger.log("Failed to load data. No data named A exists. ", Logger::WARNING, __LINE__);
+                return false;
+            }
             content.back().push_back(std::string(str.begin(), str.begin() + data_len));
             str.erase(str.begin(), str.begin() + data_len);
         }
