@@ -114,12 +114,6 @@ bool NodeManager::save() {
         data.back().push_back(it.second.second.create_time);
         data.back().push_back(it.second.second.update_time);
         data.back().push_back(std::to_string(it.second.second.fid));
-
-        for (auto &t : data.back()) {
-            std::cout << t << '\n';
-        }
-        std::cout << '\n';
-
     }
     if (!saver.save(DATA_STORAGE_NAME, data)) return false;
     return true;

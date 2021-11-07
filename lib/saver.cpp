@@ -13,6 +13,7 @@ Author: Mu Xiangyu, Chant Mee
 
 #include "logger.cpp"
 #include "encryptor.cpp"
+#include <cctype>
 #include <vector>
 #include <string>
 #include <sstream>
@@ -46,6 +47,7 @@ private:
      * 其中 len为data的pair的对数 / N
     */
     void save_data(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> data);
+    int read(std::string &s);
 
 public:
     Saver();
@@ -126,6 +128,16 @@ void Saver::save_data(unsigned long long name_hash, unsigned long long data_hash
     mp[name_hash] = dataNode(name_hash, data_hash, data);
 }
 
+int Saver::read(std::string &s) {
+    int cur = 0, d = 0;
+    for (; !isdigit(s[cur]); cur++);
+    for (; isdigit(s[cur]); cur++) {
+        d = d * 10 + s[cur] - '0';
+    }
+    s.erase(s.begin(), s.begin() + cur + 1);
+    return d;
+}
+
 Saver::Saver() {
     load_file();
 }
@@ -155,23 +167,14 @@ Saver::~Saver() {
  * 每个单元之间都用空格隔开
 */
 bool Saver::save(std::string name, std::vector<std::vector<std::string>> &content) {
-    std::stringstream ss;
-    ss << content.size();
+    std::string data;
+    data += std::to_string(content.size());
     for (auto &data_block : content) {
-        ss << ' ' << data_block.size();
-        for (auto &data : data_block) {
-            ss << ' ' << data.size();
-            for (auto &ch : data) {
-                ss << ' ' << ch;
-            }
+        data += " " + std::to_string(data_block.size());
+        for (auto &dt : data_block) {
+            data += " " + std::to_string(dt.size()) + " " + dt;
         }
     }
-    ss << '\n';
-    std::string data;
-    std::getline(ss, data);
-
-    std::cout << data << '\n';
-
     std::vector<int> sequence;
     for (auto &it : data) {
         sequence.push_back((int)it);
@@ -201,31 +204,22 @@ bool Saver::load(std::string name, std::vector<std::vector<std::string>> &conten
     for (auto &it : sequence) {
         str.push_back(it);
     }
-    std::stringstream ss(str);
     /**
      * data字符串的格式:
      * 数据块的个数 
      * 每个数据块中数据的个数
      * 数据的长度
-     * 数据的字符表示
-     * 每个单元之间都用空格隔开
+     * 数据字符串
     */
     content.clear();
     int block_num, data_num, data_len;
-    std::string tmp;
-    ss >> block_num;
+    block_num = read(str);
     for (int i = 0; i < block_num; i++) {
         content.push_back(std::vector<std::string>());
-        ss >> data_num;
+        data_num = read(str);
         for (int j = 0; j < data_num; j++) {
-            ss >> data_len;
-            tmp.clear();
-            for (int k = 0; k < data_len; k++) {
-                char ch;
-                ss >> ch;
-                tmp.push_back(ch);
-            }
-            content.back().push_back(tmp);
+            data_len = read(str);
+            content.back().push_back(std::string(str.begin(), str.begin() + data_len));
         }
     }
     return true;
@@ -251,8 +245,8 @@ Saver& Saver::get_saver() {
     return saver;
 }
 
-// int test_saver() {
-int main() {
+int test_saver() {
+// int main() {
     Logger &logger = Logger::get_logger();
     Saver &saver = Saver::get_saver();
     
@@ -261,6 +255,7 @@ int main() {
 
     data.push_back(std::vector<std::string>());
     data.back().push_back("a b");
+    data.back().push_back("asdf 121 3123: 123 21: 213; 12jlfjafo2*((HGH87G*7g*6fg&F7FG7");
     saver.save(name, data);
 
     saver.load(name, data);
