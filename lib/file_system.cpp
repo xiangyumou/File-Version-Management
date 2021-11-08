@@ -22,7 +22,6 @@ Author: Mu Xiangyu, Chant Mee
 
 class FileSystem : private BSTree {
 private:
-
     VersionManager version_manager;
     Logger &logger = Logger::get_logger();
     NodeManager &node_manager = NodeManager::get_node_manager();

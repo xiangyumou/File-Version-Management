@@ -68,8 +68,8 @@ public:
     */
     bool save(std::string name, std::vector<std::vector<std::string>> &content);
     bool load(std::string name, std::vector<std::vector<std::string>> &content, bool mandatory_access = false);
-    bool is_all_digits(std::string &s);
-    unsigned long long str_to_ull(std::string &s);
+    static bool is_all_digits(std::string &s);
+    static unsigned long long str_to_ull(std::string &s);
 
     static Saver& get_saver();
 };

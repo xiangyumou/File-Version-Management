@@ -14,6 +14,7 @@ Author: Mu Xiangyu, Chant Mee
 #include "file_system.cpp"
 #include "command_interpreter.cpp"
 #include "logger.cpp"
+#include "saver.cpp"
 #include <cstdlib>
 #include <cctype>
 #include <map>
@@ -23,6 +24,7 @@ Author: Mu Xiangyu, Chant Mee
 class Terminal : private CommandInterpreter {
 private:
    FileSystem file_system;
+   Logger &logger = Logger::get_logger();
 
    enum PARA_TYPE {
       STR = 0, INT, ULL
@@ -54,26 +56,8 @@ private:
     */
    std::vector<std::vector<PARA_TYPE>> function_requirement;
 
-   Logger &logger = Logger::get_logger();
-
    bool execute(unsigned long long pid, std::vector<std::string> parameter);
    bool initialize();
-
-private:
-   static bool is_all_numbers(std::string &s) {
-      for (auto &ch : s) {
-         if (!isdigit(ch)) return false;
-      }
-      return true;
-   }
-
-   static unsigned long long str_to_ull(std::string &s) {
-      unsigned long long res = 0;
-      for (auto &ch : s) {
-         res = res * 10 + ch - '0';
-      }
-      return res;
-   }
 
 public:
    Terminal();
@@ -92,7 +76,7 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
    }
    for (int i = 0; i < fr.size(); i++) {
       if (fr[i] == INT || fr[i] == ULL) {
-         if (!is_all_numbers(parameter[i])) {
+         if (!Saver::is_all_digits(parameter[i])) {
             logger.log("The " + std::to_string(i) + "th parameter must be an integer. Check the input.", Logger::WARNING, __LINE__);
             return false;
          }
@@ -117,7 +101,7 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
 
    switch (pid) {
       case 0: 
-      if (!add_identifier(parameter[0], str_to_ull(parameter[1]))) return false;
+      if (!add_identifier(parameter[0], Saver::str_to_ull(parameter[1]))) return false;
       else std::cout << "An identifier was successfully added for program 5." << '\n';
       break;
       case 1:
@@ -126,7 +110,7 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       break;
 
       case 2:
-      if (!file_system.switch_version(str_to_ull(parameter[0]))) return false;
+      if (!file_system.switch_version(Saver::str_to_ull(parameter[0]))) return false;
       else std::cout << "Switched to version " + parameter[0] << '\n';
       break;
 
@@ -191,16 +175,16 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       if (parameter.size() == 0) {
          if (!file_system.create_version("")) return false;
       } else if (parameter.size() == 1) {
-         if (is_all_numbers(parameter[0])) {
-            if (!file_system.create_version(str_to_ull(parameter[0]))) return false;
+         if (Saver::is_all_digits(parameter[0])) {
+            if (!file_system.create_version(Saver::str_to_ull(parameter[0]))) return false;
          } else {
             if (!file_system.create_version(parameter[0])) return false;
          }
       } else {
-         if (is_all_numbers(parameter[0])) {
-            if (!file_system.create_version(str_to_ull(parameter[0]), parameter[1])) return false;
-         } else if (is_all_numbers(parameter[1])) {
-            if (!file_system.create_version(parameter[0], str_to_ull(parameter[1]))) return false;
+         if (Saver::is_all_digits(parameter[0])) {
+            if (!file_system.create_version(Saver::str_to_ull(parameter[0]), parameter[1])) return false;
+         } else if (Saver::is_all_digits(parameter[1])) {
+            if (!file_system.create_version(parameter[0], Saver::str_to_ull(parameter[1]))) return false;
          }
       }
       break;
@@ -224,7 +208,6 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       case 18:
       system("clear");
       break;
-
    }
    return true;
 }
