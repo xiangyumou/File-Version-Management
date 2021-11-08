@@ -49,6 +49,9 @@ public:
     bool create_version(unsigned long long model_version=NO_MODEL_VERSION, std::string info="");
     bool create_version(std::string info = "", unsigned long long model_version=NO_MODEL_VERSION);
     bool version(std::vector<std::pair<unsigned long long, versionNode>> &version_log);
+    bool get_update_time(std::string name, std::string &update_time);
+    bool get_create_time(std::string name, std::string &create_time);
+    bool get_type(std::string name, treeNode::TYPE &type);
     int get_current_version();
 };
 
@@ -298,6 +301,24 @@ bool FileSystem::create_version(std::string info, unsigned long long model_versi
 
 bool FileSystem::version(std::vector<std::pair<unsigned long long, versionNode>> &version_log) {
     return version_manager.get_version_log(version_log);
+}
+
+bool FileSystem::get_update_time(std::string name, std::string &update_time) {
+    if (!go_to(name)) return false;
+    update_time = node_manager.get_update_time(path.back()->link);
+    return true;
+}
+
+bool FileSystem::get_create_time(std::string name, std::string &create_time) {
+    if (!go_to(name)) return false;
+    create_time = node_manager.get_create_time(path.back()->link);
+    return true;
+}
+
+bool FileSystem::get_type(std::string name, treeNode::TYPE &type) {
+    if (!go_to(name)) return false;
+    type = path.back()->type;
+    return true;
 }
 
 int FileSystem::get_current_version() {

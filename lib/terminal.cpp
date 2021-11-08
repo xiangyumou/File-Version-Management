@@ -20,6 +20,7 @@ Author: Mu Xiangyu, Chant Mee
 #include <map>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 
 class Terminal : private CommandInterpreter {
 private:
@@ -52,7 +53,9 @@ private:
     * 14: create_version         create_version
     * 15: version                version
     * 16: get_current_version    gcv
-    * 17: clear                  clear
+    * 17: init                   init
+    * 18: clear                  clear
+    * 19: vim                    vim
     */
    std::vector<std::vector<PARA_TYPE>> function_requirement;
 
@@ -102,7 +105,7 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
    switch (pid) {
       case 0: 
       if (!add_identifier(parameter[0], Saver::str_to_ull(parameter[1]))) return false;
-      else std::cout << "An identifier was successfully added for program 5." << '\n';
+      else std::cout << "An identifier was successfully added for program " + Saver::str_to_ull(parameter[1]) <<  + "." << '\n';
       break;
       case 1:
       if (!delete_identifier(parameter[0])) return false;
@@ -162,12 +165,25 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
          std::cout << "The folder is empty.  QAQ" << '\n';
          break;
       }
-      std::sort(ls_content.begin(), ls_content.end());
-      for (int i = 0; i < ls_content.size(); i++) {
-         if (i != 0 && i % 8 == 0) std::cout << '\n';
-         std::cout << ls_content[i] << "\t";
+
+      if (parameter.size() == 0 || parameter[0] != "-a") {
+         std::sort(ls_content.begin(), ls_content.end());
+         for (int i = 0; i < ls_content.size(); i++) {
+            if (i != 0 && i % 8 == 0) std::cout << '\n';
+            std::cout << ls_content[i] << "\t";
+         }
+         std::cout << '\n';
+      } else {
+         std::cout << "type\t" << "create time\t\t" << "update time\t\t" << "name" << '\n';
+         for (auto &content : ls_content) {
+            treeNode::TYPE type;
+            std::string create_time, update_time;
+            if (!file_system.get_type(content, type)) return false;
+            if (!file_system.get_create_time(content, create_time)) return false;
+            if (!file_system.get_update_time(content, update_time)) return false;
+            std::cout << (type == treeNode::FILE ? "file" : "dir") << '\t' << create_time << '\t' << update_time << '\t' << content << '\n';
+         }
       }
-      std::cout << '\n';
       break;
 
       case 14:
@@ -207,6 +223,34 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       case 18:
       system("clear");
       break;
+
+      case 19:
+      std::string file_name = "temp_file_" + parameter[0];
+      std::string cmd = "rm -f " + file_name;
+      system(cmd.c_str());
+      cmd = "touch -f " + file_name;
+      system(cmd.c_str());
+      std::string content;
+      if (file_system.get_content(parameter[0], content)) {
+         std::ofstream out(file_name);
+         out << content;
+         out.close();
+      }
+      cmd = "vim " + file_name;
+      system(cmd.c_str());
+      std::ifstream in(file_name);
+      content.clear();
+      std::string tmp;
+      while (std::getline(in, tmp)) {
+         content += tmp;
+         content.push_back('\n');
+      }
+      in.close();
+      cmd = "rm -f " + file_name;
+      system(cmd.c_str());
+      file_system.make_file(parameter[0]);
+      if (!file_system.update_content(parameter[0], content)) return false;
+      break;
    }
    return true;
 }
@@ -234,6 +278,7 @@ bool Terminal::initialize() {
    add_identifier("gcv", 16);
    add_identifier("init", 17);
    add_identifier("clear", 18);
+   add_identifier("vim", 19);
    return true;
 }
 
@@ -276,6 +321,8 @@ Terminal::Terminal() {
    function_requirement.push_back(std::vector<PARA_TYPE>());
    // clear
    function_requirement.push_back(std::vector<PARA_TYPE>());
+   // vim
+   function_requirement.push_back(std::vector<PARA_TYPE>({STR}));
 
    if (FIRST_START) {
       initialize();
