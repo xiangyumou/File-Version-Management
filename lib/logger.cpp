@@ -11,6 +11,7 @@ Author: Mu Xiangyu, Chant Mee
 #ifndef LOGGER_CPP
 #define LOGGER_CPP
 
+#include <ctime>
 #include <string>
 #include <fstream>
 #include <iostream>
