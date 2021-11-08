@@ -1,0 +1,54 @@
+level: WARNING 
+line: 95 (2021-11-08 11:48:20) load_file: No data file.
+level: WARNING 
+line: 193 (2021-11-08 11:48:20) Failed to load data. No data named A exists. 
+level: WARNING 
+line: 193 (2021-11-08 11:48:20) Failed to load data. No data named A exists. 
+level: WARNING 
+line: 193 (2021-11-08 11:48:20) Failed to load data. No data named A exists. 
+level: WARNING 
+line: 193 (2021-11-08 11:48:20) Failed to load data. No data named A exists. 
+level: INFO 
+(2021-11-08 11:48:20) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 11:48:20) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 11:48:20) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-08 11:48:20) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 11:48:20) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-08 11:48:35) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 11:48:35) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 11:48:35) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 11:48:35) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 11:48:35) The counter for node b has been incremented by one.
+level: INFO 
+(2021-11-08 11:48:35) The counter for node a has been incremented by one.
+level: INFO 
+(2021-11-08 11:48:35) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-08 11:48:35) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 11:48:35) The counter for node root has been incremented by one.
+level: WARNING 
+line: 198 (2021-11-08 11:48:36) Command not found: exit
+level: INFO 
+(2021-11-08 11:48:51) Get a null pointer in line 96
+level: INFO 
+(2021-11-08 11:48:51) Get a null pointer in line 96
+level: INFO 
+(2021-11-08 11:48:51) Get a null pointer in line 96
+level: INFO 
+(2021-11-08 11:48:51) Get a null pointer in line 96
+level: WARNING 
+line: 198 (2021-11-08 11:48:54) Command not found: exit
+level: INFO 
+(2021-11-08 11:49:59) a: Not a directory.
+level: WARNING 
+line: 198 (2021-11-08 11:50:02) Command not found: exit

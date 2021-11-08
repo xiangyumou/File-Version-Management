@@ -84,7 +84,7 @@ bool VersionManager::load() {
         cnt = saver.str_to_ull(s_cnt);
         link = saver.str_to_ull(s_link);
         
-        if (cnt >= 3) {
+        if (type >= 3) {
             logger.log("VersionManager: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
             return false;
         }
