@@ -13,6 +13,7 @@ Author: Mu Xiangyu, Chant Mee
 
 #include "node_manager.cpp"
 #include "logger.cpp"
+#include <algorithm>
 #include <vector>
 
 struct treeNode {
@@ -38,15 +39,14 @@ protected:
 
     bool check_path();
     bool check_node(treeNode *p, int line);
-    bool travel_tree(treeNode *p, std::string &tree_info);
     bool is_son();
     bool goto_tail();
     bool goto_head();
     bool name_exist(std::string name);
     bool go_to(std::string name);
-
     bool goto_last_dir();
     bool list_directory_contents(std::vector<std::string> &content);
+    bool get_current_path(std::vector<std::string> &path);
 };
 
 
@@ -88,33 +88,6 @@ bool BSTree::check_node(treeNode *p, int line) {
         logger.log("The node counter is already less than or equal to 0, please check the program!", Logger::FATAL, line);
         return false;
     }
-    return true;
-}
-
-bool BSTree::travel_tree(treeNode *p,std::string &tree_info) {
-    if (p == nullptr) {
-        logger.log("Get a null pointer in line " + std::to_string(__LINE__));
-        return false;
-    }
-    static int tab_cnt = 1;
-    if (p->type == 2) {
-        travel_tree(p->next_brother, tree_info);
-        return true;
-    }
-    for (unsigned int i = 0; i < tab_cnt; i++) {
-        if (i < tab_cnt - 1) {
-            tree_info += "    ";
-        } else if (p->next_brother != nullptr) {
-            tree_info += "├── ";
-        } else {
-            tree_info += "└── ";
-        }
-    }
-    tree_info += node_manager.get_name(p->link) + '\n';
-    tab_cnt++;
-    travel_tree(p->first_son, tree_info);
-    tab_cnt--;
-    travel_tree(p->next_brother, tree_info);
     return true;
 }
 
@@ -179,6 +152,20 @@ bool BSTree::list_directory_contents(std::vector<std::string> &content) {
         content.push_back(node_manager.get_name(path.back()->next_brother->link));
         path.push_back(path.back()->next_brother);
     }
+    return true;
+}
+
+bool BSTree::get_current_path(std::vector<std::string> &p) {
+    auto path_backup = path;
+    goto_head();
+    while (path.size() > 2) {
+        p.push_back(node_manager.get_name(path[path.size() - 2]->link));
+        goto_last_dir();
+        goto_head();
+    }
+    p.push_back(node_manager.get_name(path.front()->link));
+    path = path_backup;
+    std::reverse(p.begin(), p.end());
     return true;
 }
 

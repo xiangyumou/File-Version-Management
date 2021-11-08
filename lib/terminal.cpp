@@ -56,6 +56,7 @@ private:
     * 17: init                   init
     * 18: clear                  clear
     * 19: vim                    vim
+    * 20: get_current_path       pwd
     */
    std::vector<std::vector<PARA_TYPE>> function_requirement;
 
@@ -100,6 +101,12 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
    std::string tree_content;              // case 11
    std::vector<std::string> ls_content;   // case 13
    std::vector<std::pair<unsigned long long, versionNode>> version_content; // case 15
+   std::string file_name;                 // case 19
+   std::string cmd;                       // case 19
+   std::string content;                   // case 19
+   std::string tmp;                       // case 19
+   std::ifstream in;                      // case 19
+   std::vector<std::string> path;         // case 20
 
 
    switch (pid) {
@@ -233,12 +240,11 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       break;
 
       case 19:
-      std::string file_name = "temp_file_" + parameter[0];
-      std::string cmd = "rm -f " + file_name;
+      file_name = "temp_file_" + parameter[0];
+      cmd = "rm -f " + file_name;
       system(cmd.c_str());
       cmd = "touch -f " + file_name;
       system(cmd.c_str());
-      std::string content;
       if (file_system.get_content(parameter[0], content)) {
          std::ofstream out(file_name);
          out << content;
@@ -246,9 +252,8 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       }
       cmd = "vim " + file_name;
       system(cmd.c_str());
-      std::ifstream in(file_name);
+      in.open(file_name);
       content.clear();
-      std::string tmp;
       while (std::getline(in, tmp)) {
          content += tmp;
          content.push_back('\n');
@@ -258,6 +263,15 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       system(cmd.c_str());
       file_system.make_file(parameter[0]);
       if (!file_system.update_content(parameter[0], content)) return false;
+      break;
+
+      case 20:
+      if (!file_system.get_current_path(path)) return false;
+      std::cout << '/';
+      for (auto &p : path) {
+         std::cout << p << '/';
+      }
+      std::cout << '\n';
       break;
    }
    return true;
@@ -287,6 +301,7 @@ bool Terminal::initialize() {
    add_identifier("init", 17);
    add_identifier("clear", 18);
    add_identifier("vim", 19);
+   add_identifier("pwd", 20);
    return true;
 }
 
@@ -331,6 +346,8 @@ Terminal::Terminal() {
    function_requirement.push_back(std::vector<PARA_TYPE>());
    // vim
    function_requirement.push_back(std::vector<PARA_TYPE>({STR}));
+   // pwd
+   function_requirement.push_back(std::vector<PARA_TYPE>());
 
    if (FIRST_START) {
       initialize();

@@ -31,6 +31,7 @@ private:
     bool recursive_delete_nodes(treeNode *p, bool delete_brother=false);
     bool delete_node();
     bool rebuild_nodes(treeNode *p);
+    bool travel_tree(treeNode *p, std::string &tree_info);
 
 public:
     FileSystem();
@@ -52,6 +53,7 @@ public:
     bool get_update_time(std::string name, std::string &update_time);
     bool get_create_time(std::string name, std::string &create_time);
     bool get_type(std::string name, treeNode::TYPE &type);
+    bool get_current_path(std::vector<std::string> &p);
     int get_current_version();
 };
 
@@ -125,6 +127,33 @@ bool FileSystem::rebuild_nodes(treeNode *p) {
     }
     if (path.back() == nullptr) path.pop_back();
     if (!check_path()) return false;
+    return true;
+}
+
+bool FileSystem::travel_tree(treeNode *p,std::string &tree_info) {
+    if (p == nullptr) {
+        logger.log("Get a null pointer in line " + std::to_string(__LINE__));
+        return false;
+    }
+    static int tab_cnt = 1;
+    if (p->type == 2) {
+        travel_tree(p->next_brother, tree_info);
+        return true;
+    }
+    for (unsigned int i = 0; i < tab_cnt; i++) {
+        if (i < tab_cnt - 1) {
+            tree_info += "    ";
+        } else if (p->next_brother != nullptr) {
+            tree_info += "├── ";
+        } else {
+            tree_info += "└── ";
+        }
+    }
+    tree_info += node_manager.get_name(p->link) + '\n';
+    tab_cnt++;
+    travel_tree(p->first_son, tree_info);
+    tab_cnt--;
+    travel_tree(p->next_brother, tree_info);
     return true;
 }
 
@@ -274,7 +303,6 @@ bool FileSystem::get_content(std::string name, std::string &content) {
 bool FileSystem::tree(std::string &tree_info) {
     if (!check_path()) return false;
     if (!travel_tree(path.front(), tree_info)) return false;
-    puts("");
     return true;
 }
 
@@ -318,6 +346,11 @@ bool FileSystem::get_create_time(std::string name, std::string &create_time) {
 bool FileSystem::get_type(std::string name, treeNode::TYPE &type) {
     if (!go_to(name)) return false;
     type = path.back()->type;
+    return true;
+}
+
+bool FileSystem::get_current_path(std::vector<std::string> &p) {
+    if (!BSTree::get_current_path(p)) return false;
     return true;
 }
 
