@@ -57,6 +57,7 @@ private:
     * 18: clear                  clear
     * 19: vim                    vim
     * 20: get_current_path       pwd
+    * 21: find                   find
     */
    std::vector<std::vector<PARA_TYPE>> function_requirement;
 
@@ -107,6 +108,7 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
    std::string tmp;                       // case 19
    std::ifstream in;                      // case 19
    std::vector<std::string> path;         // case 20
+   std::vector<std::pair<std::string, std::vector<std::string>>> res;      // case 21
 
 
    switch (pid) {
@@ -273,6 +275,19 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       }
       std::cout << '\n';
       break;
+
+      case 21:
+      if (!file_system.Find(parameter[0], res)) return false;
+      std::cout << "name\t" << "path" << '\n';
+      for (auto &r : res) {
+         std::cout << r.first << '\t';
+         std::cout << '/';
+         for (auto &s : r.second) {
+            std::cout << s << '/';
+         }
+         std::cout << '\n';
+      }
+      break;
    }
    return true;
 }
@@ -302,6 +317,7 @@ bool Terminal::initialize() {
    add_identifier("clear", 18);
    add_identifier("vim", 19);
    add_identifier("pwd", 20);
+   add_identifier("find", 21);
    return true;
 }
 
@@ -348,6 +364,8 @@ Terminal::Terminal() {
    function_requirement.push_back(std::vector<PARA_TYPE>({STR}));
    // pwd
    function_requirement.push_back(std::vector<PARA_TYPE>());
+   // find
+   function_requirement.push_back(std::vector<PARA_TYPE>({STR}));
 
    if (FIRST_START) {
       initialize();

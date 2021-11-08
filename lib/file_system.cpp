@@ -19,6 +19,7 @@ Author: Mu Xiangyu, Chant Mee
 #include <ctime>
 #include <string>
 #include <stack>
+#include <vector>
 
 class FileSystem : private BSTree {
 private:
@@ -32,6 +33,8 @@ private:
     bool delete_node();
     bool rebuild_nodes(treeNode *p);
     bool travel_tree(treeNode *p, std::string &tree_info);
+    bool travel_find(std::string name, std::vector<std::pair<std::string, std::vector<std::string>>> &res);
+    bool kmp(std::string str, std::string tar);
 
 public:
     FileSystem();
@@ -54,6 +57,7 @@ public:
     bool get_create_time(std::string name, std::string &create_time);
     bool get_type(std::string name, treeNode::TYPE &type);
     bool get_current_path(std::vector<std::string> &p);
+    bool Find(std::string name, std::vector<std::pair<std::string, std::vector<std::string>>> &res);
     int get_current_version();
 };
 
@@ -154,6 +158,54 @@ bool FileSystem::travel_tree(treeNode *p,std::string &tree_info) {
     travel_tree(p->first_son, tree_info);
     tab_cnt--;
     travel_tree(p->next_brother, tree_info);
+    return true;
+}
+
+bool FileSystem::kmp(std::string str, std::string tar) {
+    static const int MAX_NAME_LEN = 1000;
+    if (str.size() > MAX_NAME_LEN || tar.size() > MAX_NAME_LEN) return false;
+    int next[1000];
+    memset(next, 0, sizeof next);
+    for (int i = 0, j = -1; i < tar.size(); i++) {
+        while (j >= 0 && tar[j + 1] != tar[i]) {
+            j = next[j];
+        }
+        if (tar[j + 1] == tar[i]) {
+            j++;
+        }
+        next[i] = j;
+    }
+
+    for (int i = 0, j = -1; i < str.size(); i++) {
+        while (j >= 0 && tar[j + 1] != str[i]) {
+            j = next[j];
+        }
+        if (tar[j + 1] == str[i]) {
+            j++;
+        }
+        if (j == tar.size() - 1) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool FileSystem::travel_find(std::string name, std::vector<std::pair<std::string, std::vector<std::string>>> &res) {
+    if (kmp(node_manager.get_name(path.back()->link), name)) {
+        std::vector<std::string> p;
+        if (!get_current_path(p)) return false;
+        res.push_back(std::make_pair(node_manager.get_name(path.back()->link), p));
+    }
+    if (path.back()->next_brother != nullptr) {
+        path.push_back(path.back()->next_brother);
+        travel_find(name, res);
+        path.pop_back();
+    }
+    if (path.back()->first_son != nullptr) {
+        path.push_back(path.back()->first_son);
+        travel_find(name, res);
+        path.pop_back();
+    }
     return true;
 }
 
@@ -351,6 +403,13 @@ bool FileSystem::get_type(std::string name, treeNode::TYPE &type) {
 
 bool FileSystem::get_current_path(std::vector<std::string> &p) {
     if (!BSTree::get_current_path(p)) return false;
+    return true;
+}
+
+bool FileSystem::Find(std::string name, std::vector<std::pair<std::string, std::vector<std::string>>> &res) {
+    auto path_backup = path;
+    path.erase(path.begin() + 2, path.end());
+    travel_find(name, res);
     return true;
 }
 
