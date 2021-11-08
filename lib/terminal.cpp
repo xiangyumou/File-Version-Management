@@ -164,8 +164,7 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       }
       std::sort(ls_content.begin(), ls_content.end());
       for (int i = 0; i < ls_content.size(); i++) {
-         if (i % 3 == 0) std::cout << '\t';
-         if (i != 0 && i % 3 == 0) std::cout << '\n';
+         if (i != 0 && i % 8 == 0) std::cout << '\n';
          std::cout << ls_content[i] << "\t";
       }
       std::cout << '\n';

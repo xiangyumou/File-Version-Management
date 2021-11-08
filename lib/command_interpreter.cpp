@@ -86,7 +86,8 @@ std::vector<std::string> CommandInterpreter::separator(std::string &s) {
 std::string CommandInterpreter::escape(char ch) {
     static std::vector<std::pair<char, std::string>> fr_to({
         {'s', " "},
-        {'t', "\t"}
+        {'t', "\t"},
+        {'\\', "\\"}
     });
     for (auto &it : fr_to) {
         if (it.first == ch) return it.second;
