@@ -1,0 +1,52 @@
+level: WARNING 
+line: 95 (2021-11-08 21:17:31) load_file: No data file.
+level: WARNING 
+line: 193 (2021-11-08 21:17:31) Failed to load data. No data named A exists. 
+level: WARNING 
+line: 193 (2021-11-08 21:17:31) Failed to load data. No data named A exists. 
+level: WARNING 
+line: 193 (2021-11-08 21:17:31) Failed to load data. No data named A exists. 
+level: WARNING 
+line: 193 (2021-11-08 21:17:31) Failed to load data. No data named A exists. 
+level: INFO 
+(2021-11-08 21:17:31) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 21:17:31) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 21:17:31) The counter for node  has been incremented by one.
+level: INFO 
+(2021-11-08 21:17:31) Get a null pointer in line 245
+level: INFO 
+(2021-11-08 21:17:31) The counter for node root has been incremented by one.
+level: INFO 
+(2021-11-08 21:17:41) Node a will be deleted...
+level: INFO 
+(2021-11-08 21:17:41) Deleting completed.
+level: INFO 
+(2021-11-08 21:17:41) Node b will be deleted...
+level: INFO 
+(2021-11-08 21:17:41) Deleting completed.
+level: INFO 
+(2021-11-08 21:17:41) Node c will be deleted...
+level: INFO 
+(2021-11-08 21:17:41) Deleting completed.
+level: WARNING 
+line: 153 (2021-11-08 21:18:55) no file or directory named "/Users/chant/Projects/c/file_system-1/"
+level: WARNING 
+line: 199 (2021-11-08 21:18:58) Command not found: exit
+level: INFO 
+(2021-11-08 21:19:19) Node a will be deleted...
+level: INFO 
+(2021-11-08 21:19:19) Deleting completed.
+level: INFO 
+(2021-11-08 21:19:19) Node b will be deleted...
+level: INFO 
+(2021-11-08 21:19:19) Deleting completed.
+level: INFO 
+(2021-11-08 21:19:19) c: Not a file.
+level: INFO 
+(2021-11-08 21:19:19) Node d will be deleted...
+level: INFO 
+(2021-11-08 21:19:19) Deleting completed.
+level: WARNING 
+line: 199 (2021-11-08 21:19:23) Command not found: exit

@@ -130,11 +130,19 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       break;
 
       case 6:
-      if (!file_system.remove_file(parameter[0])) return false;
+      for (auto &file_name : parameter) {
+         if (!file_system.remove_file(file_name)) {
+            std::cout << *logger.information << '\n';
+         }
+      }
       break;
 
       case 7:
-      if (!file_system.remove_dir(parameter[0])) return false;
+      for (auto &file_name : parameter) {
+         if (!file_system.remove_dir(file_name)) {
+            std::cout << *logger.information << '\n';
+         }
+      }
       break;
 
       case 8:
