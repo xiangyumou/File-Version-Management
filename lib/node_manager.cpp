@@ -46,7 +46,6 @@ private:
     bool load();
     bool save();
 public:
-    // std::map<unsigned long long, std::pair<unsigned long long, Node>> &MPP = mp;
     NodeManager();
     ~NodeManager();
     bool node_exist(unsigned long long id);
