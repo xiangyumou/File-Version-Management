@@ -410,6 +410,7 @@ bool FileSystem::Find(std::string name, std::vector<std::pair<std::string, std::
     auto path_backup = path;
     path.erase(path.begin() + 2, path.end());
     travel_find(name, res);
+    path = path_backup;
     return true;
 }
 
