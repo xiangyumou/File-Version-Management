@@ -19,23 +19,23 @@ Author: Mu Xiangyu, Chant Mee
 #include <string>
 #include <map>
 
+class Node {
+    private:
+        FileManager &file_manager = FileManager::get_file_manager();
+    public:
+        std::string name;
+        std::string create_time;
+        std::string update_time;
+        unsigned long long fid;
+
+        std::string get_time();
+        Node();
+        Node(std::string name);
+        void update_update_time();
+};
+
 class NodeManager {
 private:
-    class Node {
-        private:
-            FileManager &file_manager = FileManager::get_file_manager();
-        public:
-            std::string name;
-            std::string create_time;
-            std::string update_time;
-            unsigned long long fid;
-
-            std::string get_time();
-            Node();
-            Node(std::string name);
-            void update_update_time();
-    };
-
     std::map<unsigned long long, std::pair<unsigned long long, Node>> mp;
     FileManager &file_manager = FileManager::get_file_manager();
     std::string DATA_STORAGE_NAME = "NodeManager::map_relation";
@@ -68,7 +68,7 @@ public:
 
                         /* ======= class Node ======= */
 
-std::string NodeManager::Node::get_time() {
+std::string Node::get_time() {
     static char t[100];
     time_t timep;
     time(&timep);
@@ -77,15 +77,16 @@ std::string NodeManager::Node::get_time() {
     return std::string(t);
 }
 
-NodeManager::Node::Node() = default;
-NodeManager::Node::Node(std::string name) {
+Node::Node() = default;
+
+Node::Node(std::string name) {
     this->name = name;
     this->create_time = get_time();
     this->update_time = get_time();
     this->fid = file_manager.create_file("");
 }
 
-void NodeManager::Node::update_update_time() {
+void Node::update_update_time() {
     this->update_time = get_time();
 }
 

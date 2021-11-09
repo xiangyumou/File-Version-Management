@@ -42,7 +42,8 @@ struct Complex {
  * through FFT.
  */
 class Encryptor {
-protected:
+
+public:
 /**
  * @brief 
  * The Fast Fourier Transform requires that the sequence to be transformed must be 

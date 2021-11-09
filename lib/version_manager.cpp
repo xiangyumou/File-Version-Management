@@ -54,6 +54,10 @@ public:
     bool empty();
 };
 
+
+
+
+                        /* ====== VersionManager ====== */
 bool VersionManager::load() {
     vvs node_information;
     if (!saver.load(DATA_TREENODE_INFO, node_information)) return false;

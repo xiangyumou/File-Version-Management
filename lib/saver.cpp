@@ -21,24 +21,22 @@ Author: Mu Xiangyu, Chant Mee
 
 typedef std::vector<std::vector<std::string>> vvs;
 
+struct dataNode {
+    unsigned long long name_hash, data_hash;
+    int len;
+    std::vector<std::pair<double, double>> data;
+
+    dataNode();
+    dataNode(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> &data);
+};
+
 class Saver : private Encryptor {
 private:
-    struct dataNode {
-        unsigned long long name_hash, data_hash;
-        int len;
-        std::vector<std::pair<double, double>> data;
-
-        dataNode();
-        dataNode(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> &data);
-    };
-
     std::string data_file = "data.chm";
     std::map<unsigned long long, dataNode> mp;
     Logger logger = Logger::get_logger();
-
     template <class T>
     unsigned long long get_hash(T &s);
-
     bool load_file();
 
     /**
@@ -51,7 +49,7 @@ private:
 
 public:
     Saver();
-
+    
     /**
      * 保存的格式：
      * name_hash data_hash len 后面跟len对浮点数
@@ -70,16 +68,26 @@ public:
     bool load(std::string name, std::vector<std::vector<std::string>> &content, bool mandatory_access = false);
     static bool is_all_digits(std::string &s);
     static unsigned long long str_to_ull(std::string &s);
-
     static Saver& get_saver();
 };
 
 
 
-                        /* ======= class Saver ======= */
-Saver::dataNode::dataNode() = default;
-Saver::dataNode::dataNode(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> &data) : name_hash(name_hash), data_hash(data_hash), len(data.size() / N), data(data) {}
+                        /* ======= struct dataNode ======= */
+dataNode::dataNode() = default;
 
+dataNode::dataNode(     unsigned long long name_hash, 
+                        unsigned long long data_hash, 
+                        std::vector<std::pair<double, double>> &data) 
+{
+    this->name_hash = name_hash;
+    this->data_hash = data_hash;
+    this->len = data.size() / Encryptor::N;
+    this->data = data;
+}
+
+
+                        /* ======= class Saver ======= */
 template <class T>
 unsigned long long Saver::get_hash(T &s) {
     unsigned long long seed = 13331, hash = 0;

@@ -60,7 +60,6 @@ private:
     * 21: find                   find
     */
    std::vector<std::vector<PARA_TYPE>> function_requirement;
-
    bool execute(unsigned long long pid, std::vector<std::string> parameter);
    bool initialize();
 
