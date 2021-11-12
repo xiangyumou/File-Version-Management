@@ -21,6 +21,15 @@ Author: Mu Xiangyu, Chant Mee
 
 typedef std::vector<std::vector<std::string>> vvs;
 
+/**
+ * @brief 
+ * The structure encapsulates the data, including the name of the data, the hash value 
+ * of the data, the length of the encrypted data, and the encrypted data.
+ * 
+ * It should be noted that the len here is not the actual length of the data, but the 
+ * actual length/N, where N is the length of a data block. (This concept is proposed in 
+ * the encryptor class)
+ */
 struct dataNode {
     unsigned long long name_hash, data_hash;
     int len;
@@ -30,21 +39,89 @@ struct dataNode {
     dataNode(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> &data);
 };
 
+/**
+ * @brief 
+ * This class realizes the preservation of data.
+ * This class inherits the Encryptor class and re-encapsulates the functions in it.
+ * 
+ * There is a data type "vvs" in this class, you can simply think of it as a 
+ * two-dimensional array storing strings, but this array is implemented with a vector.
+ * 
+ * The prototype of "vvs" is std::vector<std::vector<std::string>>. I believe that 
+ * most of the time this data structure can store any type of data, even if it cannot 
+ * be directly stored in this structure, it can be stored through a certain deformation.
+ * 
+ * The functional design of this class is very interesting. It achieves such a function. 
+ * The user provides a vvs where he has stored the data and the name of the data. After 
+ * that, if the user wants this set of data, he only needs to provide the name of the 
+ * data, and the user can get a copy that is exactly the same as when he stored it.
+ */
 class Saver : private Encryptor {
 private:
+    /**
+     * @brief 
+     * The file name of the stored data is set here.
+     */
     std::string data_file = "data.chm";
+
+    /**
+     * @brief 
+     *  Here, the hash value of the data name provided by the user is used as the primary 
+     *  key to map a data structure.
+     */
     std::map<unsigned long long, dataNode> mp;
+
     Logger logger = Logger::get_logger();
+
+    /**
+     * @brief Get the hash object
+     * This is a generic function, it is a generalized hash function.
+     * 
+     * @param s 
+     * You want to take the data array of the hash value.
+     * 
+     * @return unsigned long long 
+     * The calculated hash value.
+     */
     template <class T>
     unsigned long long get_hash(T &s);
+
+    /**
+     * @brief 
+     * Read the previously stored data from the file.
+     * 
+     * @return true 
+     * The data was successfully read from the file.
+     * 
+     * @return false 
+     * The file does not exist or the file is damaged.
+     */
     bool load_file();
 
     /**
-     * 在map中的存储方式
-     * 以name_hash作为主键，会检索出一个dataNode，里面包括了name_hash, data_hash, len, data.
-     * 其中 len为data的pair的对数 / N
-    */
+     * @brief 
+     * Store the processed data through this function.
+     * The things that need to be processed are the hash value of the data name, the 
+     * hash value of the data, and the encrypted data.
+     * 
+     * @param name_hash 
+     * The hash value of the data name.
+     * 
+     * @param data_hash 
+     * The hash value of the data.
+     * 
+     * @param data 
+     * The encrypted data array.
+     */
     void save_data(unsigned long long name_hash, unsigned long long data_hash, std::vector<std::pair<double, double>> data);
+
+    /**
+     * @brief 
+     * This function is used to assist the load function.
+     * 
+     * This function takes the first number out of the string and removes the number 
+     * part from the string.
+     */
     int read(std::string &s);
 
 public:
