@@ -19,6 +19,11 @@
 #include <string>
 #include <map>
 
+/**
+ * @brief 
+ * This class implements the abstraction of nodes.
+ * This class will repackage the FileManager class.
+ */
 class Node {
     private:
         FileManager &file_manager = FileManager::get_file_manager();
