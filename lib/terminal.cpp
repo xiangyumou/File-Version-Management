@@ -5,7 +5,7 @@
 / /___| | | | (_| | | | | |_  / /\/\ |  __|  __/
 \____/|_| |_|\__,_|_| |_|\__| \/    \/\___|\___|
 
-Author: Mu Xiangyu, Chant Mee 
+@ Author: Mu Xiangyu, Chant Mee 
 */
 
 #ifndef TERMINAL_CPP

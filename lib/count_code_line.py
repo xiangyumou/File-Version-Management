@@ -1,3 +1,8 @@
+# -*- coding: UTF-8 -*-
+
+# @author MuXiangyu, Chant Mee
+# QAQ
+
 import os
 import fnmatch
 
