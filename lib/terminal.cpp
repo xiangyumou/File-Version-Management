@@ -379,8 +379,6 @@ int Terminal::run() {
       if (cmd.first == NO_COMMAND) {
          if (!cmd.second.empty() && cmd.second.front() == "exit") {
             return 0;
-         } else {
-            std::cout << *logger.information << '\n';
          }
       } else {
          if (!execute(cmd.first, cmd.second)) {
