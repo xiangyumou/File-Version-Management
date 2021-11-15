@@ -1,4 +1,3 @@
-!.cpp
-!.h
 .vscode
-main.cpp
+.gitignore
+.DS_Store
