@@ -51,7 +51,7 @@ The system is divided into ten modules. This section contains the role of each m
 
 ### Structure Diagram
 
-![structure]([C:\Users\chant\Desktop\structure.png](https://github.com/ChantMee/File-Version-Management/blob/master/structure_diagram.png))
+![structure_diagram](https://github.com/ChantMee/File-Version-Management/blob/master/structure_diagram.png)
 
 ### BSTree
 
