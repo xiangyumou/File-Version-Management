@@ -53,6 +53,11 @@ set(LIB_SOURCES
     lib/src/terminal.cpp
     lib/src/command_base.cpp
     lib/src/command_registry.cpp
+    lib/src/commands/touch_command.cpp
+    lib/src/commands/mkdir_command.cpp
+    lib/src/commands/cd_command.cpp
+    lib/src/commands/cat_command.cpp
+    lib/src/commands/ls_command.cpp
 )
 
 # Create static library for testing
