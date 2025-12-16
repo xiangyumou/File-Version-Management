@@ -11,31 +11,32 @@
 #ifndef LOGGER_H
 #define LOGGER_H
 
+#include "interfaces/i_logger.h"
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <ctime>
 
-class Logger {
+/**
+ * @brief Logger implementation with file and console output
+ * 
+ * Implements ILogger interface while maintaining backward compatibility
+ * with existing code through the get_logger() singleton accessor.
+ */
+class Logger : public ffvms::ILogger {
 private:
     std::string log_file = "log.chm";
     std::ofstream out;
     std::string get_time();
+    std::string information_;
+    std::string last_message_;
 
 public:
     Logger();
-    ~Logger();
+    ~Logger() override;
 
-    /**
-     * Unless there is no other processing method, the User-oriented and 
-     * developer-oriented functions in the program only returns true or false 
-     * to indicate whether the requested operation is successfully executed.
-     * 
-     * If the execution is successful and the function has a return value, 
-     * then the return value will be stored in this variable; if it is not 
-     * successfully executed, the reason for not being successfully executed 
-     * will be stored in this variable.
-    */
+    // Legacy public member for backward compatibility (deprecated)
+    // New code should use get_information() instead
     std::string information;
 
     /**
@@ -57,8 +58,15 @@ public:
 
     /**
      * Use this function to record logs. 
+     * @deprecated Use the ILogger interface version with LogLevel instead
     */
     void log(std::string content, LOG_LEVEL level = INFO, int line = __LINE__);
+
+    // ILogger interface implementation
+    void log(const std::string& content, ffvms::LogLevel level, int line) override;
+    const std::string& get_last_message() const override;
+    void set_information(const std::string& info) override;
+    const std::string& get_information() const override;
 };
 
 // Debug macros
