@@ -1,2 +1,52 @@
+# ===== Build Artifacts =====
 *.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# ===== CMake =====
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# ===== IDE =====
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+out/
+
+# Visual Studio Code
+.vscode/
+
+# CLion
+.idea/
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+# ===== Data Files =====
 *.chm
+
+# ===== OS Files =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Debug =====
+*.dSYM/
+*.pdb
+*.ilk
