@@ -194,9 +194,10 @@ void NodeManager::delete_node(unsigned long long idx) {
 unsigned long long NodeManager::update_content(unsigned long long idx, std::string content) {
     if (!node_exist(idx)) return -1;
     std::string name = get_name(idx);
-    std::string create_time = get_update_time(idx);
+    std::string create_time = get_create_time(idx);
     delete_node(idx);
     idx = get_new_node(name);
+    mp[idx].second.create_time = create_time;
 
     unsigned long long fid = mp[idx].second.fid;
     file_manager.update_content(mp[idx].second.fid, mp[idx].second.fid, content);
@@ -205,7 +206,7 @@ unsigned long long NodeManager::update_content(unsigned long long idx, std::stri
 
 unsigned long long NodeManager::update_name(unsigned long long idx, std::string name) {
     if (!node_exist(idx)) return -1;
-    std::string create_time = get_update_time(idx);
+    std::string create_time = get_create_time(idx);
     unsigned long long fid = mp[idx].second.fid;
     unsigned long long old_idx = idx;
     file_manager.increase_counter(fid);
