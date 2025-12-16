@@ -237,22 +237,31 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
       break;
 
       case 18:
+#ifdef _WIN32
+      system("cls");
+#else
       system("clear");
+#endif
       break;
 
       case 19:
       file_name = "temp_file_" + parameter[0];
-      cmd = "rm -f " + file_name;
-      system(cmd.c_str());
-      cmd = "touch -f " + file_name;
-      system(cmd.c_str());
-      if (file_system.get_content(parameter[0], content)) {
+      // 使用 C++ 标准库创建临时文件
+      {
          std::ofstream out(file_name);
-         out << content;
+         if (file_system.get_content(parameter[0], content)) {
+            out << content;
+         }
          out.close();
       }
+      // 跨平台编辑器
+#ifdef _WIN32
+      cmd = "notepad " + file_name;
+#else
       cmd = "vim " + file_name;
+#endif
       system(cmd.c_str());
+      // 读取编辑后内容
       in.open(file_name);
       content.clear();
       while (std::getline(in, tmp)) {
@@ -260,8 +269,8 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
          content.push_back('\n');
       }
       in.close();
-      cmd = "rm -f " + file_name;
-      system(cmd.c_str());
+      // 使用 C++ 删除临时文件
+      remove(file_name.c_str());
       file_system.make_file(parameter[0]);
       if (!file_system.update_content(parameter[0], content)) return false;
       break;
