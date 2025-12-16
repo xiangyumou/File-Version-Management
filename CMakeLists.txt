@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 project(ffvms 
-    VERSION 1.0.0
+    VERSION 1.1.0
     DESCRIPTION "File & Folder Version Management System"
     LANGUAGES CXX
 )
@@ -18,21 +18,31 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 # Platform-specific settings
 if(WIN32)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
-    # Enable Unicode on Windows
     add_definitions(-DUNICODE -D_UNICODE)
 endif()
 
-# Note: The current project structure uses #include for .cpp files
-# This is a header-only style compilation through main.cpp
-# All source files are included via lib/terminal.cpp -> other .cpp files
+# Source files
+set(SOURCES
+    main.cpp
+    lib/src/logger.cpp
+    lib/src/encryptor.cpp
+    lib/src/saver.cpp
+    lib/src/file_manager.cpp
+    lib/src/node_manager.cpp
+    lib/src/bs_tree.cpp
+    lib/src/version_manager.cpp
+    lib/src/command_interpreter.cpp
+    lib/src/file_system.cpp
+    lib/src/terminal.cpp
+)
 
 # Create executable
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Include directories
 target_include_directories(${PROJECT_NAME} PRIVATE 
     ${CMAKE_SOURCE_DIR}
-    ${CMAKE_SOURCE_DIR}/lib
+    ${CMAKE_SOURCE_DIR}/lib/include
 )
 
 # Compiler-specific warnings
