@@ -30,6 +30,7 @@ private:
 
 public:
     Logger();
+    ~Logger();
 
     /**
      * Unless there is no other processing method, the User-oriented and 
@@ -104,6 +105,11 @@ std::string Logger::get_time() {
 
 Logger::Logger() {
     information = new std::string();
+}
+
+Logger::~Logger() {
+    delete information;
+    information = nullptr;
 }
 
 Logger& Logger::get_logger() {
