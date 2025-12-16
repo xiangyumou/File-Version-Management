@@ -9,12 +9,20 @@
 */
 
 #include "node_manager.h"
+#include "file_manager.h"
+#include "saver.h"
+#include "logger.h"
 #include <random>
 #include <ctime>
 #include <sstream>
 #include <iomanip>
 
 // Node implementation
+ffvms::IFileManager& Node::get_file_manager_ref() {
+    if (file_manager_) return *file_manager_;
+    return FileManager::get_file_manager();
+}
+
 std::string Node::get_time() {
     auto now = std::time(nullptr);
     auto* local = std::localtime(&now);
@@ -25,15 +33,39 @@ std::string Node::get_time() {
 
 Node::Node() = default;
 
-Node::Node(std::string name) {
+Node::Node(const std::string& name) : file_manager_(nullptr) {
     this->name = name;
     this->create_time = get_time();
     this->update_time = get_time();
-    this->fid = file_manager.create_file("");
+    this->fid = get_file_manager_ref().create_file("");
+}
+
+Node::Node(const std::string& name, ffvms::IFileManager* file_manager) 
+    : file_manager_(file_manager) {
+    this->name = name;
+    this->create_time = get_time();
+    this->update_time = get_time();
+    this->fid = get_file_manager_ref().create_file("");
 }
 
 void Node::update_update_time() {
     this->update_time = get_time();
+}
+
+// NodeManager helper methods
+ffvms::IFileManager& NodeManager::get_file_manager_ref() {
+    if (file_manager_) return *file_manager_;
+    return FileManager::get_file_manager();
+}
+
+ffvms::IStorage& NodeManager::get_storage_ref() {
+    if (storage_) return *storage_;
+    return Saver::get_saver();
+}
+
+ffvms::ILogger& NodeManager::get_logger_ref() {
+    if (logger_) return *logger_;
+    return Logger::get_logger();
 }
 
 // NodeManager implementation
@@ -54,7 +86,7 @@ unsigned long long NodeManager::get_new_id() {
 }
 
 bool NodeManager::save() {
-    vvs data;
+    ffvms::DataTable data;
     for (auto& it : mp) {
         data.push_back(std::vector<std::string>());
         data.back().push_back(std::to_string(it.first));
@@ -64,32 +96,34 @@ bool NodeManager::save() {
         data.back().push_back(it.second.second.update_time);
         data.back().push_back(std::to_string(it.second.second.fid));
     }
-    if (!saver.save(DATA_STORAGE_NAME, data)) return false;
+    if (!get_storage_ref().save(DATA_STORAGE_NAME, data)) return false;
     return true;
 }
 
 bool NodeManager::load() {
-    vvs data;
-    if (!saver.load(DATA_STORAGE_NAME, data)) return false;
+    ffvms::DataTable data;
+    if (!get_storage_ref().load(DATA_STORAGE_NAME, data)) return false;
     mp.clear();
     for (auto& it : data) {
         if (it.size() != 6) {
-            logger.log("NodeManager: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
+            get_logger_ref().log("NodeManager: File is corrupted and cannot be read.", 
+                                 ffvms::LogLevel::WARNING, __LINE__);
             mp.clear();
             return false;
         }
         bool flag = true;
-        if (!saver.is_all_digits(it[0])) flag = false;
-        if (!saver.is_all_digits(it[1])) flag = false;
-        if (!saver.is_all_digits(it[5])) flag = false;
+        if (!ffvms::IStorage::is_all_digits(it[0])) flag = false;
+        if (!ffvms::IStorage::is_all_digits(it[1])) flag = false;
+        if (!ffvms::IStorage::is_all_digits(it[5])) flag = false;
         if (!flag) {
             mp.clear();
-            logger.log("NodeManager: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
+            get_logger_ref().log("NodeManager: File is corrupted and cannot be read.", 
+                                 ffvms::LogLevel::WARNING, __LINE__);
             return false;
         }
-        unsigned long long key = saver.str_to_ull(it[0]);
-        unsigned long long cnt = saver.str_to_ull(it[1]);
-        unsigned long long fid = saver.str_to_ull(it[5]);
+        unsigned long long key = ffvms::IStorage::str_to_ull(it[0]);
+        unsigned long long cnt = ffvms::IStorage::str_to_ull(it[1]);
+        unsigned long long fid = ffvms::IStorage::str_to_ull(it[5]);
         std::string& name = it[2];
         std::string& create_time = it[3];
         std::string& update_time = it[4];
@@ -104,7 +138,14 @@ bool NodeManager::load() {
     return true;
 }
 
-NodeManager::NodeManager() {
+NodeManager::NodeManager() 
+    : file_manager_(nullptr), storage_(nullptr), logger_(nullptr) {
+    if (!load()) return;
+}
+
+NodeManager::NodeManager(ffvms::IFileManager* file_manager, ffvms::IStorage* storage, 
+                         ffvms::ILogger* logger)
+    : file_manager_(file_manager), storage_(storage), logger_(logger) {
     if (!load()) return;
 }
 
@@ -112,9 +153,9 @@ NodeManager::~NodeManager() {
     if (!save()) return;
 }
 
-unsigned long long NodeManager::get_new_node(std::string name) {
+unsigned long long NodeManager::get_new_node(const std::string& name) {
     unsigned long long new_id = get_new_id();
-    auto t = std::make_pair(1ULL, Node(name));
+    auto t = std::make_pair(1ULL, Node(name, file_manager_));
     mp.insert(std::make_pair(new_id, t));
     return new_id;
 }
@@ -122,12 +163,12 @@ unsigned long long NodeManager::get_new_node(std::string name) {
 void NodeManager::delete_node(unsigned long long idx) {
     if (!node_exist(idx)) return;
     if (--mp[idx].first == 0) {
-        file_manager.decrease_counter(mp[idx].second.fid);
+        get_file_manager_ref().decrease_counter(mp[idx].second.fid);
         mp.erase(mp.find(idx));
     }
 }
 
-unsigned long long NodeManager::update_content(unsigned long long idx, std::string content) {
+unsigned long long NodeManager::update_content(unsigned long long idx, const std::string& content) {
     if (!node_exist(idx)) return static_cast<unsigned long long>(-1);
     std::string name = get_name(idx);
     std::string create_time = get_create_time(idx);
@@ -136,19 +177,19 @@ unsigned long long NodeManager::update_content(unsigned long long idx, std::stri
     mp[idx].second.create_time = create_time;
 
     unsigned long long fid = mp[idx].second.fid;
-    file_manager.update_content(mp[idx].second.fid, fid, content);
+    get_file_manager_ref().update_content(mp[idx].second.fid, fid, content);
     return idx;
 }
 
-unsigned long long NodeManager::update_name(unsigned long long idx, std::string name) {
+unsigned long long NodeManager::update_name(unsigned long long idx, const std::string& name) {
     if (!node_exist(idx)) return static_cast<unsigned long long>(-1);
     std::string create_time = get_create_time(idx);
     unsigned long long fid = mp[idx].second.fid;
     unsigned long long old_idx = idx;
-    file_manager.increase_counter(fid);
+    get_file_manager_ref().increase_counter(fid);
     idx = get_new_node(name);
     mp[idx].second.create_time = create_time;
-    file_manager.decrease_counter(mp[idx].second.fid);
+    get_file_manager_ref().decrease_counter(mp[idx].second.fid);
     mp[idx].second.fid = fid;
     delete_node(old_idx);
     return idx;
@@ -157,7 +198,7 @@ unsigned long long NodeManager::update_name(unsigned long long idx, std::string 
 std::string NodeManager::get_content(unsigned long long idx) {
     if (!node_exist(idx)) return "-1";
     std::string content;
-    file_manager.get_content(mp[idx].second.fid, content);
+    get_file_manager_ref().get_content(mp[idx].second.fid, content);
     return content;
 }
 

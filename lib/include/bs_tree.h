@@ -11,13 +11,17 @@
 #ifndef BS_TREE_H
 #define BS_TREE_H
 
-#include "node_manager.h"
-#include "logger.h"
+#include "interfaces/i_node_manager.h"
+#include "interfaces/i_logger.h"
+#include "core/types.h"
 #include <vector>
 #include <string>
 
 /**
  * @brief Tree node structure for file system
+ * 
+ * Uses manual memory management with reference counting (cnt field).
+ * Nodes can be shared across versions - when cnt reaches 0, node can be deleted.
  */
 struct treeNode {
     enum TYPE {
@@ -25,22 +29,33 @@ struct treeNode {
     };
 
     TYPE type;
-    int cnt;
-    unsigned long long link;
+    int cnt;  ///< Reference count for version sharing
+    unsigned long long link;  ///< Link to NodeManager for metadata
     treeNode* next_brother;
     treeNode* first_son;
 
     treeNode();
-    treeNode(TYPE type);
+    explicit treeNode(TYPE type);
 };
+
+// Forward declarations
+class NodeManager;
+class Logger;
 
 /**
  * @brief Binary Search Tree for file system operations
+ * 
+ * Provides tree navigation and management for the virtual file system.
  */
 class BSTree {
 private:
-    Logger& logger = Logger::get_logger();
-    NodeManager& node_manager = NodeManager::get_node_manager();
+    // Dependencies (can be injected or use singletons)
+    ffvms::ILogger* logger_ = nullptr;
+    ffvms::INodeManager* node_manager_ = nullptr;
+    
+    // Helper to get dependencies
+    ffvms::ILogger& get_logger_ref();
+    ffvms::INodeManager& get_node_manager_ref();
 
 protected:
     std::vector<treeNode*> path;
@@ -50,11 +65,20 @@ protected:
     bool is_son();
     bool goto_tail();
     bool goto_head();
-    bool name_exist(std::string name);
-    bool go_to(std::string name);
+    bool name_exist(const std::string& name);
+    bool go_to(const std::string& name);
     bool goto_last_dir();
     bool list_directory_contents(std::vector<std::string>& content);
     bool get_current_path(std::vector<std::string>& path);
+
+public:
+    /// Default constructor (uses global singletons)
+    BSTree() = default;
+    
+    /// Constructor with dependency injection
+    BSTree(ffvms::ILogger* logger, ffvms::INodeManager* node_manager);
+    
+    virtual ~BSTree() = default;
 };
 
 #endif // BS_TREE_H
