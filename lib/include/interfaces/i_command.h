@@ -14,11 +14,12 @@
 #include <memory>
 
 // Forward declaration
-// Forward declaration
 class FileSystem;
-class ISession;
 
 namespace ffvms {
+
+// Forward declaration
+class ISession;
 
 
 /**
