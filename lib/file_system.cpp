@@ -610,7 +610,9 @@ bool FileSystem::travel_tree(treeNode *p,std::string &tree_info) {
         logger.log("Get a null pointer in line " + std::to_string(__LINE__));
         return false;
     }
-    static int tab_cnt = 1;
+    static int tab_cnt;
+    // 重置静态变量：当p是根节点时
+    if (p == path.front()) tab_cnt = 1;
     if (p->type == 2) {
         travel_tree(p->next_brother, tree_info);
         return true;
@@ -633,32 +635,8 @@ bool FileSystem::travel_tree(treeNode *p,std::string &tree_info) {
 }
 
 bool FileSystem::kmp(std::string str, std::string tar) {
-    static const int MAX_NAME_LEN = 1000;
-    if (str.size() > MAX_NAME_LEN || tar.size() > MAX_NAME_LEN) return false;
-    int next[1000];
-    memset(next, 0, sizeof next);
-    for (int i = 0, j = -1; i < tar.size(); i++) {
-        while (j >= 0 && tar[j + 1] != tar[i]) {
-            j = next[j];
-        }
-        if (tar[j + 1] == tar[i]) {
-            j++;
-        }
-        next[i] = j;
-    }
-
-    for (int i = 0, j = -1; i < str.size(); i++) {
-        while (j >= 0 && tar[j + 1] != str[i]) {
-            j = next[j];
-        }
-        if (tar[j + 1] == str[i]) {
-            j++;
-        }
-        if (j == tar.size() - 1) {
-            return true;
-        }
-    }
-    return false;
+    // 简化：使用 std::string::find 替代有bug的KMP实现
+    return str.find(tar) != std::string::npos;
 }
 
 bool FileSystem::travel_find(std::string name, std::vector<std::pair<std::string, std::vector<std::string>>> &res) {
@@ -793,7 +771,7 @@ bool FileSystem::update_name(std::string fr_name, std::string to_name) {
 }
 
 bool FileSystem::update_content(std::string name, std::string content) {
-    if (!go_to(name)) false;
+    if (!go_to(name)) return false;
     if (!check_path()) return false;
     if (path.back()->type != 0) {
         logger.log(name + ": Not a file.");
