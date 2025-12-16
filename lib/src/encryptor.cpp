@@ -11,6 +11,7 @@
 #include "encryptor.h"
 #include <cstring>
 #include <cmath>
+#include <algorithm>
 
 // Complex struct implementation
 Complex::Complex() = default;
@@ -73,7 +74,7 @@ bool Encryptor::encrypt_sequence(std::vector<int>& sequence, std::vector<std::pa
     int len = static_cast<int>(sequence.size());
     int idx = 1;
     while ((sequence.size() + 1) % N != 0) sequence.push_back(PLACEHOLDER);
-    memset(block, 0, sizeof block);
+    std::fill(block, block + N, Complex(0, 0));
     block[0].a = len;
     res.clear();
     std::vector<std::pair<double, double>> tmp;
@@ -83,7 +84,7 @@ bool Encryptor::encrypt_sequence(std::vector<int>& sequence, std::vector<std::pa
             encrypt_block(tmp);
             res.insert(res.end(), tmp.begin(), tmp.end());
             idx = 0;
-            memset(block, 0, sizeof block);
+            std::fill(block, block + N, Complex(0, 0));
             tmp.clear();
         }
     }
@@ -92,7 +93,7 @@ bool Encryptor::encrypt_sequence(std::vector<int>& sequence, std::vector<std::pa
 
 bool Encryptor::decrypt_sequence(std::vector<std::pair<double, double>>& sequence, std::vector<int>& res) {
     if (sequence.size() % N != 0) return false;
-    memset(block, 0, sizeof block);
+    std::fill(block, block + N, Complex(0, 0));
     int idx = 0;
     res.clear();
     int len = -1;
@@ -109,7 +110,7 @@ bool Encryptor::decrypt_sequence(std::vector<std::pair<double, double>>& sequenc
                 res.insert(res.end(), tmp.begin() + 1, tmp.end());
             }
             idx = 0;
-            memset(block, 0, sizeof block);
+            std::fill(block, block + N, Complex(0, 0));
             tmp.clear();
         }
     }
