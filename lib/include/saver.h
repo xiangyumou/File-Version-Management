@@ -12,12 +12,14 @@
 #define SAVER_H
 
 #include "encryptor.h"
-#include "logger.h"
+#include "interfaces/i_storage.h"
+#include "interfaces/i_logger.h"
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 
-// Type alias for 2D string vector
+// Type alias for 2D string vector (same as ffvms::DataTable)
 typedef std::vector<std::vector<std::string>> vvs;
 
 /**
@@ -35,12 +37,20 @@ struct dataNode {
 
 /**
  * @brief Saver class for persistent data storage with encryption
+ * 
+ * Implements IStorage interface for data persistence.
+ * Uses FFT-based encryption for data security.
  */
-class Saver : private Encryptor {
+class Saver : public ffvms::IStorage, private Encryptor {
 private:
     std::string data_file = "data.chm";
     std::map<unsigned long long, dataNode> mp;
-    Logger& logger = Logger::get_logger();
+    
+    // Logger can be injected or use global singleton
+    ffvms::ILogger* logger_ = nullptr;
+    
+    // Helper to get logger
+    ffvms::ILogger& get_logger_ref();
 
     template <class T>
     unsigned long long get_hash(T& s);
@@ -51,15 +61,24 @@ private:
     int read(std::string& s);
 
 public:
+    /// Default constructor (uses global Logger singleton)
     Saver();
-    ~Saver();
-
-    bool save(std::string name, std::vector<std::vector<std::string>>& content);
-    bool load(std::string name, std::vector<std::vector<std::string>>& content, 
-              bool mandatory_access = false);
     
+    /// Constructor with injected logger
+    explicit Saver(ffvms::ILogger* logger);
+    
+    ~Saver() override;
+
+    // IStorage interface implementation (also serves as legacy interface since vvs == DataTable)
+    bool save(const std::string& name, const ffvms::DataTable& content) override;
+    bool load(const std::string& name, ffvms::DataTable& content, 
+              bool mandatory_access = false) override;
+    
+    // Static utility functions
     static bool is_all_digits(const std::string& s);
     static unsigned long long str_to_ull(const std::string& s);
+    
+    /// Get global singleton instance (legacy access pattern)
     static Saver& get_saver();
 };
 

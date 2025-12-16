@@ -9,6 +9,7 @@
 */
 
 #include "saver.h"
+#include "logger.h"
 #include <cctype>
 #include <fstream>
 #include <sstream>
@@ -24,6 +25,12 @@ dataNode::dataNode(unsigned long long name_hash, unsigned long long data_hash,
     this->data = data;
 }
 
+// Helper to get logger reference
+ffvms::ILogger& Saver::get_logger_ref() {
+    if (logger_) return *logger_;
+    return Logger::get_logger();
+}
+
 // Saver implementation
 template <class T>
 unsigned long long Saver::get_hash(T& s) {
@@ -37,7 +44,7 @@ unsigned long long Saver::get_hash(T& s) {
 bool Saver::load_file() {
     std::ifstream in(data_file);
     if (!in.good()) {
-        logger.log("load_file: No data file.", Logger::WARNING, __LINE__);
+        get_logger_ref().log("load_file: No data file.", ffvms::LogLevel::WARNING, __LINE__);
         return false;
     }
     mp.clear();
@@ -48,7 +55,7 @@ bool Saver::load_file() {
         in >> data_hash >> len;
         if (in.eof()) {
             mp.clear();
-            logger.log("Read interrupted, please check data integrity.", Logger::WARNING, __LINE__);
+            get_logger_ref().log("Read interrupted, please check data integrity.", ffvms::LogLevel::WARNING, __LINE__);
             return false;
         }
         for (unsigned long long i = 0; i < len * N; i++) {
@@ -80,7 +87,11 @@ int Saver::read(std::string& s) {
     return d;
 }
 
-Saver::Saver() {
+Saver::Saver() : logger_(nullptr) {
+    load_file();
+}
+
+Saver::Saver(ffvms::ILogger* logger) : logger_(logger) {
     load_file();
 }
 
@@ -96,12 +107,13 @@ Saver::~Saver() {
     }
 }
 
-bool Saver::save(std::string name, std::vector<std::vector<std::string>>& content) {
+// IStorage interface implementation
+bool Saver::save(const std::string& name, const ffvms::DataTable& content) {
     std::string data;
     data += std::to_string(content.size());
-    for (auto& data_block : content) {
+    for (const auto& data_block : content) {
         data += " " + std::to_string(data_block.size());
-        for (auto& dt : data_block) {
+        for (const auto& dt : data_block) {
             data += " " + std::to_string(dt.size()) + " " + dt;
         }
     }
@@ -117,17 +129,18 @@ bool Saver::save(std::string name, std::vector<std::vector<std::string>>& conten
     return true;
 }
 
-bool Saver::load(std::string name, std::vector<std::vector<std::string>>& content, bool mandatory_access) {
+// IStorage interface implementation
+bool Saver::load(const std::string& name, ffvms::DataTable& content, bool mandatory_access) {
     unsigned long long name_hash = get_hash(name);
     if (!mp.count(name_hash)) {
-        logger.log("Failed to load data. No data named " + name + " exists.", Logger::WARNING, __LINE__);
+        get_logger_ref().log("Failed to load data. No data named " + name + " exists.", ffvms::LogLevel::WARNING, __LINE__);
         return false;
     }
     dataNode& data = mp[name_hash];
     std::vector<int> sequence;
     decrypt_sequence(data.data, sequence);
     if (get_hash(sequence) != data.data_hash) {
-        logger.log("Data failed to pass integrity verification.", Logger::WARNING, __LINE__);
+        get_logger_ref().log("Data failed to pass integrity verification.", ffvms::LogLevel::WARNING, __LINE__);
         if (!mandatory_access) return false;
     }
     std::string str;
@@ -144,7 +157,7 @@ bool Saver::load(std::string name, std::vector<std::vector<std::string>>& conten
         for (int j = 0; j < data_num; j++) {
             data_len = read(str);
             if (str.size() < static_cast<size_t>(data_len)) {
-                logger.log("Failed to load data. Data corrupted.", Logger::WARNING, __LINE__);
+                get_logger_ref().log("Failed to load data. Data corrupted.", ffvms::LogLevel::WARNING, __LINE__);
                 return false;
             }
             content.back().push_back(std::string(str.begin(), str.begin() + data_len));
