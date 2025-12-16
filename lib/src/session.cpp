@@ -38,8 +38,38 @@ bool Session::set_current_path(const std::vector<std::string>& path) {
     return true;
 }
 
+
 std::vector<std::string> Session::get_previous_path() const {
     return previous_path_;
 }
+
+std::vector<std::string> Session::resolve_path(const std::vector<std::string>& input_path) const {
+    std::vector<std::string> resolved;
+    
+    // If input path is absolute (implementation detail: how do we represent absolute? 
+    // In this system, maybe we assume if it starts with special token? 
+    // Actually, vector<string> usually means relative to root if it's the whole path.
+    // Let's assume input_path is relative to CWD unless we define a convention.
+    // But typically shell sends "params".
+    // Let's defer "absolute vs relative" parsing to the command or helper.
+    // Wait, the Session should probably handle the "logic" of applying a relative path to CWD.
+    
+    // For now, let's implement a helper that takes a path relative to CWD and returns the absolute canonical path.
+    resolved = current_path_;
+
+    for (const auto& part : input_path) {
+        if (part == ".") {
+            continue;
+        } else if (part == "..") {
+            if (!resolved.empty()) {
+                resolved.pop_back();
+            }
+        } else {
+            resolved.push_back(part);
+        }
+    }
+    return resolved;
+}
+
 
 } // namespace ffvms
