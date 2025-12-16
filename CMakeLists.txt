@@ -58,6 +58,21 @@ set(LIB_SOURCES
     lib/src/commands/cd_command.cpp
     lib/src/commands/cat_command.cpp
     lib/src/commands/ls_command.cpp
+    lib/src/commands/rmf_command.cpp
+    lib/src/commands/rmd_command.cpp
+    lib/src/commands/update_name_command.cpp
+    lib/src/commands/update_content_command.cpp
+    lib/src/commands/tree_command.cpp
+    lib/src/commands/cdl_command.cpp
+    lib/src/commands/pwd_command.cpp
+    lib/src/commands/find_command.cpp
+    lib/src/commands/create_version_command.cpp
+    lib/src/commands/switch_version_command.cpp
+    lib/src/commands/version_command.cpp
+    lib/src/commands/gcv_command.cpp
+    lib/src/commands/clear_command.cpp
+    lib/src/commands/vim_command.cpp
+    lib/src/commands/help_command.cpp
 )
 
 # Create static library for testing
