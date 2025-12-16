@@ -11,11 +11,19 @@
 #ifndef FILE_MANAGER_H
 #define FILE_MANAGER_H
 
-#include "logger.h"
-#include "saver.h"
+#include "interfaces/i_file_manager.h"
+#include "interfaces/i_logger.h"
+#include "interfaces/i_storage.h"
 #include <string>
 #include <map>
 
+// Forward declaration
+class Saver;
+class Logger;
+
+/**
+ * @brief File node structure for content storage
+ */
 struct fileNode {
     std::string content;
     unsigned long long cnt;
@@ -24,12 +32,24 @@ struct fileNode {
     fileNode(std::string content);
 };
 
-class FileManager {
+/**
+ * @brief FileManager class for managing file content with reference counting
+ * 
+ * Implements IFileManager interface for file content management.
+ * Ensures files with same content are stored only once via reference counting.
+ */
+class FileManager : public ffvms::IFileManager {
 private:
     std::string DATA_STORAGE_NAME = "FileManager::map_relation";
     std::map<unsigned long long, fileNode> mp;
-    Saver& saver = Saver::get_saver();
-    Logger& logger = Logger::get_logger();
+    
+    // Dependencies (can be injected or use singletons)
+    ffvms::IStorage* storage_ = nullptr;
+    ffvms::ILogger* logger_ = nullptr;
+    
+    // Helper to get dependencies
+    ffvms::IStorage& get_storage_ref();
+    ffvms::ILogger& get_logger_ref();
 
     unsigned long long get_new_id();
     bool file_exist(unsigned long long fid);
@@ -38,14 +58,24 @@ private:
     bool load();
 
 public:
+    /// Default constructor (uses global singletons)
     FileManager();
-    ~FileManager();
+    
+    /// Constructor with dependency injection
+    FileManager(ffvms::IStorage* storage, ffvms::ILogger* logger);
+    
+    ~FileManager() override;
+    
+    /// Get global singleton instance
     static FileManager& get_file_manager();
-    unsigned long long create_file(std::string content = "");
-    bool increase_counter(unsigned long long fid);
-    bool decrease_counter(unsigned long long fid);
-    bool update_content(unsigned long long fid, unsigned long long& new_id, std::string content);
-    bool get_content(unsigned long long fid, std::string& content);
+    
+    // IFileManager interface implementation
+    unsigned long long create_file(const std::string& content) override;
+    bool get_content(unsigned long long fid, std::string& content) override;
+    bool increase_counter(unsigned long long fid) override;
+    bool decrease_counter(unsigned long long fid) override;
+    bool update_content(unsigned long long fid, unsigned long long& new_id, 
+                        const std::string& content) override;
 };
 
 #endif // FILE_MANAGER_H

@@ -9,10 +9,24 @@
 */
 
 #include "file_manager.h"
+#include "saver.h"
+#include "logger.h"
 #include <random>
 
 // fileNode implementation
-fileNode::fileNode(std::string content) : content(content), cnt(1) {}
+fileNode::fileNode(std::string content) : content(std::move(content)), cnt(1) {}
+
+// Helper to get storage reference
+ffvms::IStorage& FileManager::get_storage_ref() {
+    if (storage_) return *storage_;
+    return Saver::get_saver();
+}
+
+// Helper to get logger reference
+ffvms::ILogger& FileManager::get_logger_ref() {
+    if (logger_) return *logger_;
+    return Logger::get_logger();
+}
 
 // FileManager implementation
 unsigned long long FileManager::get_new_id() {
@@ -29,7 +43,8 @@ unsigned long long FileManager::get_new_id() {
 
 bool FileManager::file_exist(unsigned long long fid) {
     if (!mp.count(fid)) {
-        logger.log("File id " + std::to_string(fid) + " does not exists. This is not normal. Please check if the procedure is correct.", Logger::FATAL, __LINE__);
+        get_logger_ref().log("File id " + std::to_string(fid) + " does not exists. This is not normal.", 
+                             ffvms::LogLevel::FATAL, __LINE__);
         return false;
     }
     return true;
@@ -38,41 +53,44 @@ bool FileManager::file_exist(unsigned long long fid) {
 bool FileManager::check_file(unsigned long long fid) {
     if (!file_exist(fid)) return false;
     if (mp[fid].cnt <= 0) {
-        logger.log("File ID is " + std::to_string(fid) + " corresponding to the file, its counter is less than or equal to 0, this is abnormal, please check whether the program is correct.", Logger::FATAL, __LINE__);
+        get_logger_ref().log("File ID " + std::to_string(fid) + " counter is <= 0, abnormal state.", 
+                             ffvms::LogLevel::FATAL, __LINE__);
         return false;
     }
     return true;
 }
 
 bool FileManager::save() {
-    vvs data;
+    ffvms::DataTable data;
     for (auto& it : mp) {
         data.push_back(std::vector<std::string>());
         data.back().push_back(std::to_string(it.first));
         data.back().push_back(it.second.content);
         data.back().push_back(std::to_string(it.second.cnt));
     }
-    if (!saver.save(DATA_STORAGE_NAME, data)) return false;
+    if (!get_storage_ref().save(DATA_STORAGE_NAME, data)) return false;
     return true;
 }
 
 bool FileManager::load() {
-    vvs data;
-    if (!saver.load(DATA_STORAGE_NAME, data)) return false;
+    ffvms::DataTable data;
+    if (!get_storage_ref().load(DATA_STORAGE_NAME, data)) return false;
     mp.clear();
     for (auto& it : data) {
         if (it.size() != 3) {
-            logger.log("FileSystem: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
+            get_logger_ref().log("FileSystem: File is corrupted and cannot be read.", 
+                                 ffvms::LogLevel::WARNING, __LINE__);
             mp.clear();
             return false;
         }
-        if (!saver.is_all_digits(it[0])) {
-            logger.log("FileSystem: File is corrupted and cannot be read.", Logger::WARNING, __LINE__);
+        if (!ffvms::IStorage::is_all_digits(it[0])) {
+            get_logger_ref().log("FileSystem: File is corrupted and cannot be read.", 
+                                 ffvms::LogLevel::WARNING, __LINE__);
             mp.clear();
             return false;
         }
-        unsigned long long key = saver.str_to_ull(it[0]);
-        unsigned long long cnt = saver.str_to_ull(it[2]);
+        unsigned long long key = ffvms::IStorage::str_to_ull(it[0]);
+        unsigned long long cnt = ffvms::IStorage::str_to_ull(it[2]);
         std::string& content = it[1];
         auto t = std::make_pair(key, fileNode(content));
         t.second.cnt = cnt;
@@ -81,7 +99,12 @@ bool FileManager::load() {
     return true;
 }
 
-FileManager::FileManager() {
+FileManager::FileManager() : storage_(nullptr), logger_(nullptr) {
+    if (!load()) return;
+}
+
+FileManager::FileManager(ffvms::IStorage* storage, ffvms::ILogger* logger) 
+    : storage_(storage), logger_(logger) {
     if (!load()) return;
 }
 
@@ -94,7 +117,7 @@ FileManager& FileManager::get_file_manager() {
     return file_manager;
 }
 
-unsigned long long FileManager::create_file(std::string content) {
+unsigned long long FileManager::create_file(const std::string& content) {
     unsigned long long id = get_new_id();
     mp[id] = fileNode(content);
     return id;
@@ -102,7 +125,7 @@ unsigned long long FileManager::create_file(std::string content) {
 
 bool FileManager::increase_counter(unsigned long long fid) {
     if (!mp.count(fid)) {
-        logger.log("File id does not exists. Please check if the procedure is correct.", Logger::FATAL, __LINE__);
+        get_logger_ref().log("File id does not exists.", ffvms::LogLevel::FATAL, __LINE__);
         return false;
     }
     if (!check_file(fid)) return false;
@@ -112,7 +135,7 @@ bool FileManager::increase_counter(unsigned long long fid) {
 
 bool FileManager::decrease_counter(unsigned long long fid) {
     if (!mp.count(fid)) {
-        logger.log("File id does not exists. Please check if the procedure is correct.", Logger::FATAL, __LINE__);
+        get_logger_ref().log("File id does not exists.", ffvms::LogLevel::FATAL, __LINE__);
         return false;
     }
     if (!check_file(fid)) return false;
@@ -122,7 +145,8 @@ bool FileManager::decrease_counter(unsigned long long fid) {
     return true;
 }
 
-bool FileManager::update_content(unsigned long long fid, unsigned long long& new_id, std::string content) {
+bool FileManager::update_content(unsigned long long fid, unsigned long long& new_id, 
+                                 const std::string& content) {
     if (!file_exist(fid)) return false;
     if (!decrease_counter(fid)) return false;
     new_id = get_new_id();
