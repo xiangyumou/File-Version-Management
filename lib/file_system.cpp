@@ -127,7 +127,7 @@ private:
      * But don't worry, if the user does not call the function, it will return an error. This 
      * is normal, because this function will inevitably recurse to the boundary of the tree.
      */
-    bool travel_tree(treeNode *p, std::string &tree_info);
+    bool travel_tree(treeNode *p, std::string &tree_info, int tab_cnt = 1);
 
     /**
      * @brief 
@@ -605,19 +605,16 @@ bool FileSystem::rebuild_nodes(treeNode *p) {
     return true;
 }
 
-bool FileSystem::travel_tree(treeNode *p,std::string &tree_info) {
+bool FileSystem::travel_tree(treeNode *p,std::string &tree_info, int tab_cnt) {
     if (p == nullptr) {
         logger.log("Get a null pointer in line " + std::to_string(__LINE__));
         return false;
     }
-    static int tab_cnt;
-    // 重置静态变量：当p是根节点时
-    if (p == path.front()) tab_cnt = 1;
     if (p->type == 2) {
-        travel_tree(p->next_brother, tree_info);
+        travel_tree(p->next_brother, tree_info, tab_cnt);
         return true;
     }
-    for (unsigned int i = 0; i < tab_cnt; i++) {
+    for (int i = 0; i < tab_cnt; i++) {
         if (i < tab_cnt - 1) {
             tree_info += "    ";
         } else if (p->next_brother != nullptr) {
@@ -627,10 +624,8 @@ bool FileSystem::travel_tree(treeNode *p,std::string &tree_info) {
         }
     }
     tree_info += node_manager.get_name(p->link) + '\n';
-    tab_cnt++;
-    travel_tree(p->first_son, tree_info);
-    tab_cnt--;
-    travel_tree(p->next_brother, tree_info);
+    travel_tree(p->first_son, tree_info, tab_cnt + 1);
+    travel_tree(p->next_brother, tree_info, tab_cnt);
     return true;
 }
 
