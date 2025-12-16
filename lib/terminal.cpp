@@ -216,6 +216,9 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
             if (!file_system.create_version(Saver::str_to_ull(parameter[0]), parameter[1])) return false;
          } else if (Saver::is_all_digits(parameter[1])) {
             if (!file_system.create_version(parameter[0], Saver::str_to_ull(parameter[1]))) return false;
+         } else {
+            logger.log("create_version requires at least one numeric parameter (version id).", Logger::WARNING, __LINE__);
+            return false;
          }
       }
       break;
