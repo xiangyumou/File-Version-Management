@@ -13,23 +13,20 @@
 
 #include "file_system.h"
 #include "command_interpreter.h"
-#include "logger.h"
-#include "saver.h"
-#include <vector>
+#include "command_registry.h"
+#include "interfaces/i_logger.h"
 #include <string>
+#include <vector>
 
-class Terminal : private CommandInterpreter {
+class Terminal {
 private:
     FileSystem file_system;
-    Logger& logger = Logger::get_logger();
+    CommandInterpreter interpreter_;
+    ffvms::CommandRegistry registry_;
+    ffvms::ILogger* logger_ = nullptr;
 
-    enum PARA_TYPE {
-        STR = 0, INT, ULL
-    };
-
-    std::vector<std::vector<PARA_TYPE>> function_requirement;
-    bool execute(unsigned long long pid, std::vector<std::string> parameter);
-    bool initialize();
+    ffvms::ILogger& get_logger_ref();
+    void register_commands();
 
 public:
     Terminal();

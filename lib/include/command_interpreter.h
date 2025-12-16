@@ -11,37 +11,37 @@
 #ifndef COMMAND_INTERPRETER_H
 #define COMMAND_INTERPRETER_H
 
-#include "saver.h"
-#include "logger.h"
+#include "interfaces/i_logger.h"
 #include <string>
 #include <vector>
-#include <map>
-#include <utility>
 
-// Constants
-constexpr unsigned long long NO_COMMAND = 0x3f3f3f3fULL;
-
+/**
+ * @brief Handles reading and parsing of user input
+ * 
+ * Refactored to remove command mapping logic (now in CommandRegistry).
+ * Focuses solely on parsing standard input into tokens, handling escapes.
+ */
 class CommandInterpreter {
-    std::map<unsigned long long, unsigned long long> mp;
-    Saver& saver = Saver::get_saver();
-    Logger& logger = Logger::get_logger();
-    std::string DATA_STORAGE_NAME = "CommandInterpreter::map_relation";
+private:
+    ffvms::ILogger* logger_ = nullptr;
+    
+    // Dependencies helper
+    ffvms::ILogger& get_logger_ref();
 
-    static unsigned long long get_hash(std::string s);
-    bool identifier_exist(unsigned long long iid);
     std::string escape(char ch);
     std::vector<std::string> separator(std::string& s);
-    bool load();
-    bool save();
 
 public:
     CommandInterpreter();
-    ~CommandInterpreter();
-    bool FIRST_START = false;
-    bool add_identifier(std::string identifier, unsigned long long pid);
-    bool delete_identifier(std::string identifier);
-    std::pair<unsigned long long, std::vector<std::string>> get_command();
-    bool clear_data();
+    explicit CommandInterpreter(ffvms::ILogger* logger);
+    ~CommandInterpreter() = default;
+
+    /**
+     * @brief Parse input from stdin
+     * @return Vector of strings, where index 0 is command name
+     *         Returns empty vector if input is empty
+     */
+    std::vector<std::string> parse_input();
 };
 
 #endif // COMMAND_INTERPRETER_H
