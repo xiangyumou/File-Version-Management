@@ -32,10 +32,46 @@ std::string Session::get_current_path_string() const {
 }
 
 bool Session::set_current_path(const std::vector<std::string>& path) {
+    if (!file_system_.navigate_to_path(path)) {
+        return false;
+    }
     // Save current as previous
     previous_path_ = current_path_;
     current_path_ = path;
     return true;
+}
+
+
+bool Session::change_directory(const std::string& path) {
+    if (path == "-") {
+        if (previous_path_.empty()) return false;
+        return set_current_path(previous_path_);
+    }
+    
+    std::vector<std::string> input_vector;
+    std::string current_segment;
+    std::istringstream iss(path);
+    while (std::getline(iss, current_segment, '/')) {
+        if (!current_segment.empty()) {
+            input_vector.push_back(current_segment);
+        }
+    }
+
+    std::vector<std::string> target_path;
+    if (!path.empty() && path.front() == '/') {
+         for (const auto& part : input_vector) {
+            if (part == ".") continue;
+            if (part == "..") {
+                if (!target_path.empty()) target_path.pop_back();
+            } else {
+                target_path.push_back(part);
+            }
+         }
+    } else {
+        target_path = resolve_path(input_vector);
+    }
+    
+    return set_current_path(target_path);
 }
 
 

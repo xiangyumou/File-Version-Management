@@ -59,6 +59,13 @@ public:
      * @return Vector of path components, or empty if none
      */
     virtual std::vector<std::string> get_previous_path() const = 0;
+
+    /**
+     * @brief Change directory with path resolution
+     * @param path Path string (can be relative, absolute, "..", "-")
+     * @return true if successful
+     */
+    virtual bool change_directory(const std::string& path) = 0;
 };
 
 } // namespace ffvms

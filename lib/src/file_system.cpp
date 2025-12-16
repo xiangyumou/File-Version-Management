@@ -372,3 +372,48 @@ bool FileSystem::Find(const std::string& name,
 int FileSystem::get_current_version() {
     return CURRENT_VERSION;
 }
+
+bool FileSystem::navigate_to_path(const std::vector<std::string>& path) {
+    if (!tree_->check_path()) return false;
+    
+    // Backup current path in case of failure
+    // Actually we can just try to go from root.
+    // But if we fail in middle, we should prob restore or just stay there?
+    // Better to restore for atomicity.
+    auto original_path = tree_->path;
+    
+    if (!tree_->goto_head()) return false;
+    
+    for (const auto& dir : path) {
+        if (!tree_->go_to(dir)) {
+            // Failed, restore
+            tree_->path = original_path;
+            return false;
+        }
+        
+        // Enter the directory if it's not the last one? 
+        // go_to moves cursor to the node. 
+        // But we need to be "inside" it if it's a directory?
+        // BSTree::go_to moves 'path' to point to the node.
+        // If we want to continue traversing, we need to push its first_son to path?
+        // No, BSTree logic maintains path as stack of parents + current node.
+        // Wait, `change_directory` in `file_system.cpp` does:
+        // tree_->go_to(name);
+        // tree_->path.push_back(tree_->path.back()->first_son);
+        // This suggests `go_to` puts you ON the directory node, but you must manually "enter" it by pushing `first_son` to stack?
+        // Let's verify `change_directory` logic in file_system.cpp step 29.
+        // Yes: `tree_->path.push_back(tree_->path.back()->first_son);`
+        
+        if (tree_->path.back()->type != treeNode::DIR) {
+            tree_->path = original_path;
+            return false;
+        }
+        
+        if (!tree_->check_node(tree_->path.back()->first_son, __LINE__)) {
+             tree_->path = original_path;
+             return false;
+        }
+        tree_->path.push_back(tree_->path.back()->first_son);
+    }
+    return true;
+}

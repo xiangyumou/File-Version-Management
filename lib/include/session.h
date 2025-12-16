@@ -28,6 +28,7 @@ public:
     std::string get_current_path_string() const override;
     bool set_current_path(const std::vector<std::string>& path) override;
     std::vector<std::string> get_previous_path() const override;
+    bool change_directory(const std::string& path) override;
     
     // Helper to resolve relative path against current path
     std::vector<std::string> resolve_path(const std::vector<std::string>& input_path) const;

@@ -88,6 +88,7 @@ public:
     bool Find(const std::string& name, 
               std::vector<std::pair<std::string, std::vector<std::string>>>& res);
     int get_current_version();
+    bool navigate_to_path(const std::vector<std::string>& path);
 };
 
 #endif // FILE_SYSTEM_H

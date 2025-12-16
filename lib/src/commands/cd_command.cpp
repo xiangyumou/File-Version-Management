@@ -6,11 +6,10 @@
 namespace ffvms {
 
 CommandResult CdCommand::execute(ISession& session, const std::vector<std::string>& params) {
-    FileSystem& fs = session.get_file_system();
     std::string error = validate_params(params, get_param_requirements());
     if (!error.empty()) return CommandResult::Error(error);
 
-    if (fs.change_directory(params[0])) {
+    if (session.change_directory(params[0])) {
         return CommandResult::Ok();
     } else {
         return CommandResult::Error(Logger::get_logger().get_information());
