@@ -6,6 +6,8 @@ set(TEST_SOURCES
     unit/bs_tree_test.cpp
     unit/file_system_test.cpp
     unit/commands_test.cpp
+    unit/session_test.cpp
+    unit/cd_command_test.cpp
 )
 
 add_executable(ffvms_test ${TEST_SOURCES})
