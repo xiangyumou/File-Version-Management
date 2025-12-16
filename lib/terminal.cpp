@@ -389,6 +389,10 @@ int Terminal::run() {
          if (!cmd.second.empty() && cmd.second.front() == "exit") {
             return 0;
          }
+         // 显示无效命令的错误信息
+         if (!cmd.second.empty()) {
+            std::cout << *logger.information << '\n';
+         }
       } else {
          if (!execute(cmd.first, cmd.second)) {
             std::cout << *logger.information << '\n';
