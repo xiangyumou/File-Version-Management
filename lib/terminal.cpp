@@ -89,7 +89,7 @@ bool Terminal::execute(unsigned long long pid, std::vector<std::string> paramete
             return false;
          }
 
-         if (fr[i] == INT && parameter[i].size() > 18) {
+         if (fr[i] == ULL && parameter[i].size() > 18) {
             logger.log("The " + std::to_string(i) + "th argument has a maximum of 18. Check the output.", Logger::WARNING, __LINE__);
             return false;
          }
