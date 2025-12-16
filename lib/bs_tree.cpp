@@ -236,7 +236,7 @@ protected:
 
 
                         /* ======= struct treeNode ======= */
-treeNode::treeNode() = default;
+treeNode::treeNode() {\r\n    this->type = HEAD_NODE;\r\n    this->cnt = 0;\r\n    this->link = 0;\r\n    this->next_brother = nullptr;\r\n    this->first_son = nullptr;\r\n}
 
 treeNode::treeNode(TYPE type) {
     this->type = type;

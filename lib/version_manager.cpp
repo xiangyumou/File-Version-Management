@@ -280,7 +280,7 @@ bool VersionManager::create_version(unsigned long long model_version, std::strin
     }
     new_version->cnt = 0;
     new_version->link = node_manager.get_new_node("root");
-    if (model_version != NO_MODEL_VERSION) delete new_version->first_son;
+    // 注释：原代码 delete 可能导致crash，暂时注释\r\n    // if (model_version != NO_MODEL_VERSION) delete new_version->first_son;
     treeNode *model = model_version == NO_MODEL_VERSION ? new_version : version[model_version].p;
     if (!init_version(new_version, model)) return false;
     unsigned long long id = version.empty() ? 1001 : (*version.rbegin()).first + 1;
