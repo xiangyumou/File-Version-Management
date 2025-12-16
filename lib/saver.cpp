@@ -316,6 +316,7 @@ bool Saver::load(std::string name, std::vector<std::vector<std::string>> &conten
 }
 
 bool Saver::is_all_digits(std::string &s) {
+    if (s.empty()) return false;
     for (auto &ch : s) {
         if (!isdigit(ch)) return false;
     }
