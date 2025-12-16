@@ -51,6 +51,8 @@ set(LIB_SOURCES
     lib/src/command_interpreter.cpp
     lib/src/file_system.cpp
     lib/src/terminal.cpp
+    lib/src/command_base.cpp
+    lib/src/command_registry.cpp
 )
 
 # Create static library for testing
