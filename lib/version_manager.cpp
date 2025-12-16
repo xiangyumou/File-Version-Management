@@ -273,15 +273,17 @@ bool VersionManager::create_version(unsigned long long model_version, std::strin
         return false;
     }
     treeNode *new_version = new treeNode(treeNode::DIR);
-    new_version->cnt = 0;
     if (new_version == nullptr) {
         logger.log("The system did not allocate memory for this operation.", Logger::FATAL, __LINE__);
         return false;
     }
     new_version->cnt = 0;
     new_version->link = node_manager.get_new_node("root");
-    // 注释：原代码 delete 可能导致crash，暂时注释
-    // if (model_version != NO_MODEL_VERSION) delete new_version->first_son;
+    // 如果是继承版本，需要删除构造函数自动创建的 HEAD_NODE 以避免内存泄漏
+    if (model_version != NO_MODEL_VERSION && new_version->first_son != nullptr) {
+        delete new_version->first_son;
+        new_version->first_son = nullptr;
+    }
     treeNode *model = model_version == NO_MODEL_VERSION ? new_version : version[model_version].p;
     if (!init_version(new_version, model)) return false;
     unsigned long long id = version.empty() ? 1001 : (*version.rbegin()).first + 1;
