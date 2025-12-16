@@ -36,7 +36,7 @@
 
 using namespace ffvms;
 
-Terminal::Terminal() : logger_(nullptr) {
+Terminal::Terminal() : session_(file_system), logger_(nullptr) {
     register_commands();
 }
 
@@ -93,7 +93,7 @@ int Terminal::run() {
         
         auto cmd = registry_.get_command(name);
         if (cmd) {
-            CommandResult result = cmd->execute(file_system, params);
+            CommandResult result = cmd->execute(session_, params);
             if (result.success) {
                 if (!result.output.empty()) {
                     std::cout << result.output << "\n";

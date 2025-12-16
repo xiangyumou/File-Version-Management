@@ -1,10 +1,12 @@
 #include "commands/create_version_command.h"
 #include "file_system.h"
 #include "logger.h"
+#include "interfaces/i_session.h"
 
 namespace ffvms {
 
-CommandResult CreateVersionCommand::execute(FileSystem& fs, const std::vector<std::string>& params) {
+CommandResult CreateVersionCommand::execute(ISession& session, const std::vector<std::string>& params) {
+    FileSystem& fs = session.get_file_system();
     if (params.empty()) {
         if (fs.create_version("")) {
             return CommandResult::Ok();

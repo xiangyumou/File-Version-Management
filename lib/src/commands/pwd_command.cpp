@@ -1,11 +1,13 @@
 #include "commands/pwd_command.h"
 #include "file_system.h"
 #include "logger.h"
+#include "interfaces/i_session.h"
 #include <sstream>
 
 namespace ffvms {
 
-CommandResult PwdCommand::execute(FileSystem& fs, const std::vector<std::string>& params) {
+CommandResult PwdCommand::execute(ISession& session, const std::vector<std::string>& params) {
+    FileSystem& fs = session.get_file_system();
     std::vector<std::string> path;
     if (!fs.get_current_path(path)) {
         return CommandResult::Error(Logger::get_logger().get_information());

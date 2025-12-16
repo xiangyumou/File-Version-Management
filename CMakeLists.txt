@@ -37,6 +37,7 @@ set(SOURCES
     lib/src/command_interpreter.cpp
     lib/src/file_system.cpp
     lib/src/terminal.cpp
+    lib/src/session.cpp
 )
 
 # Library sources (without main.cpp for testing)
@@ -51,6 +52,7 @@ set(LIB_SOURCES
     lib/src/command_interpreter.cpp
     lib/src/file_system.cpp
     lib/src/terminal.cpp
+    lib/src/session.cpp
     lib/src/command_base.cpp
     lib/src/command_registry.cpp
     lib/src/commands/touch_command.cpp

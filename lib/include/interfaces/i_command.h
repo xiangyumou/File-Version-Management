@@ -14,9 +14,12 @@
 #include <memory>
 
 // Forward declaration
+// Forward declaration
 class FileSystem;
+class ISession;
 
 namespace ffvms {
+
 
 /**
  * @brief Parameter types for command validation
@@ -64,7 +67,7 @@ public:
      * @param params Command parameters
      * @return CommandResult with success/failure and output
      */
-    virtual CommandResult execute(FileSystem& fs, 
+    virtual CommandResult execute(ISession& session, 
                                   const std::vector<std::string>& params) = 0;
 
     /**

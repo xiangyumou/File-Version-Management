@@ -1,11 +1,13 @@
 #include "commands/version_command.h"
 #include "file_system.h"
 #include "logger.h"
+#include "interfaces/i_session.h"
 #include <sstream>
 
 namespace ffvms {
 
-CommandResult VersionCommand::execute(FileSystem& fs, const std::vector<std::string>& params) {
+CommandResult VersionCommand::execute(ISession& session, const std::vector<std::string>& params) {
+    FileSystem& fs = session.get_file_system();
     std::vector<std::pair<unsigned long long, versionNode>> version_content;
     if (!fs.version(version_content)) {
         return CommandResult::Error(Logger::get_logger().get_information());

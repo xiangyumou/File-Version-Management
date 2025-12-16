@@ -1,10 +1,12 @@
 #include "commands/clear_command.h"
 #include "core/platform.h"
 #include "file_system.h" // Not used but required for signature
+#include "interfaces/i_session.h"
 
 namespace ffvms {
 
-CommandResult ClearCommand::execute(FileSystem& fs, const std::vector<std::string>& params) {
+CommandResult ClearCommand::execute(ISession& session, const std::vector<std::string>& params) {
+    FileSystem& fs = session.get_file_system();
     ffvms::platform::clear_screen();
     return CommandResult::Ok();
 }

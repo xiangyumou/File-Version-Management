@@ -15,12 +15,16 @@
 #include "command_interpreter.h"
 #include "command_registry.h"
 #include "interfaces/i_logger.h"
+#include "session.h"
 #include <string>
 #include <vector>
 
 class Terminal {
 private:
+
+
     FileSystem file_system;
+    Session session_;
     CommandInterpreter interpreter_;
     ffvms::CommandRegistry registry_;
     ffvms::ILogger* logger_ = nullptr;

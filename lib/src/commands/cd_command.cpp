@@ -1,10 +1,12 @@
 #include "commands/cd_command.h"
 #include "file_system.h"
 #include "logger.h"
+#include "interfaces/i_session.h"
 
 namespace ffvms {
 
-CommandResult CdCommand::execute(FileSystem& fs, const std::vector<std::string>& params) {
+CommandResult CdCommand::execute(ISession& session, const std::vector<std::string>& params) {
+    FileSystem& fs = session.get_file_system();
     std::string error = validate_params(params, get_param_requirements());
     if (!error.empty()) return CommandResult::Error(error);
 
