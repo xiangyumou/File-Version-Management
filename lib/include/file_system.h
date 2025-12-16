@@ -13,54 +13,79 @@
 
 #include "version_manager.h"
 #include "bs_tree.h"
-#include "node_manager.h"
-#include "saver.h"
-#include "logger.h"
+#include "interfaces/i_logger.h"
+#include "interfaces/i_node_manager.h"
 #include <string>
 #include <vector>
 #include <stack>
+#include <memory>
+
+// Forward declarations
+class NodeManager;
+class Logger;
 
 /**
  * @brief FileSystem class - Core file system operations
+ * 
+ * Uses composition with BSTree instead of inheritance for better testability.
  */
-class FileSystem : private BSTree {
+class FileSystem {
 private:
-    VersionManager version_manager;
-    Logger& logger = Logger::get_logger();
-    NodeManager& node_manager = NodeManager::get_node_manager();
+    std::unique_ptr<BSTree> tree_;  ///< Tree structure (composition)
+    VersionManager version_manager_;
     int CURRENT_VERSION;
+    
+    // Dependencies
+    ffvms::ILogger* logger_ = nullptr;
+    ffvms::INodeManager* node_manager_ = nullptr;
+    
+    // Helper to get dependencies
+    ffvms::ILogger& get_logger_ref();
+    ffvms::INodeManager& get_node_manager_ref();
 
+    // Internal helper methods
     bool decrease_counter(treeNode* p);
     bool recursive_delete_nodes(treeNode* p, bool delete_brother = false);
     bool delete_node();
     bool rebuild_nodes(treeNode* p);
     bool travel_tree(treeNode* p, std::string& tree_info, int tab_cnt = 1);
-    bool travel_find(std::string name, std::vector<std::pair<std::string, std::vector<std::string>>>& res);
-    bool kmp(std::string str, std::string tar);
+    bool travel_find(const std::string& name, 
+                     std::vector<std::pair<std::string, std::vector<std::string>>>& res);
+    bool kmp(const std::string& str, const std::string& tar);
 
 public:
+    /// Default constructor
     FileSystem();
+    
+    /// Constructor with dependency injection
+    FileSystem(ffvms::ILogger* logger, ffvms::INodeManager* node_manager);
+    
+    virtual ~FileSystem() = default;
 
+    // File system operations
     bool switch_version(int version_id);
-    bool make_file(std::string name);
-    bool make_dir(std::string name);
-    bool change_directory(std::string name);
-    bool remove_file(std::string name);
-    bool remove_dir(std::string name);
-    bool update_name(std::string fr_name, std::string to_name);
-    bool update_content(std::string name, std::string content);
-    bool get_content(std::string name, std::string& content);
+    bool make_file(const std::string& name);
+    bool make_dir(const std::string& name);
+    bool change_directory(const std::string& name);
+    bool remove_file(const std::string& name);
+    bool remove_dir(const std::string& name);
+    bool update_name(const std::string& fr_name, const std::string& to_name);
+    bool update_content(const std::string& name, const std::string& content);
+    bool get_content(const std::string& name, std::string& content);
     bool tree(std::string& tree_info);
     bool goto_last_dir();
     bool list_directory_contents(std::vector<std::string>& content);
-    bool create_version(unsigned long long model_version = NO_MODEL_VERSION, std::string info = "");
-    bool create_version(std::string info, unsigned long long model_version = NO_MODEL_VERSION);
+    bool create_version(unsigned long long model_version = NO_MODEL_VERSION, 
+                        const std::string& info = "");
+    bool create_version(const std::string& info, 
+                        unsigned long long model_version = NO_MODEL_VERSION);
     bool version(std::vector<std::pair<unsigned long long, versionNode>>& version_log);
-    bool get_update_time(std::string name, std::string& update_time);
-    bool get_create_time(std::string name, std::string& create_time);
-    bool get_type(std::string name, treeNode::TYPE& type);
+    bool get_update_time(const std::string& name, std::string& update_time);
+    bool get_create_time(const std::string& name, std::string& create_time);
+    bool get_type(const std::string& name, treeNode::TYPE& type);
     bool get_current_path(std::vector<std::string>& p);
-    bool Find(std::string name, std::vector<std::pair<std::string, std::vector<std::string>>>& res);
+    bool Find(const std::string& name, 
+              std::vector<std::pair<std::string, std::vector<std::string>>>& res);
     int get_current_version();
 };
 

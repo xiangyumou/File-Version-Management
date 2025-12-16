@@ -46,6 +46,7 @@ class Logger;
  * @brief Binary Search Tree for file system operations
  * 
  * Provides tree navigation and management for the virtual file system.
+ * All methods are now public to support composition pattern.
  */
 class BSTree {
 private:
@@ -57,9 +58,19 @@ private:
     ffvms::ILogger& get_logger_ref();
     ffvms::INodeManager& get_node_manager_ref();
 
-protected:
+public:
+    /// Current path in the tree (made public for composition)
     std::vector<treeNode*> path;
 
+    /// Default constructor (uses global singletons)
+    BSTree() = default;
+    
+    /// Constructor with dependency injection
+    BSTree(ffvms::ILogger* logger, ffvms::INodeManager* node_manager);
+    
+    virtual ~BSTree() = default;
+
+    // Tree navigation and management methods (now public for composition)
     bool check_path();
     bool check_node(treeNode* p, int line);
     bool is_son();
@@ -69,16 +80,7 @@ protected:
     bool go_to(const std::string& name);
     bool goto_last_dir();
     bool list_directory_contents(std::vector<std::string>& content);
-    bool get_current_path(std::vector<std::string>& path);
-
-public:
-    /// Default constructor (uses global singletons)
-    BSTree() = default;
-    
-    /// Constructor with dependency injection
-    BSTree(ffvms::ILogger* logger, ffvms::INodeManager* node_manager);
-    
-    virtual ~BSTree() = default;
+    bool get_current_path(std::vector<std::string>& p);
 };
 
 #endif // BS_TREE_H
