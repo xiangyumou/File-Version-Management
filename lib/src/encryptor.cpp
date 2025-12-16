@@ -38,7 +38,6 @@ void Encryptor::fft(Complex a[], int n, int type) {
         buf[i + m] = a[i << 1 | 1];
     }
     memcpy(a, buf, sizeof(Complex) * n);
-    Complex *a1 = a, *a2 = a + m;
     fft(a, m, type);
     fft(a + m, m, type);
     Complex wn = Complex(1, 0), u = Complex(cos(2 * Pi / n), type * sin(2 * Pi / n));
