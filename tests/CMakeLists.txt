@@ -3,6 +3,9 @@
 # Unit test executable
 set(TEST_SOURCES
     unit/encryptor_test.cpp
+    unit/bs_tree_test.cpp
+    unit/file_system_test.cpp
+    unit/commands_test.cpp
 )
 
 add_executable(ffvms_test ${TEST_SOURCES})
