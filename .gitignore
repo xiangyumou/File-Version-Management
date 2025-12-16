@@ -11,6 +11,7 @@
 
 # ===== CMake =====
 build/
+Testing/
 cmake-build-*/
 CMakeCache.txt
 CMakeFiles/

@@ -15,6 +15,7 @@
 #include "bs_tree.h"
 #include "interfaces/i_logger.h"
 #include "interfaces/i_node_manager.h"
+#include "interfaces/i_storage.h"
 #include <string>
 #include <vector>
 #include <stack>
@@ -58,7 +59,7 @@ public:
     FileSystem();
     
     /// Constructor with dependency injection
-    FileSystem(ffvms::ILogger* logger, ffvms::INodeManager* node_manager);
+    FileSystem(ffvms::ILogger* logger, ffvms::INodeManager* node_manager, ffvms::IStorage* storage = nullptr);
     
     virtual ~FileSystem() = default;
 

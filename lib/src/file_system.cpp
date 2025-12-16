@@ -37,8 +37,9 @@ FileSystem::FileSystem()
     switch_version(static_cast<int>(latest_version_id));
 }
 
-FileSystem::FileSystem(ffvms::ILogger* logger, ffvms::INodeManager* node_manager)
+FileSystem::FileSystem(ffvms::ILogger* logger, ffvms::INodeManager* node_manager, ffvms::IStorage* storage)
     : tree_(std::make_unique<BSTree>(logger, node_manager))
+    , version_manager_(logger, node_manager, storage)
     , logger_(logger)
     , node_manager_(node_manager) {
     if (version_manager_.empty()) {

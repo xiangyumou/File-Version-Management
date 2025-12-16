@@ -12,9 +12,11 @@
 #define VERSION_MANAGER_H
 
 #include "bs_tree.h"
-#include "node_manager.h"
-#include "logger.h"
-#include "saver.h"
+#include "bs_tree.h"
+#include "interfaces/i_node_manager.h"
+#include "interfaces/i_logger.h"
+#include "interfaces/i_storage.h"
+#include "saver.h" // Needed for default constructor in cpp, or forward declare? Keep it for now.
 #include <string>
 #include <vector>
 #include <map>
@@ -33,9 +35,14 @@ struct versionNode {
 class VersionManager {
 private:
     std::map<unsigned long long, versionNode> version;
-    NodeManager& node_manager = NodeManager::get_node_manager();
-    Logger& logger = Logger::get_logger();
-    Saver& saver = Saver::get_saver();
+    ffvms::INodeManager* node_manager_ = nullptr;
+    ffvms::ILogger* logger_ = nullptr;
+    ffvms::IStorage* storage_ = nullptr;
+    
+    // Helpers
+    ffvms::ILogger& get_logger_ref();
+    ffvms::INodeManager& get_node_manager_ref();
+    ffvms::IStorage& get_storage_ref();
     static constexpr unsigned long long NULL_NODE = 0x3f3f3f3f3f3fULL;
     std::string DATA_TREENODE_INFO = "VersionManager::DATA_TREENODE_INFO";
     std::string DATA_VERSION_INFO = "VersionManager::DATA_VERSION_INFO";
@@ -47,6 +54,7 @@ private:
 
 public:
     VersionManager();
+    VersionManager(ffvms::ILogger* logger, ffvms::INodeManager* node_manager, ffvms::IStorage* storage);
     ~VersionManager();
     bool init_version(treeNode* p, treeNode* vp);
     bool create_version(unsigned long long model_version = NO_MODEL_VERSION, std::string info = "");
